@@ -1,0 +1,2 @@
+echo "GROQ_API_KEY=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" > .env
+echo "CHUNKS_URL=https://raw.githubusercontent.com/arthurlvt/uapv-rag/main/chunks_all.json" >> .env

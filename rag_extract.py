@@ -1,45 +1,3 @@
-"""
-rag_extract.py
---------------
-Extraction, nettoyage et chunking de TOUTES les ressources de cours.
-
-Structure attendue (3 niveaux) :
-    cours/
-    ├── fondementInformatique/          ← catégorie (niveau 1)
-    │   ├── S1_fondementInfo/           ← UE        (niveau 2)
-    │   │   ├── CCs/                    ← doc_type  (niveau 3)
-    │   │   │   └── fichier.pdf
-    │   │   ├── cours/
-    │   │   └── TDs/
-    │   └── cours_info.pdf              ← PDF global (UE = catégorie)
-    ├── maths/
-    │   ├── analyse1/
-    │   │   ├── CCs/
-    │   │   ├── cours/
-    │   │   └── analyse1_cours.pdf      ← PDF global dans UE
-    │   └── ...
-    └── programmation/
-        ├── CPP/
-        │   ├── cours/
-        │   └── TPs/
-        └── cheatsheets.pdf             ← PDF global (UE = catégorie)
-
-Chaque chunk produit :
-    {
-        "category": "maths",            # dossier niveau 1
-        "ue":       "analyse1",         # dossier niveau 2
-        "doc_type": "cours",            # type détecté automatiquement
-        "source":   "analyse1_cours.pdf",
-        "chunk_id": 0,
-        "text":     "..."
-    }
-
-Usage :
-    python rag_extract.py
-    python rag_extract.py --input ./cours --output ./chunks_all.json
-    python rag_extract.py --input ./cours --output ./chunks_all.json --chunk-size 400 --overlap 40
-"""
-
 import os
 import re
 import json
@@ -57,11 +15,6 @@ DOC_TYPE_KEYWORDS = {
 }
 
 def detect_doc_type(filepath: str) -> str:
-    """
-    Déduit le type de document depuis le chemin complet.
-    Analyse le nom du fichier ET les dossiers parents (en minuscules).
-    Priorité : correction > CC > TP > TD > cours > autre.
-    """
     path_lower = filepath.lower().replace("\\", "/")
     for doc_type, keywords in DOC_TYPE_KEYWORDS.items():
         if any(kw in path_lower for kw in keywords):
@@ -72,21 +25,6 @@ def detect_doc_type(filepath: str) -> str:
 # ── Détection catégorie / UE ───────────────────────────────────────────────────
 
 def detect_category_and_ue(filepath: str, root_dir: str) -> tuple[str, str]:
-    """
-    Extrait la catégorie (niveau 1) et l'UE (niveau 2) depuis le chemin relatif.
-
-    Règles :
-      - Si ≥ 3 parties : category = parts[0], ue = parts[1]
-      - Si   2 parties : category = parts[0], ue = parts[0]  (PDF global)
-
-    Exemples avec root_dir = "./cours" :
-      fondementInformatique/S1_fondementInfo/CCs/f.pdf  → ("fondementInformatique", "S1_fondementInfo")
-      fondementInformatique/cours_info.pdf              → ("fondementInformatique", "fondementInformatique")
-      maths/analyse1/cours/f.pdf                        → ("maths", "analyse1")
-      maths/analyse1/analyse1_cours.pdf                 → ("maths", "analyse1")
-      programmation/CPP/TPs/f.pdf                       → ("programmation", "CPP")
-      programmation/cheatsheets.pdf                     → ("programmation", "programmation")
-    """
     rel   = os.path.relpath(filepath, root_dir)
     parts = rel.replace("\\", "/").split("/")
 

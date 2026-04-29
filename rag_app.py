@@ -1,24 +1,3 @@
-"""
-rag_app.py
-----------
-Assistant RAG pour étudiants L1 Informatique — UAPV / CERI.
-
-Chargement des chunks (par ordre de priorité) :
-  1. Variable d'env  CHUNKS_URL  → URL raw GitHub du chunks_all.json
-  2. Fichier local   chunks_all.json                (mode dev)
-
-Variables d'environnement :
-  GROQ_API_KEY   — clé API Groq                        (obligatoire)
-  CHUNKS_URL     — URL raw GitHub du chunks_all.json   (recommandé en prod)
-
-Exemple .env pour le dev local :
-  GROQ_API_KEY=gsk_...
-  CHUNKS_URL=https://raw.githubusercontent.com/OWNER/REPO/main/chunks_all.json
-
-Usage :
-  python rag_app.py
-"""
-
 import os
 import json
 import sys
@@ -26,7 +5,6 @@ import urllib.request
 from pathlib import Path
 
 
-# ── Chargement silencieux du .env local (dev) ──────────────────────────────────
 # Évite d'avoir besoin de python-dotenv
 _env_file = Path(".env")
 if _env_file.exists():
@@ -195,13 +173,9 @@ def run_chat(chunks: list[dict], index: "BM25Okapi | None") -> None:
             print("Au revoir !")
             break
 
-        # ── Récupération des chunks pertinents ──────────────────────────
         retrieved = retrieve(user_input, chunks, index)
         context   = format_context(retrieved)
 
-        # ── Construction des messages ───────────────────────────────────
-        # Le contexte est injecté dans le message système à chaque tour,
-        # car il change à chaque question. L'historique reste léger.
         system = SYSTEM_PROMPT + "\n\n## Extraits de cours :\n\n" + context
 
         messages = (
@@ -228,8 +202,6 @@ def run_chat(chunks: list[dict], index: "BM25Okapi | None") -> None:
 
         print(f"\nAssistant : {reply}\n")
 
-
-# ── Point d'entrée ─────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
     chunks = load_chunks()
