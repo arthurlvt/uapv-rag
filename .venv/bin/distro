@@ -1,0 +1,6 @@
+#!/Users/arthurr/Nextcloud/cours/projets-perso/Recherche_RAG_IA_2026-2027/.venv/bin/python3.12
+import sys
+from distro.distro import main
+if __name__ == '__main__':
+    sys.argv[0] = sys.argv[0].removesuffix('.exe')
+    sys.exit(main())

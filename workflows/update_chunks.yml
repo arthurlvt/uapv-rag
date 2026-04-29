@@ -1,0 +1,71 @@
+# .github/workflows/update_chunks.yml
+#
+# Clone le repo public uapv_cours, génère chunks_all.json,
+# puis le committe dans ce repo privé (uapv_rag) si des changements sont détectés.
+#
+# Déclencheurs :
+#   - Cron quotidien à 3h00 UTC (5h heure française)
+#   - Déclenchement manuel depuis l'onglet "Actions" de GitHub
+
+name: 🔄 Mise à jour des chunks RAG
+
+on:
+  schedule:
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-chunks:
+    runs-on: ubuntu-latest
+
+    steps:
+      # ── 1. Checkout du repo privé (uapv_rag) ────────────────────────────────
+      - name: 📥 Checkout uapv_rag
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # ── 2. Clone du repo public de cours (uapv_cours) ───────────────────────
+      - name: 📚 Clone uapv_cours (repo public)
+        run: git clone https://github.com/arthurlvt/uapv_cours.git ./cours
+        # ⚠️  Remplace TON_USER par ton vrai nom d'utilisateur GitHub
+
+      # ── 3. Python ────────────────────────────────────────────────────────────
+      - name: 🐍 Setup Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      # ── 4. Dépendances ───────────────────────────────────────────────────────
+      - name: 📦 Installation des dépendances
+        run: pip install pymupdf
+
+      # ── 5. Extraction ────────────────────────────────────────────────────────
+      - name: 🔨 Génération de chunks_all.json
+        run: |
+          python rag_extract.py \
+            --input  ./cours/cours  \
+            --output ./chunks_all.json \
+            --chunk-size 500 \
+            --overlap    50
+
+      # ── 6. Commit conditionnel ───────────────────────────────────────────────
+      - name: 💾 Commit si des changements ont été détectés
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add chunks_all.json
+
+          if git diff --staged --quiet; then
+            echo "✅ chunks_all.json inchangé — aucun commit nécessaire."
+          else
+            TIMESTAMP=$(date -u '+%Y-%m-%d %H:%M UTC')
+            git commit -m "chore(rag): mise à jour chunks — ${TIMESTAMP} [skip ci]"
+            git push
+            echo "✅ chunks_all.json mis à jour et poussé."
+          fi
