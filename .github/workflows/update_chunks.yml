@@ -8,11 +8,12 @@
 #   - Déclenchement manuel depuis l'onglet "Actions" de GitHub
 
 name: 🔄 Mise à jour des chunks RAG
-
 on:
   schedule:
     - cron: '0 3 * * *'
   workflow_dispatch:
+  repository_dispatch:          # ← ajouter ça
+    types: [cours_updated]      # ← même nom que dans le curl
 
 permissions:
   contents: write
