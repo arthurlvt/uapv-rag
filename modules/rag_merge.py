@@ -1,32 +1,3 @@
-"""
-rag_merge.py
-------------
-Étape 1.5 : fusion de plusieurs JSON de chunks par UE en un JSON global.
-
-Cas d'usage typique :
-- Tu as extrait chaque UE séparément avec `rag_extract_ue.py`, ce qui a
-  produit `chunks_Mathematiques.json`, `chunks_FondementInformatique.json`,
-  `chunks_Programmation.json`, etc.
-- Tu veux maintenant un unique `chunks.json` à indexer dans la suite du
-  pipeline RAG (embeddings, stockage vectoriel...).
-
-Le merge :
-- concatène tous les chunks
-- vérifie la cohérence des champs (ue, doc_type, source, chunk_id, text)
-- détecte et signale les doublons (même UE + source + chunk_id)
-- affiche un résumé global
-
-Usage :
-    # Fusionne tous les chunks_*.json du dossier courant
-    python rag_merge.py --output chunks.json
-
-    # Liste explicite de fichiers à fusionner
-    python rag_merge.py --inputs chunks_Math.json chunks_Info.json \\
-        --output chunks.json
-
-    # Ne garder qu'une UE
-    python rag_merge.py --filter-ue Mathematiques --output chunks_Math_only.json
-"""
 import os
 import json
 import glob

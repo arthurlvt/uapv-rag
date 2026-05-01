@@ -1,0 +1,525 @@
+\documentclass[a4paper,11pt]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage[
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=black
+]{hyperref}
+
+% Page setup
+\geometry{margin=2.5cm}
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textit{Intelligent Assistant for L1 Courses}}
+\fancyhead[R]{\textit{CMI Informatique --- 2025/2026}}
+\fancyfoot[C]{\thepage}
+
+% Style of sections
+\titleformat{\section}
+    {\large\bfseries}
+    {\thesection.}{0.6em}{}
+    [\vspace{2pt}\titlerule\vspace{4pt}]
+
+\titleformat{\subsection}
+    {\normalsize\bfseries}
+    {\thesubsection.}{0.6em}{}
+
+% ============================================================
+\begin{document}
+
+% ============================================================
+% COVER OF RESEARCH PROJECT
+% ============================================================
+\thispagestyle{empty}
+
+\vspace*{3cm}
+
+\begin{center}
+    {\small\scshape Research Project --- CMI Informatique}\\[1cm]
+    {\rule{\linewidth}{0.4pt}}\\[0.6cm]
+    {\LARGE\bfseries Creation of an Intelligent Assistant\\[0.3cm]for First-Year Courses}\\[0.6cm]
+    {\rule{\linewidth}{0.4pt}}\\[1.2cm]
+    {\normalsize\itshape Target audience: Everyone}\\[0.4cm]
+    {\normalsize Supervisor: Yannick Estève}\\[2.5cm]
+    {\normalsize
+        A. Louvet \quad L. Ouelhadj \quad T. De Faveri-Serre \quad C. Cloupet \quad H. Baudey
+    }\\[0.8cm]
+    {\small Academics Years 2025--2027}
+\end{center}
+
+\vfill
+
+\begin{center}
+\noindent\rule{0.5\linewidth}{0.4pt}\\[0.5cm]
+{\small
+This project aims to one one hand make  some research contributions about
+LLMs, RAG, vector search and explain it regardless of prior familiarity 
+with the concept. \\ and orchestration frameworks in the context of 
+educational assistants, in the order build a conversational AI assistant grounded in 
+Retrieval-Augmented Generation (RAG), capable of answering students'
+questions based on their own course documents.
+}\\[0.4cm]
+\noindent\rule{0.5\linewidth}{0.4pt}
+\end{center}
+
+\vspace{2cm}
+
+% ============================================================
+% TABLE OF CONTENTS
+% ============================================================
+
+\newpage
+\tableofcontents
+
+% ============================================================
+% PART 1: STATE OF THE ART (DEFINITIONS AND CONTEXT)
+% ============================================================
+
+\newpage
+\section{State of the Art : Definitions and Context}
+
+\subsection{Setting the Stage with Artificial Intelligence}
+
+\subsubsection{A Brief History}
+The idea of machines that can think is not new. As early as 1950, Alan
+Turing proposed his famous \emph{Turing Test} as a criterion for machine
+intelligence \cite{turing1950computing}: if a machine can sustain a
+conversation indistinguishable from a human, it could, in some sense, be
+said to think. The term ``Artificial Intelligence'' itself was coined in 1956
+by John McCarthy at the Dartmouth Conference, which is widely regarded as
+the founding moment of the field.
+ 
+The decades that followed alternated between periods of optimism and
+so-called ``AI winters'' --- intervals of reduced funding and interest
+caused by the gap between ambitious promises and modest results. The
+landscape shifted dramatically in the 1980s and 1990s with the rise of
+\emph{machine learning}: rather than hard-coding rules into a program,
+researchers began designing systems that could \emph{learn} patterns
+directly from data. This paradigm shift laid the foundations for everything
+that followed.
+
+The true turning point came in 2012, when a deep neural network called
+AlexNet \cite{krizhevsky2012alexnet} crushed the competition in the ImageNet
+visual recognition challenge, demonstrating that \emph{deep learning} ---
+neural networks with many layers trained on large datasets --- could achieve
+performance far beyond classical methods. From that moment, deep learning
+became the dominant approach across almost every subfield of AI.
+
+\subsubsection{So What Is Artificial Intelligence?}
+The term \emph{Artificial Intelligence} is one of the most used --- and most
+misused --- expressions in today's technological landscape. Before discussing
+the specific systems at the heart of this project, it is worth taking a step
+back to understand what AI actually is, where it comes from, and why it has
+become so central to modern computing.
+
+At its core, Artificial Intelligence refers to any computational system
+designed to perform tasks that would normally require human intelligence ---
+such as recognizing objects in an image, understanding a spoken sentence,
+or deciding the next move in a chess game. A more precise definition,
+proposed by Russell and Norvig in their seminal textbook \cite{russell2010ai},
+describes an AI agent as a system that \emph{perceives its environment through
+sensors and acts upon it through actuators in order to maximize a performance
+measure}.
+ 
+A useful distinction is that between \emph{narrow AI} (also called weak AI)
+and \emph{general AI} (or strong AI). Narrow AI --- which covers virtually
+all systems in existence today --- is designed to excel at one specific type
+of task: a spam filter classifies emails, a recommendation engine suggests
+movies, a language model generates text. General AI, by contrast, would be
+a system capable of reasoning across arbitrary domains at a human level; it
+remains largely hypothetical and is an active subject of long-term research.
+Every AI system discussed in this project falls squarely in the narrow AI
+category.
+% ------------------------------------------------------------
+\subsection{A closer look at Large Language Models (LLMs)}
+ceceeeedvfieij (à refaire)
+\subsubsection{Limitations: Hallucinations and Knowledge Boundaries}
+ 
+Despite their impressive performance, LLMs suffer from several
+well-documented limitations. The most critical one in an educational context
+is the tendency to produce \emph{hallucinations} --- generating text that is
+fluent and plausible but factually incorrect or unfounded
+\cite{zhang2023hallucination, huang2025hallucination}.
+ 
+Hallucinations arise from multiple causes. First, LLMs rely on statistical
+correlations in their training data rather than grounded factual reasoning.
+Second, their knowledge is static: they have a training cutoff date and
+cannot access new or domain-specific information unless explicitly provided.
+Third, when a query falls outside the model's confident knowledge region, it
+may confabulate an answer rather than acknowledging uncertainty. According to
+a 2024 survey published in the \emph{ACM Transactions on Information
+Systems}, hallucinations are categorized into two main types:
+\emph{factuality hallucination} (stating incorrect facts) and
+\emph{faithfulness hallucination} (producing content inconsistent with a
+given source).
+ 
+These limitations are particularly problematic in an educational context,
+where accuracy is essential. An assistant that confidently provides wrong
+information about a course concept could actively mislead students. This
+motivates the use of external document grounding through RAG.
+
+\subsubsection{Biase Considerations Issue : Feedback Loop Degradation via RLHF}
+A subtler but  significant limitation concerns the feedback mechanism used to
+improve LLMs by using techniques such as \emph{Reinforcement Learning from Human Feedback} 
+(RLHF) and Constitutional AI are used to align model behaviorwith human preferences 
+and reduce harmful outputs. This system bases on a system in which users
+rate model responses positively or negatively and the model is updated
+accordingly \cite{ouyang2022rlhf}. While this process is intended to align
+model behavior with user expectations, it can produce perverse effects when
+users consistently submit poorly formulated prompts.
+ 
+When a user provides an ambiguous, incomplete, or incoherent query, the model
+has no reliable basis on which to produce a relevant answer. Then it generates a
+response that is statistically plausible given the input, but which
+inevitably fails to match the user's unstated intent. The user, perceiving
+the response as irrelevant or absurd, assigns a negative rating --- even
+though, from the model's perspective, the response was a reasonable
+completion of the given prompt. This misalignment between the signal (a
+negative rating) and its actual cause (a poorly formulated query rather than
+a model error) introduces \emph{corrupted supervision} into the training
+loop.
+ 
+Repeated at scale, this dynamic causes the model to associate certain
+legitimate response patterns with negative reward and to unlearn them,
+leading to a measurable degradation in general response quality over time. HAS
+study by Chen et al. \cite{chen2023chatgpt} empirically documented this
+phenomenon for ChatGPT, observing significant behavioral shifts between
+model versions, with certain tasks where earlier versions outperformed later
+ones. The authors attribute part of this regression to the compounding
+effects of user feedback noise in the RLHF pipeline.
+ 
+This issue is particularly relevant in an educational setting, where students
+--- especially at the first-year level --- may lack the prompt-engineering
+literacy to formulate precise queries. An assistant that degrades under
+noisy feedback could thus become progressively less useful for its primary
+audience, underscoring the importance of designing robust feedback collection
+mechanisms and, where possible, reducing reliance on unfiltered user ratings
+for model updates.
+% ------------------------------------------------------------
+\subsection{Let's recap}
+A natural starting point for this overview is a question that seems simple
+but is actually quite nuanced: what exactly is an LLM, and how does it
+differ from the broader notion of ``AI''? The term \emph{Artificial
+Intelligence} (AI) is an umbrella concept encompassing any technique or
+system that enables machines to mimic human intelligence, including machine
+learning, computer vision, robotics, and natural language processing. A
+\emph{Large Language Model} (LLM), by contrast, refers to a specific
+category of AI model designed to understand and generate human language.
+LLMs are a subset of AI, just like \emph{Machine Learning } (ML) or \emph{Deep Learning} (DL) etc\dots
+while all LLMs are AI systems, the converse is not true.
+ 
+Concretely, LLMs are neural networks trained on massive text corpora using
+self-supervised learning, based on the Transformer architecture introduced
+by Vaswani et al.\ \cite{vaswani2017attention}, which enables models to
+capture long-range dependencies in text through self-attention mechanisms.
+The subsequent introduction of OpenAI's GPT series --- GPT-2 in 2019,
+GPT-3 in 2020, and later GPT-4 --- demonstrated that scaling up model size
+and training data leads to \emph{emergent capabilities} in language
+understanding and generation \cite{wei2022emergent}: abilities that appear
+qualitatively only beyond a certain scale threshold. Contemporary LLMs such
+as GPT-4, Anthropic's Claude, Meta's LLaMA, Google's Gemini, and Mistral
+exhibit remarkable proficiency across a wide range of tasks --- from question
+answering and summarization to code generation and multi-step reasoning ---
+and are characterized by parameter counts in the tens or hundreds of billions.
+These models operate by encoding vast amounts of world knowledge into their
+parameters through statistical pattern learning over billions of tokens, and
+their trajectory of development has been defined by increasing model size,
+diversifying training data, and refining training techniques.
+% ------------------------------------------------------------
+% ------------------------------------------------------------
+\subsection{Retrieval-Augmented Generation (RAG)}
+ 
+\subsubsection{Principle and Motivation}
+Before diving into the technical architecture, it is worth stepping back to
+explain what RAG is and why it was developed, so as to make this research
+accessible and interesting to everyone.
+ 
+Imagine asking a very knowledgeable friend a question about a specific topic
+--- say, the content of a course they have never attended. No matter how
+smart they are, they simply cannot know what was taught in that particular
+class. An LLM faces the exact same limitation: it only knows what it saw
+during training, and it has no way to consult documents it has never
+encountered. Now imagine instead that before answering, your friend is
+allowed to quickly flip through the relevant course notes and use what they
+find to inform their reply. That, in essence, is what RAG does: it gives the
+model access to a specific set of documents at the moment of answering, so
+that its response is grounded in those sources rather than in its general
+(and potentially outdated or incomplete) memory.
+ 
+More formally, Retrieval-Augmented Generation (RAG) is a paradigm that
+enhances LLMs by connecting them to an external knowledge base at inference
+time \cite{lewis2020rag}. Rather than relying solely on the model's
+parametric memory, a RAG system first retrieves relevant document passages
+from a curated corpus based on the user's query, then passes these passages
+as context to the LLM, which generates a grounded response. 
+
+This approach directly addresses the limitations described in the previous
+section: it provides the LLM with up-to-date and domain-specific
+information, and it anchors the generation in explicit, verifiable sources
+--- significantly reducing the risk of hallucination. A survey specifically
+focused on RAG for educational applications \cite{rag_education_survey}
+confirms that this approach substantially improves the relevance and factual
+accuracy of AI-generated answers in academic settings.
+
+\newpage
+\subsubsection{RAG Architecture}
+ 
+A standard RAG pipeline consists of three stages: 
+ 
+\begin{enumerate}
+  \item \textbf{Indexing (developer phase):} Source documents (PDFs, course
+    slides, lecture notes, etc.) are split into chunks, encoded as vector
+    embeddings using an embedding model, and stored in a vector database.
+    \emph{(cf Section 1.4 with details about vector search and indexing)}.
+
+  \item \textbf{Retrieval (user phase):} When a user submits a query, it is
+    encoded into the same embedding space. The system then performs a
+    similarity search to retrieve the top-$k$ most relevant chunks from the
+    database.
+ 
+  \item \textbf{Generation:} The retrieved chunks are prepended to the user
+    query as context in the LLM's prompt. The LLM then generates a response
+    grounded in this retrieved information.
+\end{enumerate}
+
+\subsubsection{RAG Variants and Evolution}
+ 
+The field has matured significantly since the original RAG paper. Surveys
+from 2024--2025 identify three main paradigms \cite{gao2024rag}:
+ 
+\begin{itemize}
+  \item \textbf{Naive RAG:} The basic retrieve-then-generate pipeline
+    described above.
+  \item \textbf{Advanced RAG:} Introduces query rewriting, re-ranking of
+    retrieved results, and iterative retrieval to improve precision.
+  \item \textbf{Modular RAG:} A more flexible architecture where each
+    component (retriever, reader, memory, etc.) can be independently swapped
+    or optimized.
+\end{itemize}
+ 
+More recent work also explores \textbf{Agentic RAG}, where the model can
+decide \emph{when} to retrieve and \emph{which} sources to consult based on
+the complexity of the query, using a multi-step reasoning loop
+\cite{zhao2024rag}.
+ 
+For our project, a Naive or Advanced RAG architecture is sufficient given
+the well-defined and bounded scope of the document corpus (first-year course
+materials).
+% ------------------------------------------------------------
+% ------------------------------------------------------------
+\subsection{Vector Search and Indexing}
+
+% ============================================================
+% PART 1.2: PROJECT OVERVIEW AND SEARCHES ABOUT AI ASSISTANTS IN EDUCATION
+% ============================================================
+\newpage
+\section{Project Overview}
+
+\subsection{Pedagogical Objectives}
+The goal is to discover the fundamental principles of modern artificial intelligence through
+large language models (LLM) and the RAG (Retrieval-Augmented Generation) system.
+Students will learn how to interface an LLM with a custom document base to create
+a conversational assistant capable of answering questions about their courses.
+\subsection{AI Assistants in Educational Settings}
+ 
+\subsubsection{Overview of Existing Work}
+ 
+The application of AI-powered assistants to education has attracted growing
+research interest. A survey published in \emph{Applied Sciences}
+\cite{mdpi2025rag} identified 47 studies on RAG-based educational chatbots,
+the majority published in 2024, demonstrating the rapid growth of this field.
+ 
+Several real-world deployments are directly relevant to our project:
+ 
+\begin{itemize}
+  \item \textbf{UniMiB Assistant} (Bicocca University, Milan, 2024)
+    \cite{unimib2024}: A RAG-based student assistant capable of answering
+    questions about university procedures, course schedules, and
+    administrative information. It indexes official university documents and
+    uses an LLM to generate answers grounded in those sources.
+ 
+  \item \textbf{OwlMentor} (Frontiers in Psychology, 2024)
+    \cite{owlmentor2024}: An AI-powered learning environment designed to help
+    university students comprehend scientific texts. Integrated into a course,
+    it offered document-based chat, automatic question generation, and quiz
+    creation.
+ 
+  \item \textbf{CS50 AI Assistant} (Harvard University): Integrated into an
+    introductory computer science course, a RAG-based assistant was shown to
+    provide detailed and contextually appropriate responses, facilitating
+    personalized tutoring at scale.
+ 
+  \item \textbf{Medical education RAG assistant} (Nature \emph{npj Digital
+    Medicine}, 2025) \cite{npj2025}: A teaching assistant deployed in a
+    medical school course, where usage patterns and student feedback were
+    analyzed across two consecutive cohorts, demonstrating the feasibility and
+    effectiveness of RAG-based assistants in high-stakes educational contexts.
+\end{itemize}
+ 
+\subsubsection{Effectiveness and Challenges}
+ 
+The general finding across these studies is that RAG-based assistants are
+effective at providing accurate, context-grounded answers to domain-specific
+questions, and that students perceive them positively as a complement to human
+instruction. However, several challenges are consistently reported:
+ 
+\begin{itemize}
+  \item \textbf{Document quality and coverage:} The quality of the assistant's
+    answers is directly bounded by the quality and coverage of the indexed
+    document corpus. Poorly formatted or incomplete course documents degrade
+    performance.
+  \item \textbf{Out-of-scope queries:} Students often ask questions outside
+    the domain of the indexed documents. Robust systems must detect such
+    queries and gracefully decline to speculate.
+  \item \textbf{Evaluation difficulty:} Assessing the correctness of generated
+    answers in open-ended educational contexts is non-trivial and often
+    requires human expert evaluation.
+  \item \textbf{Student trust calibration:} Students may over-rely on AI
+    answers or, conversely, distrust them even when correct. Communicating
+    uncertainty and citing sources is important for appropriate trust
+    calibration.
+\end{itemize}
+ 
+% ------------------------------------------------------------
+\newpage
+\subsection{Summary and Positioning of Our Project}
+ 
+This state of the art reveals that the combination of LLMs and RAG represents
+the current best practice for building domain-specific conversational
+assistants. The technology stack we plan to use --- Python, an embedding model
+(\texttt{sentence-transformers} or OpenAI), a vector database (FAISS or
+Chroma), and an orchestration framework (LangChain or LlamaIndex) --- is
+well-validated both in the academic literature and in real-world educational
+deployments.
+ 
+The main originality of our project lies in its specific scope: building an
+assistant tailored to \emph{first-year CMI Informatique course materials},
+which have specific characteristics (introductory-level computer science,
+mathematics, and project content in French and English). The challenges we
+anticipate align with those reported in the literature: ensuring sufficient
+document coverage, managing out-of-scope questions, and calibrating student
+trust in the system's outputs.
+\newpage
+
+
+% Parler de comment fonctionne l'IA (vectorisation, embeddings, etc.)
+% Parler de FAISS, Chroma, etc.
+% Parler de LangChain, LlamaIndex, etc.
+% ============================================================
+%  Bibliography entries (to paste into your .bib file)
+% ============================================================
+%
+% @inproceedings{vaswani2017attention,
+%   author    = {Vaswani, Ashish and others},
+%   title     = {Attention Is All You Need},
+%   booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+%   year      = {2017}
+% }
+%
+% @article{wei2022emergent,
+%   author  = {Wei, Jason and others},
+%   title   = {Emergent Abilities of Large Language Models},
+%   journal = {Transactions on Machine Learning Research},
+%   year    = {2022}
+% }
+%
+% @article{zhang2023hallucination,
+%   author  = {Zhang, Yue and others},
+%   title   = {Siren's Song in the {AI} Ocean: A Survey on Hallucination in
+%              Large Language Models},
+%   journal = {arXiv preprint arXiv:2309.01219},
+%   year    = {2023}
+% }
+%
+% @article{huang2025hallucination,
+%   author  = {Huang, Lei and others},
+%   title   = {Large Language Models Hallucination: A Comprehensive Survey},
+%   journal = {arXiv preprint arXiv:2510.06265},
+%   year    = {2025}
+% }
+%
+% @inproceedings{lewis2020rag,
+%   author    = {Lewis, Patrick and others},
+%   title     = {Retrieval-Augmented Generation for Knowledge-Intensive {NLP} Tasks},
+%   booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+%   year      = {2020}
+% }
+%
+% @article{gao2024rag,
+%   author  = {Gao, Yunfan and others},
+%   title   = {Retrieval-Augmented Generation for Large Language Models: A Survey},
+%   journal = {arXiv preprint arXiv:2312.10997},
+%   year    = {2024}
+% }
+%
+% @article{zhao2024rag,
+%   author  = {Zhao, Penghao and others},
+%   title   = {A Comprehensive Survey of Retrieval-Augmented Generation ({RAG}):
+%              Evolution, Current Landscape and Future Directions},
+%   journal = {arXiv preprint arXiv:2410.12837},
+%   year    = {2024}
+% }
+%
+% @article{rag_education_survey,
+%   title   = {Retrieval-Augmented Generation ({RAG}) Chatbots for Education:
+%              A Survey of Applications},
+%   journal = {Computers and Education: Artificial Intelligence},
+%   year    = {2024}
+% }
+%
+% @article{mdpi2025rag,
+%   title   = {Retrieval-Augmented Generation ({RAG}) Chatbots for Education:
+%              A Survey of Applications},
+%   journal = {Applied Sciences (MDPI)},
+%   year    = {2025}
+% }
+%
+% @article{owlmentor2024,
+%   title   = {Exploring Generative {AI} in Higher Education: A {RAG} System
+%              to Enhance Student Engagement with Scientific Literature},
+%   journal = {Frontiers in Psychology},
+%   year    = {2024}
+% }
+%
+% @article{unimib2024,
+%   author  = {Aiello, Luca Maria and others},
+%   title   = {{UniMiB} Assistant: Designing a Student-Friendly {RAG}-Based Chatbot},
+%   journal = {arXiv preprint arXiv:2411.19554},
+%   year    = {2024}
+% }
+%
+% @article{npj2025,
+%   title   = {A Generative {AI} Teaching Assistant for Personalized Learning
+%              in Medical Education},
+%   journal = {npj Digital Medicine},
+%   year    = {2025}
+% }
+%
+% @online{langcopilot2025,
+%   title   = {Best {RAG} Frameworks 2025: {LangChain} vs {LlamaIndex} vs {Haystack}},
+%   url     = {https://langcopilot.com/posts/2025-09-18-top-rag-frameworks-2024-complete-guide},
+%   year    = {2025}
+% }
+%
+% @online{ibm2024llamaindex,
+%   author  = {{IBM}},
+%   title   = {{LlamaIndex} vs {LangChain}: What's the Difference?},
+%   url     = {https://www.ibm.com/think/topics/llamaindex-vs-langchain},
+%   year    = {2024}
+% }
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
