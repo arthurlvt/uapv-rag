@@ -1,0 +1,137 @@
+\begin{thebibliography}{10}
+
+\bibitem{rag_education_survey}
+Muhammad Afzaal, Jalal Nouri, Aqdas Zia, and Panagiotis Papapetrou.
+\newblock Retrieval-augmented generation ({RAG}) chatbots for education: A
+  survey of applications.
+\newblock {\em Computers and Education: Artificial Intelligence}, 7, 2024.
+
+\bibitem{unimib2024}
+Luca~Maria Aiello, Maria~Teresa Baldassarre, Daniela Giordano, and Concetto
+  Spampinato.
+\newblock {UniMiB} assistant: Designing a student-friendly {RAG}-based chatbot.
+\newblock {\em arXiv preprint arXiv:2411.19554}, 2024.
+
+\bibitem{chen2023chatgpt}
+Lingjiao Chen, Matei Zaharia, and James Zou.
+\newblock How is {ChatGPT}'s behavior changing over time?
+\newblock {\em arXiv preprint arXiv:2307.09009}, 2023.
+
+\bibitem{gao2024rag}
+Yunfan Gao, Yun Xiong, Xinyu Gao, Kangxiang Jia, Jinliu Pan, Yuxi Bi, Yi~Dai,
+  Jiawei Sun, Meng Wang, and Haofen Wang.
+\newblock Retrieval-augmented generation for large language models: A survey.
+\newblock {\em arXiv preprint arXiv:2312.10997}, 2024.
+
+\bibitem{owlmentor2024}
+Shuai Guo, Yang Song, and Jian Tang.
+\newblock Exploring generative {AI} in higher education: A {RAG} system to
+  enhance student engagement with scientific literature.
+\newblock {\em Frontiers in Psychology}, 15, 2024.
+
+\bibitem{huang2025hallucination}
+Lei Huang, Weijiang Yu, Weitao Ma, Weihong Zhong, Zhangyin Feng, Haotian Wang,
+  Qianglong Chen, Weihua Peng, Xiaocheng Feng, Bing Qin, et~al.
+\newblock Large language models hallucination: A comprehensive survey.
+\newblock {\em arXiv preprint arXiv:2510.06265}, 2025.
+
+\bibitem{krizhevsky2012alexnet}
+Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E. Hinton.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock In {\em Advances in Neural Information Processing Systems (NeurIPS)},
+  volume~25, 2012.
+
+\bibitem{lewis2020rag}
+Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir
+  Karpukhin, Naman Goyal, Heinrich K{\"u}ttler, Mike Lewis, Wen-tau Yih, Tim
+  Rockt{\"a}schel, et~al.
+\newblock Retrieval-augmented generation for knowledge-intensive {NLP} tasks.
+\newblock In {\em Advances in Neural Information Processing Systems (NeurIPS)},
+  volume~33, pages 9459--9474, 2020.
+
+\bibitem{malkov2018hnsw}
+Yu~A. Malkov and D.~A. Yashunin.
+\newblock Efficient and robust approximate nearest neighbor search using
+  hierarchical navigable small world graphs.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  42(4):824--836, 2020.
+
+\bibitem{mikolov2013word2vec}
+Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg Corrado, and Jeffrey Dean.
+\newblock Distributed representations of words and phrases and their
+  compositionality.
+\newblock In {\em Advances in Neural Information Processing Systems (NeurIPS)},
+  volume~26, 2013.
+
+\bibitem{ouyang2022rlhf}
+Long Ouyang, Jeffrey Wu, Xu~Jiang, Diogo Almeida, Carroll Wainwright, Pamela
+  Mishkin, Chong Zhang, Sandhini Agarwal, Katarina Slama, Alex Ray, et~al.
+\newblock Training language models to follow instructions with human feedback.
+\newblock {\em Advances in Neural Information Processing Systems (NeurIPS)},
+  35:27730--27744, 2022.
+
+\bibitem{pennington2014glove}
+Jeffrey Pennington, Richard Socher, and Christopher~D. Manning.
+\newblock {GloVe}: Global vectors for word representation.
+\newblock In {\em Proceedings of the 2014 Conference on Empirical Methods in
+  Natural Language Processing (EMNLP)}, pages 1532--1543, 2014.
+
+\bibitem{reimers2019sbert}
+Nils Reimers and Iryna Gurevych.
+\newblock Sentence-{BERT}: Sentence embeddings using siamese {BERT}-networks.
+\newblock In {\em Proceedings of the 2019 Conference on Empirical Methods in
+  Natural Language Processing and the 9th International Joint Conference on
+  Natural Language Processing (EMNLP-IJCNLP)}, pages 3982--3992, 2019.
+
+\bibitem{russell2010ai}
+Stuart Russell and Peter Norvig.
+\newblock {\em Artificial Intelligence: A Modern Approach}.
+\newblock Prentice Hall, 3rd edition, 2010.
+
+\bibitem{npj2025}
+Malik Sallam, Nizar~Abdullah Salim, Muna Barakat, and Ala'a~B. Al-Tammemi.
+\newblock A generative {AI} teaching assistant for personalized learning in
+  medical education.
+\newblock {\em npj Digital Medicine}, 8, 2025.
+
+\bibitem{mdpi2025rag}
+Shamane Siriwardhana, Rivindu Weerasekera, Elliott Wen, Tharindu Kaluarachchi,
+  Rajib Rana, and Suranga Nanayakkara.
+\newblock Retrieval-augmented generation ({RAG}) chatbots for education: A
+  survey of applications.
+\newblock {\em Applied Sciences (MDPI)}, 15, 2025.
+
+\bibitem{turing1950computing}
+Alan~M. Turing.
+\newblock Computing machinery and intelligence.
+\newblock {\em Mind}, 59(236):433--460, 1950.
+
+\bibitem{vaswani2017attention}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
+  Aidan~N. Gomez, {\L}ukasz Kaiser, and Illia Polosukhin.
+\newblock Attention is all you need.
+\newblock In {\em Advances in Neural Information Processing Systems (NeurIPS)},
+  volume~30, 2017.
+
+\bibitem{wei2022emergent}
+Jason Wei, Yi~Tay, Rishi Bommasani, Colin Raffel, Barret Zoph, Sebastian
+  Borgeaud, Dani Yogatama, Maarten Bosma, Denny Zhou, Donald Miculivicius,
+  et~al.
+\newblock Emergent abilities of large language models.
+\newblock {\em Transactions on Machine Learning Research}, 2022.
+
+\bibitem{zhang2023hallucination}
+Yue Zhang, Yafu Li, Leyang Cui, Deng Cai, Lemao Liu, Tingchen Fu, Xinting
+  Huang, Enbo Zhao, Yu~Zhang, Yulong Chen, et~al.
+\newblock Siren's song in the {AI} ocean: A survey on hallucination in large
+  language models.
+\newblock {\em arXiv preprint arXiv:2309.01219}, 2023.
+
+\bibitem{zhao2024rag}
+Penghao Zhao, Hailin Zhang, Qinhan Yu, Zhengren Wang, Yunteng Geng, Fangcheng
+  Fu, Ling Yang, Wentao Zhang, Jie Jiang, and Bin Cui.
+\newblock A comprehensive survey of retrieval-augmented generation ({RAG}):
+  Evolution, current landscape and future directions.
+\newblock {\em arXiv preprint arXiv:2410.12837}, 2024.
+
+\end{thebibliography}

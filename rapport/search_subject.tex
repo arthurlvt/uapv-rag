@@ -17,6 +17,7 @@
     linkcolor=black,
     urlcolor=black
 ]{hyperref}
+\usepackage{bookmark}  % ← corrige le conflit titlesec/hyperref
 
 % Page setup
 \geometry{margin=2.5cm}
@@ -320,7 +321,121 @@ the well-defined and bounded scope of the document corpus (first-year course
 materials).
 % ------------------------------------------------------------
 % ------------------------------------------------------------
+% ============================================================
+% Section 1.5 — Vector Search and Indexing
+% Expanded version to integrate into search_subject.tex
+% ============================================================
+
 \subsection{Vector Search and Indexing}
+
+\subsubsection{What Is an Embedding?}
+
+An \emph{embedding}, in the context of artificial intelligence and large
+language models (LLMs), refers to the transformation of a piece of
+information --- a word, a sentence, a document, or sometimes even an image
+--- into a sequence of real numbers called a \emph{vector}. This numerical
+representation allows the machine to manipulate language and concepts no
+longer as symbolic text, but as mathematical objects on which it can
+compute.
+
+Rather than ``understanding'' words the way a human does, the model places
+them in a high-dimensional \emph{vector space} (typically between 384 and
+4096 dimensions depending on the model), where each item occupies a precise
+position. In this space, the \emph{distance} between two vectors reflects
+their \emph{semantic similarity}: two sentences with similar meanings will
+have nearby vectors, even if they share no words in common. This is the
+principle that allows a system, for instance, to retrieve the passage
+\textit{``photosynthesis allows plants to produce energy''} from the query
+\textit{``how do plants generate their energy?''}.
+
+\subsubsection{How Are Embeddings Learned?}
+
+These vectors are not chosen arbitrarily: they are \emph{learned} during
+the training of the model. The system reads enormous quantities of text and
+progressively adjusts its parameters so that the resulting vectors capture
+regularities of language. For example, the model learns that ``cat'' and
+``dog'' appear in similar contexts and therefore ends up assigning them
+nearby vectors, while ``car'' will sit further away.
+
+Early work such as \emph{Word2Vec} \cite{mikolov2013word2vec} and
+\emph{GloVe} \cite{pennington2014glove} showed that this simple principle
+is enough to give rise to remarkable semantic relationships. The
+canonical example of vector arithmetic,
+$\overrightarrow{\text{king}} - \overrightarrow{\text{man}}
++ \overrightarrow{\text{woman}} \approx \overrightarrow{\text{queen}}$,
+illustrates that the learned space encodes concepts (gender, royalty)
+rather than mere co-occurrences.
+
+In modern Transformer-based models, embeddings are also \emph{contextual}:
+the vector associated with a word depends on the sentence in which it
+appears. The word ``bank'' in \textit{``I sat by the river bank''} and in
+\textit{``I deposited money at the bank''} thus receives two distinct
+representations, which naturally resolves lexical ambiguities. For semantic
+search, one typically relies on specialized models such as those from the
+\texttt{sentence-transformers} family \cite{reimers2019sbert}, which
+produce a \emph{single vector} per sentence or paragraph, optimized for
+similarity comparison rather than for text generation.
+
+\subsubsection{Measuring Similarity Between Vectors}
+
+Once content is represented as vectors, comparing two pieces of text
+amounts to comparing two points in space. Three metrics are commonly used:
+
+\begin{itemize}
+  \item \textbf{Cosine similarity}, which measures the angle between two
+    vectors and is insensitive to their magnitude: by far the most widely
+    used metric in semantic search.
+  \item \textbf{Dot product}, faster to compute but sensitive to vector
+    norms; preferred when vectors have been normalized beforehand.
+  \item \textbf{Euclidean distance}, intuitive but often less discriminating
+    in very high dimension because of the so-called \emph{curse of
+    dimensionality}.
+\end{itemize}
+
+\subsubsection{Indexing and Approximate Nearest Neighbor Search}
+
+When a corpus contains thousands or even millions of indexed passages,
+comparing the query against every stored vector --- the so-called
+\emph{exact}, or ``brute force'', search --- becomes prohibitively
+expensive. The standard solution is to rely on \emph{indexing} structures
+that enable \emph{Approximate Nearest Neighbor} (ANN) search: one trades a
+small amount of accuracy for several orders of magnitude in speed.
+
+Several indexing algorithms have become standard:
+
+\begin{itemize}
+  \item \textbf{IVF (Inverted File Index)}: partitions the space into
+    cells via a preliminary clustering step (typically $k$-means), then
+    restricts the search to the cells closest to the query.
+  \item \textbf{HNSW (Hierarchical Navigable Small World)}
+    \cite{malkov2018hnsw}: builds a multi-layer graph in which local
+    navigation rapidly converges towards the neighborhood of the queried
+    vector. It is currently the reference algorithm in most vector
+    databases, thanks to its excellent trade-off between recall and latency.
+  \item \textbf{Product Quantization (PQ)}: compresses vectors by
+    sub-quantizing each subspace, drastically reducing memory usage at the
+    cost of a slight accuracy loss.
+\end{itemize}
+
+These algorithms are implemented in dedicated libraries and databases
+--- the so-called \emph{vector databases} --- the most widely used in the
+open-source ecosystem being \texttt{FAISS} (Facebook AI Similarity
+Search), \texttt{Chroma}, \texttt{Qdrant}, and \texttt{Weaviate}. The
+choice depends mainly on the volume of data, latency constraints, and
+whether one needs metadata filtering (for example, restricting the search
+to a specific course or chapter).
+
+\subsubsection{Summary}
+
+In practice, embeddings are the foundational building block of any RAG
+system: they are used to interpret queries, to compare course passages, to
+perform semantic search, and more broadly to feed the internal mechanisms
+of LLMs. They can be seen as a ``translation'' of human language into a
+geometry of concepts, where ideas are organized in a multidimensional
+space that the machine can efficiently explore and exploit. It is
+precisely this geometry, combined with a suitable index, that will allow
+our educational assistant to retrieve in a few milliseconds the course
+passages relevant to answering a student's question.
 
 % ============================================================
 % PART 1.2: PROJECT OVERVIEW AND SEARCHES ABOUT AI ASSISTANTS IN EDUCATION
@@ -418,108 +533,6 @@ trust in the system's outputs.
 % Parler de comment fonctionne l'IA (vectorisation, embeddings, etc.)
 % Parler de FAISS, Chroma, etc.
 % Parler de LangChain, LlamaIndex, etc.
-% ============================================================
-%  Bibliography entries (to paste into your .bib file)
-% ============================================================
-%
-% @inproceedings{vaswani2017attention,
-%   author    = {Vaswani, Ashish and others},
-%   title     = {Attention Is All You Need},
-%   booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
-%   year      = {2017}
-% }
-%
-% @article{wei2022emergent,
-%   author  = {Wei, Jason and others},
-%   title   = {Emergent Abilities of Large Language Models},
-%   journal = {Transactions on Machine Learning Research},
-%   year    = {2022}
-% }
-%
-% @article{zhang2023hallucination,
-%   author  = {Zhang, Yue and others},
-%   title   = {Siren's Song in the {AI} Ocean: A Survey on Hallucination in
-%              Large Language Models},
-%   journal = {arXiv preprint arXiv:2309.01219},
-%   year    = {2023}
-% }
-%
-% @article{huang2025hallucination,
-%   author  = {Huang, Lei and others},
-%   title   = {Large Language Models Hallucination: A Comprehensive Survey},
-%   journal = {arXiv preprint arXiv:2510.06265},
-%   year    = {2025}
-% }
-%
-% @inproceedings{lewis2020rag,
-%   author    = {Lewis, Patrick and others},
-%   title     = {Retrieval-Augmented Generation for Knowledge-Intensive {NLP} Tasks},
-%   booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
-%   year      = {2020}
-% }
-%
-% @article{gao2024rag,
-%   author  = {Gao, Yunfan and others},
-%   title   = {Retrieval-Augmented Generation for Large Language Models: A Survey},
-%   journal = {arXiv preprint arXiv:2312.10997},
-%   year    = {2024}
-% }
-%
-% @article{zhao2024rag,
-%   author  = {Zhao, Penghao and others},
-%   title   = {A Comprehensive Survey of Retrieval-Augmented Generation ({RAG}):
-%              Evolution, Current Landscape and Future Directions},
-%   journal = {arXiv preprint arXiv:2410.12837},
-%   year    = {2024}
-% }
-%
-% @article{rag_education_survey,
-%   title   = {Retrieval-Augmented Generation ({RAG}) Chatbots for Education:
-%              A Survey of Applications},
-%   journal = {Computers and Education: Artificial Intelligence},
-%   year    = {2024}
-% }
-%
-% @article{mdpi2025rag,
-%   title   = {Retrieval-Augmented Generation ({RAG}) Chatbots for Education:
-%              A Survey of Applications},
-%   journal = {Applied Sciences (MDPI)},
-%   year    = {2025}
-% }
-%
-% @article{owlmentor2024,
-%   title   = {Exploring Generative {AI} in Higher Education: A {RAG} System
-%              to Enhance Student Engagement with Scientific Literature},
-%   journal = {Frontiers in Psychology},
-%   year    = {2024}
-% }
-%
-% @article{unimib2024,
-%   author  = {Aiello, Luca Maria and others},
-%   title   = {{UniMiB} Assistant: Designing a Student-Friendly {RAG}-Based Chatbot},
-%   journal = {arXiv preprint arXiv:2411.19554},
-%   year    = {2024}
-% }
-%
-% @article{npj2025,
-%   title   = {A Generative {AI} Teaching Assistant for Personalized Learning
-%              in Medical Education},
-%   journal = {npj Digital Medicine},
-%   year    = {2025}
-% }
-%
-% @online{langcopilot2025,
-%   title   = {Best {RAG} Frameworks 2025: {LangChain} vs {LlamaIndex} vs {Haystack}},
-%   url     = {https://langcopilot.com/posts/2025-09-18-top-rag-frameworks-2024-complete-guide},
-%   year    = {2025}
-% }
-%
-% @online{ibm2024llamaindex,
-%   author  = {{IBM}},
-%   title   = {{LlamaIndex} vs {LangChain}: What's the Difference?},
-%   url     = {https://www.ibm.com/think/topics/llamaindex-vs-langchain},
-%   year    = {2024}
-% }
 \bibliographystyle{plain}
 \bibliography{references}
 \end{document}
