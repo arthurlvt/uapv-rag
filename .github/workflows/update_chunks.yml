@@ -30,7 +30,7 @@ jobs:
       # ── 5. Extraction ────────────────────────────────────────────────────────
       - name: 🔨 Génération de chunks_all.json
         run: |
-          python rag_extract.py \
+          python rag.py \
             --input  ./cours/cours  \
             --output ./chunks_all.json \
             --chunk-size 500 \
