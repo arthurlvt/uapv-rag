@@ -23,15 +23,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # ── 1. Checkout du repo privé (uapv_rag) ────────────────────────────────
-      - name: 📥 Checkout uapv_rag
+      # ── 1. Checkout du repo privé (uapv-rag) ────────────────────────────────
+      - name: 📥 Checkout uapv-rag
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      # ── 2. Clone du repo public de cours (uapv_cours) ───────────────────────
-      - name: 📚 Clone uapv_cours (repo public)
-        run: git clone https://github.com/arthurlvt/uapv_cours.git ./cours
+      # ── 2. Clone du repo public de cours (uapv-cours) ───────────────────────
+      - name: 📚 Clone uapv-cours (repo public)
+        run: git clone https://github.com/arthurlvt/uapv-cours.git ./cours
         # ⚠️  Remplace TON_USER par ton vrai nom d'utilisateur GitHub
 
       # ── 3. Python ────────────────────────────────────────────────────────────

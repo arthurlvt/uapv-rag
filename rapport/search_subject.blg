@@ -1,46 +1,5 @@
-This is BibTeX, Version 0.99e (TeX Live 2026)
-Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: search_subject.aux
-The style file: plain.bst
-Database file #1: references.bib
-You've used 21 entries,
-            2118 wiz_defined-function locations,
-            606 strings with 8762 characters,
-and the built_in function-call counts, 8851 in all, are:
-= -- 784
-> -- 687
-< -- 7
-+ -- 273
-- -- 250
-* -- 704
-:= -- 1553
-add.period$ -- 63
-call.type$ -- 21
-change.case$ -- 183
-chr.to.int$ -- 0
-cite$ -- 21
-duplicate$ -- 272
-empty$ -- 510
-format.name$ -- 250
-if$ -- 1745
-int.to.chr$ -- 0
-int.to.str$ -- 21
-missing$ -- 22
-newline$ -- 108
-num.names$ -- 42
-pop$ -- 189
-preamble$ -- 1
-purify$ -- 162
-quote$ -- 0
-skip$ -- 209
-stack$ -- 0
-substring$ -- 314
-swap$ -- 64
-text.length$ -- 7
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 82
-warning$ -- 0
-while$ -- 57
-width$ -- 23
-write$ -- 227
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'search_subject.blg'
+[24] biber-darwin:342> INFO - === Sat May  2, 2026, 23:30:08
+[128] Utils.pm:479> ERROR - Cannot find 'search_subject.bcf'!
+[128] Biber.pm:137> INFO - ERRORS: 1
