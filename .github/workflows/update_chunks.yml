@@ -1,12 +1,3 @@
-# .github/workflows/update_chunks.yml
-#
-# Clone le repo public uapv_cours, génère chunks_all.json,
-# puis le committe dans ce repo privé (uapv_rag) si des changements sont détectés.
-#
-# Déclencheurs :
-#   - Cron quotidien à 3h00 UTC (5h heure française)
-#   - Déclenchement manuel depuis l'onglet "Actions" de GitHub
-
 name: 🔄 Mise à jour des chunks RAG
 on:
   schedule:
@@ -29,10 +20,8 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      # ── 2. Clone du repo public de cours (uapv-cours) ───────────────────────
       - name: 📚 Clone uapv-cours (repo public)
         run: git clone https://github.com/arthurlvt/uapv-cours.git ./cours
-        # ⚠️  Remplace TON_USER par ton vrai nom d'utilisateur GitHub
 
       # ── 3. Python ────────────────────────────────────────────────────────────
       - name: 🐍 Setup Python 3.12
