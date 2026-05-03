@@ -23,25 +23,13 @@ jobs:
       - name: 📚 Clone uapv-cours (repo public)
         run: git clone https://github.com/arthurlvt/uapv-cours.git ./cours
 
-      # ── 3. Python ────────────────────────────────────────────────────────────
-      - name: 🐍 Setup Python 3.12
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-          cache: pip
-
       # ── 4. Dépendances ───────────────────────────────────────────────────────
       - name: 📦 Installation des dépendances
         run: pip install pymupdf
 
       # ── 5. Extraction ────────────────────────────────────────────────────────
       - name: 🔨 Génération de chunks_all.json
-        run: |
-          python rag_extract.py \
-            --input  ./cours/cours  \
-            --output ./chunks_all.json \
-            --chunk-size 500 \
-            --overlap    50
+        run: python rag.py extract --input ./cours/cours --output ./chunks/chunks_all.json --chunk-size 500 --overlap 50
 
       # ── 6. Commit conditionnel ───────────────────────────────────────────────
       - name: 💾 Commit si des changements ont été détectés
@@ -59,3 +47,4 @@ jobs:
             git push
             echo "✅ chunks_all.json mis à jour et poussé."
           fi
+          
