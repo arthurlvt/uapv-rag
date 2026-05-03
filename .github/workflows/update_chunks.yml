@@ -29,12 +29,7 @@ jobs:
 
       # ── 5. Extraction ────────────────────────────────────────────────────────
       - name: 🔨 Génération de chunks_all.json
-        run: |
-          python rag.py \
-            --input  ./cours/cours  \
-            --output ./chunks_all.json \
-            --chunk-size 500 \
-            --overlap    50
+        run: python rag.py extract --input ./cours/cours --output ./chunks/chunks_all.json --chunk-size 500 --overlap 50
 
       # ── 6. Commit conditionnel ───────────────────────────────────────────────
       - name: 💾 Commit si des changements ont été détectés
