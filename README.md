@@ -5,7 +5,7 @@ Ce README me permettra de présenter l'avancement du projet car je n'utilise pre
 
 
 
-## Première Etape: Extraction de tous les cours de l'UAPV / personnels (2025/2026)
+## Première Etape / Etape BIS: Extraction de tous les cours de l'UAPV / personnels (2025/2026)
 
 La première grosse partie de ce projet -- qui en réalité est toujours d'actualité -- a été de télécharger / extraire toute les ressources mises à disposition par l'Université d'Avignon et également les cours que j'ai rédigé moi même afin d'avoir la plage de données la plus étendue possible. Ensuite, il a fallu trier chaque cours selon l'UE et leur catégorie (TDs, TPs, CCs, cours) puis de les convertir si besoin en latex afin que ce soit lisible par tous mais aussi et surtout par un programme ce qui n'aura pas été une mince affaire. Le but étant d'avoir un assistant des plus efficaces possible il faut en permanence regarder si de nouvelles ressources ne sont pas disponibles.
 
@@ -22,11 +22,11 @@ La troisième étape consistait à découper l'ensemble des ressources extraites
 L'extraction gère deux formats : les **PDFs** (via PyMuPDF) et les **fichiers LaTeX** (.tex), avec un nettoyage spécifique pour chaque format — suppression des commandes LaTeX, des numéros de page isolés, des artefacts d'en-tête et de pied de page. L'ensemble du pipeline est regroupé dans un seul point d'entrée (`rag.py`) qui expose plusieurs sous-commandes.
 
 
-## Quatrième Etape: Mise en place du RAG et du pipeline automatisé (30/04/2026 - 01/05/2026)
+## Quatrième Etape: Mise en place du RAG et du pipeline automatisé (30/04/2026 - 03/05/2026)
 
 Une fois les chunks prêts, le cœur du RAG a pu être mis en place. À chaque question d'un étudiant, le système récupère les **5 chunks les plus pertinents** grâce à une recherche **BM25** (algorithme de ranking textuel), les injecte dans le prompt système envoyé à Groq, et l'IA répond en s'appuyant exclusivement sur ces extraits — sans inventer.
 
-Pour que les chunks restent toujours à jour sans intervention manuelle, un workflow **GitHub Actions** tourne automatiquement chaque nuit à 3h UTC. Il clone le repo public [uapv-cours](https://github.com/arthurlvt/uapv-cours) contenant toutes les ressources pédagogiques, régénère le fichier `chunks_all.json` et le commite dans ce repo privé si des changements ont été détectés. De plus, un second workflow se déclenche automatiquement à chaque push sur `uapv-cours` (via un `repository_dispatch`), ce qui garantit que l'ajout d'un nouveau document de cours se reflète quasi immédiatement dans l'assistant.
+Pour que les chunks restent toujours à jour sans intervention manuelle, un workflow **GitHub Actions** tourne automatiquement chaque nuit à 3h UTC. Il clone le repo public [uapv-cours](https://github.com/arthurlvt/uapv-cours) contenant toutes les ressources pédagogiques, régénère le fichier `chunks_all.json` et le commite dans ce repo privé si des changements ont été détectés. De plus, un second workflow se déclenche automatiquement à chaque push sur `uapv-cours` (via un `repository_dispatch`), ce qui garantit que l'ajout d'un nouveau document de cours se reflète quasi immédiatement dans l'assistant. Avec cette fonctionnalité, la difficulté principale a été de synchroniser tout le pipeline avec le fichier workflow yml.
 
 
 ## Cinquième Etape: Amélioration du RAG avec la recherche sémantique
