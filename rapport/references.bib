@@ -1,12 +1,9 @@
 % ============================================================
-%  references.bib
-%  Bibliography for: Creation of an Intelligent Assistant
-%                    for First-Year Courses
+% references.bib
+% Bibliographie complète — Intelligent Assistant for L1 Courses
 % ============================================================
 
-% ----------------------------------------------------------------
-% Foundational AI
-% ----------------------------------------------------------------
+% ── Fondations de l'IA ────────────────────────────────────────────────────────
 
 @article{turing1950computing,
   author  = {Turing, Alan M.},
@@ -15,7 +12,8 @@
   volume  = {59},
   number  = {236},
   pages   = {433--460},
-  year    = {1950}
+  year    = {1950},
+  publisher = {Oxford University Press}
 }
 
 @inproceedings{krizhevsky2012alexnet,
@@ -23,20 +21,19 @@
   title     = {ImageNet Classification with Deep Convolutional Neural Networks},
   booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
   volume    = {25},
+  pages     = {1097--1105},
   year      = {2012}
 }
 
 @book{russell2010ai,
-  author    = {Russell, Stuart and Norvig, Peter},
+  author    = {Russell, Stuart J. and Norvig, Peter},
   title     = {Artificial Intelligence: A Modern Approach},
   edition   = {3rd},
   publisher = {Prentice Hall},
   year      = {2010}
 }
 
-% ----------------------------------------------------------------
-% Large Language Models
-% ----------------------------------------------------------------
+% ── LLMs et Transformers ──────────────────────────────────────────────────────
 
 @inproceedings{vaswani2017attention,
   author    = {Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and
@@ -57,39 +54,63 @@
   year    = {2022}
 }
 
-@article{medium.com
-  author = {Carolina Bento},
-  title = {Large Language Models: A Short Introduction and why you should care about LLMs},
-  journal = {Medium},
-  year = {2023},
-  url = {https://carolinabento.medium.com/large-language-models-a-short-introduction-and-why-you-should-care-about-llms-1c9e5bd9c8}
+% ── LLMs definitions ────────────────────────────────────────────────────────── 
+
+@misc{llm_intro_placeholder,
+  author       = {Carolina Bento},
+  title        = {Large Language Models: A Short Introduction},
+  howpublished = {Towards Data Science, Medium},
+  year         = {2023},
+  url          = {https://medium.com/data-science/large-language-models-a-short-introduction-bb8366118ad0}
 }
 
-x
+@misc{llm_scale_placeholder,
+  author       = {{Andreas Stöffelbauer, Data Scientistat Microsoft}},
+  title        = {How Large Language Models Work},
+  howpublished = {Data Science at Microsoft, Medium},
+  year         = {2023},
+  url          = {https://medium.com/data-science-at-microsoft/how-large-language-models-work-91c362f5b78f}
+}
 
-
-% ----------------------------------------------------------------
-% Hallucinations and RLHF
-% ----------------------------------------------------------------
+@misc{llm_hallucinations_medium,
+  author       = {Adsagenz},
+  title        = {{LLM} Limitations and Hallucinations: 7 Challenges Explained},
+  howpublished = {Medium},
+  year         = {2024},
+  url          = {https://medium.com/@adsagenz/llm-limitations-and-hallucinations-7-challenges-explained-8d00cdc23a12}
+}
+@misc{rlhf_challenges_medium,
+  author       = {{M, Foundation Models Deep Dive}},
+  title        = {The Core Challenges and Limitations of {RLHF}},
+  howpublished = {Foundation Models Deep Dive, Medium},
+  year         = {2024},
+  url          = {https://medium.com/foundation-models-deep-dive/the-core-challenges-and-limitations-of-rlhf-134dbacbf355}
+}
+% ── Hallucinations ────────────────────────────────────────────────────────────
 
 @article{zhang2023hallucination,
   author  = {Zhang, Yue and Li, Yafu and Cui, Leyang and Cai, Deng and
              Liu, Lemao and Fu, Tingchen and Huang, Xinting and Zhao, Enbo and
              Zhang, Yu and Chen, Yulong and others},
-  title   = {Siren's Song in the {AI} Ocean: A Survey on Hallucination in
-             Large Language Models},
+  title   = {Siren's Song in the {AI} Ocean: A Survey on Hallucination in Large Language Models},
   journal = {arXiv preprint arXiv:2309.01219},
   year    = {2023}
 }
 
 @article{huang2025hallucination,
   author  = {Huang, Lei and Yu, Weijiang and Ma, Weitao and Zhong, Weihong and
-             Feng, Zhangyin and Wang, Haotian and Chen, Qianglong and
-             Peng, Weihua and Feng, Xiaocheng and Qin, Bing and others},
-  title   = {Large Language Models Hallucination: A Comprehensive Survey},
-  journal = {arXiv preprint arXiv:2510.06265},
-  year    = {2025}
+             Feng, Zhangyin and Wang, Haotian and Chen, Qianglong and Peng, Weihua and
+             Feng, Xiaocheng and Qin, Bing and others},
+  title   = {A Survey on Hallucination in Large Language Models: Principles,
+             Taxonomy, Challenges, and Open Questions},
+  journal = {ACM Transactions on Information Systems},
+  volume  = {43},
+  number  = {2},
+  year    = {2025},
+  publisher = {ACM}
 }
+
+% ── RLHF et feedback ──────────────────────────────────────────────────────────
 
 @article{ouyang2022rlhf,
   author  = {Ouyang, Long and Wu, Jeffrey and Jiang, Xu and Almeida, Diogo and
@@ -109,9 +130,7 @@ x
   year    = {2023}
 }
 
-% ----------------------------------------------------------------
-% Retrieval-Augmented Generation (RAG)
-% ----------------------------------------------------------------
+% ── RAG ───────────────────────────────────────────────────────────────────────
 
 @inproceedings{lewis2020rag,
   author    = {Lewis, Patrick and Perez, Ethan and Piktus, Aleksandra and
@@ -127,8 +146,7 @@ x
 
 @article{gao2024rag,
   author  = {Gao, Yunfan and Xiong, Yun and Gao, Xinyu and Jia, Kangxiang and
-             Pan, Jinliu and Bi, Yuxi and Dai, Yi and Sun, Jiawei and
-             Wang, Meng and Wang, Haofen},
+             Pan, Jinliu and Bi, Yuxi and Dai, Yi and Sun, Jiawei and Wang, Haofen},
   title   = {Retrieval-Augmented Generation for Large Language Models: A Survey},
   journal = {arXiv preprint arXiv:2312.10997},
   year    = {2024}
@@ -136,94 +154,28 @@ x
 
 @article{zhao2024rag,
   author  = {Zhao, Penghao and Zhang, Hailin and Yu, Qinhan and Wang, Zhengren and
-             Geng, Yunteng and Fu, Fangcheng and Yang, Ling and Zhang, Wentao and
-             Jiang, Jie and Cui, Bin},
-  title   = {A Comprehensive Survey of Retrieval-Augmented Generation ({RAG}):
-             Evolution, Current Landscape and Future Directions},
-  journal = {arXiv preprint arXiv:2410.12837},
+             Geng, Yunteng and Fu, Fang and Yang, Ling and Zhang, Wentao and Cui, Bin},
+  title   = {Retrieval-Augmented Generation for {AI}-Generated Content: A Survey},
+  journal = {arXiv preprint arXiv:2402.19473},
   year    = {2024}
 }
-
-% ----------------------------------------------------------------
-% RAG in Education
-% ----------------------------------------------------------------
 
 @article{rag_education_survey,
-  author  = {Afzaal, Muhammad and Nouri, Jalal and Zia, Aqdas and Papapetrou, Panagiotis},
-  title   = {Retrieval-Augmented Generation ({RAG}) Chatbots for Education:
-             A Survey of Applications},
-  journal = {Computers and Education: Artificial Intelligence},
-  volume  = {7},
-  year    = {2024}
+  author  = {Abdelghani, Rania and Wang, Yen-Hsiang and Yuan, Xingdi and
+             Wang, Tong and de Weck, Olivier and Cl{\'e}ment, Bernard and Oudeyer, Pierre-Yves},
+  title   = {GPT-4 as an Educational Technology: Challenges, Strengths, and
+             Implications for Design},
+  journal = {arXiv preprint arXiv:2310.02401},
+  year    = {2023}
 }
 
-@article{mdpi2025rag,
-  author  = {Siriwardhana, Shamane and Weerasekera, Rivindu and
-             Wen, Elliott and Kaluarachchi, Tharindu and Rana, Rajib and
-             Nanayakkara, Suranga},
-  title   = {Retrieval-Augmented Generation ({RAG}) Chatbots for Education:
-             A Survey of Applications},
-  journal = {Applied Sciences (MDPI)},
-  volume  = {15},
-  year    = {2025}
-}
-
-@article{owlmentor2024,
-  author  = {Guo, Shuai and Song, Yang and Tang, Jian},
-  title   = {Exploring Generative {AI} in Higher Education: A {RAG} System
-             to Enhance Student Engagement with Scientific Literature},
-  journal = {Frontiers in Psychology},
-  volume  = {15},
-  year    = {2024}
-}
-
-@article{unimib2024,
-  author  = {Aiello, Luca Maria and Baldassarre, Maria Teresa and
-             Giordano, Daniela and Spampinato, Concetto},
-  title   = {{UniMiB} Assistant: Designing a Student-Friendly {RAG}-Based Chatbot},
-  journal = {arXiv preprint arXiv:2411.19554},
-  year    = {2024}
-}
-
-@article{npj2025,
-  author  = {Sallam, Malik and Salim, Nizar Abdullah and Barakat, Muna and
-             Al-Tammemi, Ala'a B.},
-  title   = {A Generative {AI} Teaching Assistant for Personalized Learning
-             in Medical Education},
-  journal = {npj Digital Medicine},
-  volume  = {8},
-  year    = {2025}
-}
-
-% ----------------------------------------------------------------
-% Orchestration Frameworks
-% ----------------------------------------------------------------
-
-@online{langcopilot2025,
-  author  = {{LangCopilot}},
-  title   = {Best {RAG} Frameworks 2025: {LangChain} vs {LlamaIndex} vs {Haystack}},
-  url     = {https://langcopilot.com/posts/2025-09-18-top-rag-frameworks-2024-complete-guide},
-  year    = {2025},
-  urldate = {2025}
-}
-
-@online{ibm2024llamaindex,
-  author  = {{IBM}},
-  title   = {{LlamaIndex} vs {LangChain}: What's the Difference?},
-  url     = {https://www.ibm.com/think/topics/llamaindex-vs-langchain},
-  year    = {2024},
-  urldate = {2024}
-}
-
-% ----------------------------------------------------------------
-% Embeddings and Vector Search
-% ----------------------------------------------------------------
+% ── Embeddings ────────────────────────────────────────────────────────────────
 
 @inproceedings{mikolov2013word2vec,
-  author    = {Mikolov, Tomas and Sutskever, Ilya and Chen, Kai and
+  author    = {Mikolov, Tom{\'a}{\v{s}} and Sutskever, Ilya and Chen, Kai and
                Corrado, Greg and Dean, Jeffrey},
-  title     = {Distributed Representations of Words and Phrases and
-               their Compositionality},
+  title     = {Distributed Representations of Words and Phrases and their
+               Compositionality},
   booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
   volume    = {26},
   year      = {2013}
@@ -240,22 +192,69 @@ x
 
 @inproceedings{reimers2019sbert,
   author    = {Reimers, Nils and Gurevych, Iryna},
-  title     = {Sentence-{BERT}: Sentence Embeddings using Siamese
-               {BERT}-Networks},
+  title     = {Sentence-{BERT}: Sentence Embeddings using Siamese {BERT}-Networks},
   booktitle = {Proceedings of the 2019 Conference on Empirical Methods in
-               Natural Language Processing and the 9th International Joint
-               Conference on Natural Language Processing (EMNLP-IJCNLP)},
+               Natural Language Processing (EMNLP)},
   pages     = {3982--3992},
   year      = {2019}
 }
 
+% ── Indexing ──────────────────────────────────────────────────────────────────
+
 @article{malkov2018hnsw,
-  author  = {Malkov, Yu A. and Yashunin, D. A.},
-  title   = {Efficient and Robust Approximate Nearest Neighbor Search
-             Using Hierarchical Navigable Small World Graphs},
+  author  = {Malkov, Yury A. and Yashunin, Dmitry A.},
+  title   = {Efficient and Robust Approximate Nearest Neighbor Search Using
+             Hierarchical Navigable Small World Graphs},
   journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
   volume  = {42},
   number  = {4},
   pages   = {824--836},
-  year    = {2020}
+  year    = {2018},
+  publisher = {IEEE}
+}
+
+% ── Assistants IA en éducation ────────────────────────────────────────────────
+
+@inproceedings{unimib2024,
+  author    = {Benedetti, Filippo and Cantu, Davide and Fersini, Elisabetta},
+  title     = {A {RAG}-Based Conversational Assistant for University Students:
+               The {UniMiB} Case Study},
+  booktitle = {Proceedings of the Italian Conference on Computational Linguistics (CLiC-it)},
+  year      = {2024}
+}
+
+@article{mdpi2025rag,
+  author  = {Swacha, Jakub and Gracel, Micha{\l}},
+  title   = {Retrieval-Augmented Generation ({RAG}) Chatbots for Education:
+             A Survey of Applications},
+  journal = {Applied Sciences},
+  volume  = {15},
+  number  = {8},
+  pages   = {4234},
+  year    = {2025},
+  doi     = {10.3390/app15084234},
+  publisher = {MDPI}
+}
+
+@article{owlmentor2024,
+  author  = {Th{\"u}s, Dominik and Malone, Sarah and Br{\"u}nken, Roland},
+  title   = {Exploring Generative {AI} in Higher Education: A {RAG} System
+             to Enhance Student Engagement with Scientific Literature},
+  journal = {Frontiers in Psychology},
+  volume  = {15},
+  pages   = {1474892},
+  year    = {2024},
+  doi     = {10.3389/fpsyg.2024.1474892},
+  publisher = {Frontiers Media}
+}
+
+@article{npj2025,
+  author  = {Reese, Justin T. and others},
+  title   = {Usage Patterns and Student Perceptions of a {RAG}-Based Teaching
+             Assistant in Medical Education},
+  journal = {npj Digital Medicine},
+  volume  = {8},
+  number  = {1},
+  year    = {2025},
+  publisher = {Nature Publishing Group}
 }

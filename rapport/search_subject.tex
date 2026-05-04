@@ -144,16 +144,61 @@ remains largely hypothetical and is an active subject of long-term research.
 Every AI system discussed in this project falls squarely in the narrow AI
 category.
 % ------------------------------------------------------------
-\subsection{A closer look at Large Language Models (LLMs)}
-ceceeeedvfieij (à refaire)
+\subsection{A Closer Look at Large Language Models (LLMs)}
+
+Large Language Models, or LLMs, since the full name is a bit of a tongue
+twister, are much more present in our day-to-day life than we would think,
+or even anticipated just a few years back. But what are they truly? What do
+they define, and what is their use? \cite{llm_intro_placeholder}
+
+\subsubsection{What Is a Large Language Model?}
+
+A Large Language Model is, to put it simply, a mathematical model that
+generates text --- like filling in the gap for the next word in a sentence,
+much like the ``word suggestions'' that appear atop your keyboard when you
+are typing a sentence on your phone. However, do not let that simple
+comparison fool you. While your phone might struggle to predict anything
+beyond your usual coffee order, an LLM operates on a scale that is frankly
+dizzying. Imagine taking every book, article, and scrap of code on the
+internet and feeding it into a digital brain that maps out the intricate
+relationships between every word and concept. \cite{llm_scale_placeholder}
+
+By calculating the probability of what comes next based on billions of
+parameters, these models move past simple ``autofill'' and into the realm
+of reasoning and creativity. They are not just guessing letters; they are
+grasping the nuances of human intent. At the heart of this process is a
+structure called a \emph{Transformer}. Think of it as a system that allows
+the model to look at a whole paragraph at once, rather than one word at a
+time. This \emph{attention} mechanism ensures it remembers the beginning of
+your story while it is writing the end, maintaining a coherent thread that
+feels remarkably human.
+
+\subsubsection{What Can LLMs Do?}
+
+Because they are masters of pattern recognition, their utility stretches
+far beyond answering trivia or writing emails:
+
+\begin{itemize}
+  \item \textbf{Creative Partners:} They can brainstorm marketing slogans
+    or draft poetry in the style of a 19th-century novelist.
+  \item \textbf{Technical Aides:} They translate complex programming
+    languages as easily as they translate French into English.
+  \item \textbf{Educational Assistants:} They can explain intricate
+    concepts, answer questions, and adapt their tone to the level of the
+    reader --- which is precisely the use case explored in this project.
+\end{itemize}
+
+This versatility, however, comes with important caveats, which we explore
+in the following section.
+
 \subsubsection{Limitations: Hallucinations and Knowledge Boundaries}
- 
+
 Despite their impressive performance, LLMs suffer from several
 well-documented limitations. The most critical one in an educational context
 is the tendency to produce \emph{hallucinations} --- generating text that is
 fluent and plausible but factually incorrect or unfounded
-\cite{zhang2023hallucination, huang2025hallucination}.
- 
+\cite{zhang2023hallucination, huang2025hallucination, llm_hallucinations_medium}.
+
 Hallucinations arise from multiple causes. First, LLMs rely on statistical
 correlations in their training data rather than grounded factual reasoning.
 Second, their knowledge is static: they have a training cutoff date and
@@ -165,25 +210,27 @@ Systems}, hallucinations are categorized into two main types:
 \emph{factuality hallucination} (stating incorrect facts) and
 \emph{faithfulness hallucination} (producing content inconsistent with a
 given source).
- 
+
 These limitations are particularly problematic in an educational context,
 where accuracy is essential. An assistant that confidently provides wrong
 information about a course concept could actively mislead students. This
 motivates the use of external document grounding through RAG.
 
-\subsubsection{Biase Considerations Issue : Feedback Loop Degradation via RLHF}
-A subtler but  significant limitation concerns the feedback mechanism used to
-improve LLMs by using techniques such as \emph{Reinforcement Learning from Human Feedback} 
-(RLHF) and Constitutional AI are used to align model behaviorwith human preferences 
-and reduce harmful outputs. This system bases on a system in which users
-rate model responses positively or negatively and the model is updated
-accordingly \cite{ouyang2022rlhf}. While this process is intended to align
-model behavior with user expectations, it can produce perverse effects when
-users consistently submit poorly formulated prompts.
- 
+\subsubsection{Bias Considerations: Feedback Loop Degradation via RLHF}
+
+A subtler but significant limitation concerns the feedback mechanism used to
+improve LLMs \cite{rlhf_challenges_medium}. Techniques such as
+\emph{Reinforcement Learning from Human Feedback} (RLHF) and Constitutional
+AI are used to align model behavior with human preferences and reduce harmful
+outputs. This system relies on users rating model responses positively or
+negatively, with the model updated accordingly \cite{ouyang2022rlhf}. While
+this process is intended to align model behavior with user expectations, it
+can produce perverse effects when users consistently submit poorly formulated
+prompts.
+
 When a user provides an ambiguous, incomplete, or incoherent query, the model
-has no reliable basis on which to produce a relevant answer. Then it generates a
-response that is statistically plausible given the input, but which
+has no reliable basis on which to produce a relevant answer. It then generates
+a response that is statistically plausible given the input, but which
 inevitably fails to match the user's unstated intent. The user, perceiving
 the response as irrelevant or absurd, assigns a negative rating --- even
 though, from the model's perspective, the response was a reasonable
@@ -191,16 +238,16 @@ completion of the given prompt. This misalignment between the signal (a
 negative rating) and its actual cause (a poorly formulated query rather than
 a model error) introduces \emph{corrupted supervision} into the training
 loop.
- 
+
 Repeated at scale, this dynamic causes the model to associate certain
 legitimate response patterns with negative reward and to unlearn them,
-leading to a measurable degradation in general response quality over time. HAS
-study by Chen et al. \cite{chen2023chatgpt} empirically documented this
+leading to a measurable degradation in general response quality over time.
+A study by Chen et al. \cite{chen2023chatgpt} empirically documented this
 phenomenon for ChatGPT, observing significant behavioral shifts between
 model versions, with certain tasks where earlier versions outperformed later
 ones. The authors attribute part of this regression to the compounding
 effects of user feedback noise in the RLHF pipeline.
- 
+
 This issue is particularly relevant in an educational setting, where students
 --- especially at the first-year level --- may lack the prompt-engineering
 literacy to formulate precise queries. An assistant that degrades under
@@ -534,5 +581,5 @@ trust in the system's outputs.
 % Parler de LangChain, LlamaIndex, etc.
 % Inclure les références pour la partie 1.1 et 1.2 (partie de lisa) + corriger les bugs de références
 \bibliographystyle{plain}
-\bibliography{references}
+\IfFileExists{rapport/references.bib}{\bibliography{rapport/references}}{\bibliography{references}}
 \end{document}
