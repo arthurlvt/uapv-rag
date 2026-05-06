@@ -38,7 +38,7 @@ Pour que les chunks restent toujours à jour sans intervention manuelle, un work
 
 Cette étape que je réalise continuellement tout au long du projet est pour moi la plus importante car elle englobe l'intégralité du projet, allant de la recherche des différents éléments à la mise en place et la structuration du projet!
 
-
+AJOUTS RECENTS : cours de C / cours de python / refonte de la partie algèbre à venir...
 
 ## Prochaines étapes
 
