@@ -3170,6 +3170,174 @@
   {
     "category": "programmation",
     "ue": "cpp",
+    "doc_type": "cours",
+    "source": "cours_cpp.pdf",
+    "chunk_id": 0,
+    "text": "Cours de C++ Guide complet pour la révision S2 - Licence Informatique Arthur 10 février 2026 Arthur - S2 C++ - L1 Informatique Table des matières Introduction au C++ Caractéristiques du langage . . . . . . . . . . . . . . . . . . . . . . . . . . Structure minimale d’un programme . . . . . . . . . . . . . . . . . . . . . Entrées et sorties . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Les types de base et les tableaux Types de données . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Déclaration de tableaux . . . . . . . . . . . . . . . . . . . . . . . . . . . . Pointeurs et références Les pointeurs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Schéma mémoire . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Les références . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Allocation dynamique La pile (Stack) et le tas (Heap) . . . . . . . . . . . . . . . . . . . . . . . . Allocation dans la pile . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Allocation dans le tas avec new/delete . . . . . . . . . . . . . . . . . . . . Exemple complet . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Passage de paramètres Passage par valeur . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Passage par référence . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Passage par référence constante"
+  },
+  {
+    "category": "programmation",
+    "ue": "cpp",
+    "doc_type": "cours",
+    "source": "cours_cpp.pdf",
+    "chunk_id": 1,
+    "text": ". . . . . . . . . . . . . Passage par référence . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Passage par référence constante . . . . . . . . . . . . . . . . . . . . . . . . Tableau comparatif . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Programmation orientée objet Concepts fondamentaux . . . . . . . . . . . . . . . . . . . . . . . . . . . . Structure d’une classe . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Implémentation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Utilisation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Constructeurs et destructeurs Le constructeur . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Types de constructeurs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Utilisation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Le destructeur . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Constructeur par recopie Le problème . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . La solution : constructeur par recopie . . . . . . . . . . . . . . . . . . . . . Quand est-il appelé ? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Opérateur d’affectation Différence avec le constructeur par recopie . . . . ."
+  },
+  {
+    "category": "programmation",
+    "ue": "cpp",
+    "doc_type": "cours",
+    "source": "cours_cpp.pdf",
+    "chunk_id": 2,
+    "text": ". . . Quand est-il appelé ? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Opérateur d’affectation Différence avec le constructeur par recopie . . . . . . . . . . . . . . . . . . Implémentation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . La règle des trois . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Arthur - S2 C++ - L1 Informatique 10 Variables const et static 10.1 Variables const . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10.2 Fonctions membres const . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10.3 Variables membres static . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10.4 Exemple : compteur d’objets . . . . . . . . . . . . . . . . . . . . . . . . . . 11 Valeurs par défaut et surcharge 11.1 Valeurs par défaut . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11.2 Surcharge de fonctions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12 Listes chaînées 12.1 Concept . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12.2 Structure de base . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12.3 Implémentation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12.4 Utilisation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+  },
+  {
+    "category": "programmation",
+    "ue": "cpp",
+    "doc_type": "cours",
+    "source": "cours_cpp.pdf",
+    "chunk_id": 3,
+    "text": ". . . . . . . . . . . . . 12.4 Utilisation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12.5 Schéma d’exécution . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12.6 Opérations supplémentaires . . . . . . . . . . . . . . . . . . . . . . . . . . 13 Récursivité 13.1 Notion de récursivité . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13.2 Récursivité croisée (ou mutuelle) . . . . . . . . . . . . . . . . . . . . . . . 14 Structures chaînées – Arbres 14.1 Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14.2 Définition récursive . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14.3 Vocabulaire . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14.4 Caractéristiques . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14.5 Arbres ordonnés . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14.6 Arbres binaires . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14.7 Implémentation des arbres binaires . . . . . . . . . . . . . . . . . . . . . . 14.8 Création d’un arbre . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14.9 Parcours des arbres . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14.10Exemple de déroulement . ."
+  },
+  {
+    "category": "programmation",
+    "ue": "cpp",
+    "doc_type": "cours",
+    "source": "cours_cpp.pdf",
+    "chunk_id": 4,
+    "text": ". . . . . . . . . . 14.9 Parcours des arbres . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14.10Exemple de déroulement . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14.11Les trois types de parcours . . . . . . . . . . . . . . . . . . . . . . . . . . . 14.12Répartition des fonctions entre Arbre et Nœud . . . . . . . . . . . . . . . . 14.13Arbres binaires ordonnés . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14.14Quelques arbres particuliers . . . . . . . . . . . . . . . . . . . . . . . . . . 15 Bonnes pratiques et pièges à éviter 15.1 Checklist des bonnes pratiques . . . . . . . . . . . . . . . . . . . . . . . . . 15.2 Pièges fréquents . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15.3 Conseils de débogage . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16 Exercices d’entraînement 16.1 Exercice 1 : Classe Rectangle . . . . . . . . . . . . . . . . . . . . . . . . . 16.2 Exercice 2 : Classe Vecteur dynamique . . . . . . . . . . . . . . . . . . . . 16.3 Exercice 3 : Pile (Stack) avec liste chaînée . . . . . . . . . . . . . . . . . . Arthur - S2 C++ - L1 Informatique 17 Aide-mémoire 17.1 Tableau récapitulatif des opérateurs . . . . . . . . . . . . . . . . . . . . . . 17.2 Commandes de compilation . . . . . . . . . . . . . . . . . . . . . . . . . . 17.3 Modèle de fichiers .h et .cpp . . . . . . . . . . . . . . . . . . . . . . . . . . 18 Conclusion Arthur - S2 C++ - L1 Informatique Introduction au C++ Caractéristiques du langage"
+  },
+  {
+    "category": "programmation",
+    "ue": "cpp",
+    "doc_type": "cours",
+    "source": "cours_cpp.pdf",
+    "chunk_id": 5,
+    "text": ". . 17.3 Modèle de fichiers .h et .cpp . . . . . . . . . . . . . . . . . . . . . . . . . . 18 Conclusion Arthur - S2 C++ - L1 Informatique Introduction au C++ Caractéristiques du langage Le C++ est un langage compilé, c’est-à-dire qu’avant d’être exécuté, le code source doit être traduit en langage machine par un compilateur. Exemple Processus de compilation et exécution : 1. Écriture du code dans programme.cpp 2. Compilation : g++ programme.cpp -o programme 3. Exécution : ./programme Structure minimale d’un programme 1 #include <iostream > 2 using namespace std; 4 int main () { cout << \"Hello World!\" << endl; return 0; Listing 1 – Programme minimal en C++ — #include <iostream> : inclut la bibliothèque d’entrées/sorties — using namespace std; : permet d’utiliser cout et cin sans préfixe — int main() : fonction principale, point d’entrée du programme Entrées et sorties En C++, on utilise cout et cin à la place de printf et scanf. 1 int age; 2 string nom; 4 // Affichage 5 cout << \"Entrez votre nom : \"; 6 cin >> nom; 8 cout << \"Entrez votre age : \"; 9 cin >> age; 11 cout << \"Bonjour \" << nom << \", vous avez \" << age << \" ans.\" << endl; Listing 2 – Utilisation de cout et cin Arthur - S2 C++ - L1 Informatique Règle Opérateurs de flux : — « : pour envoyer vers la sortie (cout) — » : pour récupérer depuis l’entrée (cin) — endl : retour à la ligne Les types de base et les tableaux Types de données Table 1 – Types de données en C++ Type Description Exemple Entier int x = 42; double Réel double précision double pi = 3.14; float Réel simple précision float f = 2.5f; char Caractère char c = ’A’; bool Booléen bool ok = true; string Chaîne de caractères string s = \"hello\"; Déclaration de tableaux 1 // Tableau a une dimension 2 int tab [10]; // Tableau de 10 entiers 3 tab [0] = 5; // Premier element (indice 0) 4 tab [9] = 12; // Dernier element (indice 9) 6 // Tableau a deux dimensions 7 double matrice [3][4]; // 3 lignes , 4 colonnes 8 matrice [0][0] = 1.5; 10 // Initialisation lors de la declaration 11 int nombres [] = {10, 20, 30, 40, 50}; Listing 3 – Tableaux statiques Important Les tableaux statiques ont une taille fixe définie à la compilation. Cette taille ne peut pas être modifiée pendant l’exécution du programme. Pointeurs et références Les pointeurs Un pointeur est une variable qui contient l’adresse mémoire d’une autre variable. Arthur - S2 C++ - L1 Informatique 1 int x = 42; 2 int* p; // p est un pointeur sur int 4 p = &x; // p contient l’adresse de x 6 cout << x; // Affiche : 42 7 cout << &x; // Affiche"
+  },
+  {
+    "category": "programmation",
+    "ue": "cpp",
+    "doc_type": "cours",
+    "source": "cours_cpp.pdf",
+    "chunk_id": 6,
+    "text": "mémoire d’une autre variable. Arthur - S2 C++ - L1 Informatique 1 int x = 42; 2 int* p; // p est un pointeur sur int 4 p = &x; // p contient l’adresse de x 6 cout << x; // Affiche : 42 7 cout << &x; // Affiche : 0x7fff5a3b524 (adresse de x) 8 cout << p; // Affiche : 0x7fff5a3b524 (meme adresse) 9 cout << *p; // Affiche : 42 (valeur pointee) Listing 4 – Déclaration et utilisation de pointeurs Règle Les deux opérateurs clés : — & : opérateur d’adresse, donne l’adresse d’une variable — * : opérateur de déréférencement, accède à la valeur pointée Schéma mémoire Variable Adresse Valeur 0x1000 0x2000 0x1000 Le pointeur p (stocké à l’adresse 0x2000) contient l’adresse de x (0x1000). Les références Une référence est un alias pour une variable existante. 1 int x = 10; 2 int& ref = x; // ref est une reference sur x 4 ref = 20; // Modifie x 5 cout << x; // Affiche : 20 Listing 5 – Utilisation des références Astuce Une référence doit être initialisée lors de sa déclaration et ne peut plus changer de cible par la suite. Allocation dynamique La pile (Stack) et le tas (Heap) Allocation dans la pile Arthur - S2 C++ - L1 Informatique Table 2 – Comparaison Pile vs Tas Pile (Stack) Tas (Heap) Taille Limitée (∼8 Mo) Quasi-illimitée Libération Automatique Manuelle (delete) Utilisation Variables locales Allocation dynamique Rapidité Rapide Plus lent 1 void fonction () { int x = 5; // Cree dans la pile double tab [10]; // Cree dans la pile // ... 5 } // x et tab sont automatiquement detruits Listing 6 – Variables locales dans la pile Allocation dans le tas avec new/delete 1 // Allocation d’un seul element 2 int* p = new int; 3 *p = 42; 4 delete p; // Libere la memoire 6 // Allocation d’un tableau 7 int n = 100; 8 int* tableau = new int[n]; 9 tableau [0] = 10; 10 tableau [99] = 20; 11 delete [] tableau; // ATTENTION crochets ! Listing 7 – Allocation dynamique avec new Important Règle d’or : — Chaque new doit avoir son delete — Chaque new[] doit avoir son delete[] — Sinon : fuite mémoire ! Exemple complet 1 #include <iostream > 2 using namespace std; 4 int main () { int taille; cout << \"Entrez la taille du tableau : \"; cin >> taille; Arthur - S2 C++ - L1 Informatique // Allocation dynamique int* tab = new int[taille ]; // Remplissage for (int i = 0; i < taille; i++) { tab[i] = i * 10; // Affichage for (int i = 0; i < taille; i++) { cout << tab[i] << \" \"; cout << endl; // Liberation delete [] tab; return 0; 27 } Listing 8 – Gestion dynamique d’un tableau Passage de paramètres Passage par valeur Le paramètre reçoit une copie de la variable. 1 void modifier(int x) {"
+  },
+  {
+    "category": "programmation",
+    "ue": "cpp",
+    "doc_type": "cours",
+    "source": "cours_cpp.pdf",
+    "chunk_id": 7,
+    "text": "0; i < taille; i++) { cout << tab[i] << \" \"; cout << endl; // Liberation delete [] tab; return 0; 27 } Listing 8 – Gestion dynamique d’un tableau Passage de paramètres Passage par valeur Le paramètre reçoit une copie de la variable. 1 void modifier(int x) { x = 10; // Modifie la COPIE 5 int main () { int a = 5; modifier(a); cout << a; // Affiche : 5 (non modifie) Listing 9 – Passage par valeur Passage par référence Le paramètre est un alias de la variable originale. 1 void modifier(int& x) { // Le & est crucial x = 10; // Modifie l’ORIGINAL 5 int main () { int a = 5; Arthur - S2 C++ - L1 Informatique modifier(a); cout << a; // Affiche : 10 (modifie !) Listing 10 – Passage par référence Passage par référence constante Permet d’éviter la copie tout en protégeant la variable. 1 void afficher(const int& x) { cout << x; // x = 10; // ERREUR de compilation Listing 11 – Passage par référence constante Règle Quand utiliser quoi ? — Par valeur : types simples (int, char, bool, double) — Par référence constante (const &) : objets en lecture seule — Par référence (&) : objets à modifier Tableau comparatif Table 3 – Modes de passage de paramètres Mode Copie ? Modifiable ? Syntaxe Par valeur Non (copie) void f(int x) Par référence void f(int& x) Par réf. const. void f(const int& x) Programmation orientée objet Concepts fondamentaux La Programmation Orientée Objet (POO) permet de : — Regrouper données et fonctions dans une même structure (classe) — Protéger les données (encapsulation) — Créer des types personnalisés — Améliorer la maintenabilité et la réutilisabilité du code Structure d’une classe Arthur - S2 C++ - L1 Informatique 1 #ifndef POINT_H 2 #define POINT_H 4 class Point { 5 private: // Donnees membres privees double x; double y; 9 public: // Fonctions membres publiques // Constructeur Point(double abs , double ord); // Methodes void afficher () const; void deplacer(double dx , double dy); // Accesseurs (getters) double getX () const; double getY () const; // Mutateurs (setters) void setX(double valeur); void setY(double valeur); 24 }; 26 #endif Listing 12 – Déclaration d’une classe - fichier Point.h Implémentation 1 #include \"Point.h\" 2 #include <iostream > 3 using namespace std; 5 // Constructeur 6 Point :: Point(double abs , double ord) { x = abs; y = ord; 11 void Point :: afficher () const { cout << \"(\" << x << \", \" << y << \")\" << endl; 13 } 15 void Point :: deplacer(double dx , double dy) { x += dx; y += dy; 18 } Arthur - S2 C++ - L1 Informatique 20 double Point :: getX () const { return x; 22 } 24 double Point :: getY () const { return y; 26 } 28 void Point :: setX(double valeur) { x = valeur; 30 } 32 void Point :: setY(double valeur) {"
+  },
+  {
+    "category": "programmation",
+    "ue": "cpp",
+    "doc_type": "cours",
+    "source": "cours_cpp.pdf",
+    "chunk_id": 8,
+    "text": "Arthur - S2 C++ - L1 Informatique 20 double Point :: getX () const { return x; 22 } 24 double Point :: getY () const { return y; 26 } 28 void Point :: setX(double valeur) { x = valeur; 30 } 32 void Point :: setY(double valeur) { y = valeur; 34 } Listing 13 – Implémentation de la classe - fichier Point.cpp Utilisation 1 #include \"Point.h\" 2 #include <iostream > 3 using namespace std; 5 int main () { // Creation d’objets Point p1(3.0 , 5.0); Point p2(1.0 , 2.0); // Utilisation methodes p1.afficher (); // (3, 5) p1.deplacer (2.0 , 1.0); p1.afficher (); // (5, 6) // Utilisation accesseurs cout << \"x = \" << p1.getX () << endl; // Utilisation mutateurs p1.setX (10.0); p1.afficher (); // (10, 6) // INTERDIT : les donnees sont privees // p1.x = 20; // ERREUR de compilation return 0; 26 } Listing 14 – Programme principal - fichier main.cpp Arthur - S2 C++ - L1 Informatique Règle Principe d’encapsulation : — Les données membres sont private — Les méthodes d’interface sont public — On accède aux données via des accesseurs (getters) et mutateurs (setters) Constructeurs et destructeurs Le constructeur Le constructeur est une fonction appelée automatiquement lors de la création d’un objet. Règle Caractéristiques : — Porte le même nom que la classe — N’a pas de type de retour — Sert à initialiser l’objet — Peut effectuer des allocations dynamiques Types de constructeurs 1 class Tableau { 2 private: int* tab; int taille; 6 public: // 1) Constructeur par defaut Tableau () { taille = 10; tab = new int [10]; // 2) Constructeur avec parametres Tableau(int n) { taille = n; tab = new int[n]; // 3) Constructeur avec valeur par defaut Tableau(int n = 10) { taille = n; tab = new int[n]; 24 }; Listing 15 – Différents types de constructeurs Arthur - S2 C++ - L1 Informatique Utilisation 1 int main () { Tableau t1; // Appelle le constructeur par defaut Tableau t2 (20); // Appelle le constructeur avec n=20 Tableau t3 (50); // Appelle le constructeur avec n=50 // ATTENTION : ceci ne cree PAS un objet ! // Tableau t4(); // Declare fonction ! Listing 16 – Appel des constructeurs Le destructeur Le destructeur est une fonction appelée automatiquement lors de la destruction d’un objet. Règle Caractéristiques : — Porte le nom de la classe précédé de ˜ — N’a pas de paramètres — N’a pas de type de retour — Sert à libérer les ressources (mémoire, fichiers, etc.) 1 class Tableau { 2 private: int* tab; int taille; 6 public: Tableau(int n) { taille = n; tab = new int[n]; cout << \" Construction d’un tableau de \" << n << endl; ~Tableau () { // Destructeur delete [] tab; cout << \"Destruction du tableau\" << endl; 17 }; 19 void fonction () { Tableau t(100); // ... 22 } // Le destructeur est appele ICI automatiquement Listing 17 – Destructeur"
+  },
+  {
+    "category": "programmation",
+    "ue": "cpp",
+    "doc_type": "cours",
+    "source": "cours_cpp.pdf",
+    "chunk_id": 9,
+    "text": "<< \" Construction d’un tableau de \" << n << endl; ~Tableau () { // Destructeur delete [] tab; cout << \"Destruction du tableau\" << endl; 17 }; 19 void fonction () { Tableau t(100); // ... 22 } // Le destructeur est appele ICI automatiquement Listing 17 – Destructeur Arthur - S2 C++ - L1 Informatique Important Si votre classe contient des pointeurs alloués avec new, vous DEVEZ écrire un des- tructeur pour faire les delete correspondants, sinon : fuite mémoire ! Constructeur par recopie Le problème Sans constructeur par recopie défini, le compilateur fait une copie superficielle des pointeurs. 1 class Tableau { int* tab; int taille; 4 public: Tableau(int n) { taille = n; tab = new int[n]; ~Tableau () { delete [] tab; 13 }; 15 int main () { Tableau t1(5); Tableau t2 = t1; // Copie superficielle ! // t1 et t2 pointent vers le MEME tableau 20 } // CRASH : double delete ! Listing 18 – Problème de copie superficielle Schéma du problème : Avant copie : t1.tab →[zone mémoire A] Après copie superficielle : t1.tab →[zone mémoire A] t2.tab À la destruction : ˜t1() fait delete[] sur zone A ˜t2() fait delete[] sur zone A →ERREUR ! La solution : constructeur par recopie 1 class Tableau { Arthur - S2 C++ - L1 Informatique 2 private: int* tab; int taille; 6 public: // Constructeur normal Tableau(int n) { taille = n; tab = new int[n]; // CONSTRUCTEUR RECOPIE Tableau(const Tableau& autre) { taille = autre.taille; // Nouvelle allocation (copie profonde) tab = new int[taille ]; // Copie des valeurs for (int i = 0; i < taille; i++) { tab[i] = autre.tab[i]; // Destructeur ~Tableau () { delete [] tab; 30 }; Listing 19 – Constructeur par recopie (copie profonde) Règle Prototype du constructeur par recopie : NomClasse(const NomClasse& autre) Quand est-il appelé ? 1 Tableau t1 (10); 3 // 1) Initialisation par copie 4 Tableau t2 = t1; // Appelle le constructeur recopie 5 Tableau t3(t1); // Meme chose 7 // 2) Passage par valeur 8 void fonction(Tableau t) { // Copie ! // ... 10 } 11 fonction(t1); // Appelle le constructeur recopie Arthur - S2 C++ - L1 Informatique 13 // 3) Retour par valeur 14 Tableau creerTableau () { Tableau temp (5); return temp; // Copie ! 17 } Listing 20 – Situations d’appel du constructeur par recopie Astuce Pour éviter les copies inutiles, on préfère souvent passer les objets par référence constante : const Tableau& Opérateur d’affectation Différence avec le constructeur par recopie 1 Tableau t1 (10); 3 // Constructeur recopie (creation) 4 Tableau t2 = t1; 6 // Operateur d’affectation (objets existants) 7 Tableau t3(5); 8 t3 = t1; // Affectation Listing 21 – Constructeur par recopie vs opérateur d’affectation Implémentation 1 class Tableau { 2 private: int* tab; int taille; 6 public: // Operateur d’affectation Tableau& operator =( const Tableau& autre) { // 1) Verifier l’auto -affectation if (this == &autre) { return *this;"
+  },
+  {
+    "category": "programmation",
+    "ue": "cpp",
+    "doc_type": "cours",
+    "source": "cours_cpp.pdf",
+    "chunk_id": 10,
+    "text": "8 t3 = t1; // Affectation Listing 21 – Constructeur par recopie vs opérateur d’affectation Implémentation 1 class Tableau { 2 private: int* tab; int taille; 6 public: // Operateur d’affectation Tableau& operator =( const Tableau& autre) { // 1) Verifier l’auto -affectation if (this == &autre) { return *this; // 2) Liberer l’ancienne memoire delete [] tab; // 3) Copier les nouvelles donnees taille = autre.taille; tab = new int[taille ]; for (int i = 0; i < taille; i++) { Arthur - S2 C++ - L1 Informatique tab[i] = autre.tab[i]; // 4) Retourner *this return *this; 27 }; Listing 22 – Opérateur d’affectation Règle Les 4 étapes de l’opérateur d’affectation : 1. Vérifier l’auto-affectation (t = t) 2. Libérer les anciennes ressources 3. Copier les nouvelles données 4. Retourner *this La règle des trois Important Règle des trois : Si votre classe nécessite l’un des trois, elle nécessite probablement les trois : 1. Destructeur 2. Constructeur par recopie 3. Opérateur d’affectation C’est le cas pour toute classe qui gère des ressources dynamiques (pointeurs, fichiers, etc.). Variables const et static 10.1 Variables const Une variable const ne peut pas être modifiée après son initialisation. 1 const int MAX = 100; 2 MAX = 50; // ERREUR de compilation 4 const double PI = 3.14159; 5 PI = 3.14; // ERREUR de compilation Listing 23 – Utilisation de const 10.2 Fonctions membres const Une fonction membre const promet de ne pas modifier l’objet. Arthur - S2 C++ - L1 Informatique 1 class Point { 2 private: double x, y; 5 public: // Methode const : ne modifie pas l’objet void afficher () const { cout << \"(\" << x << \", \" << y << \")\" << endl; // x = 10; // ERREUR de compilation ! // Accesseur const double getX () const { return x; // Mutateur non -const void setX(double valeur) { x = valeur; 21 }; Listing 24 – Méthodes const Règle Quand utiliser const ? — Pour les accesseurs (getters) — Pour toute méthode qui ne modifie pas l’objet — Permet d’appeler ces méthodes sur des objets const 10.3 Variables membres static Une variable membre static est partagée par tous les objets de la classe. 1 class Cercle { 2 private: static double pi; // Partagee par TOUS les cercles double rayon; // Propre a chaque cercle 6 public: Cercle(double r) : rayon(r) {} double aire () const { return pi * rayon * rayon; static void setPi(double valeur) { pi = valeur; 16 }; Arthur - S2 C++ - L1 Informatique 18 // Initialisation (OBLIGATOIRE hors de la classe) 19 double Cercle ::pi = 3.14159; 21 int main () { Cercle c1 (5.0); Cercle c2 (10.0); // c1 et c2 partagent la MEME variable pi Cercle :: setPi (3.14); // Modifie pour tous les cercles 27 } Listing 25 – Variable membre static Astuce Les variables static sont utiles pour : — Compter le nombre d’instances créées — Partager des constantes entre tous les"
+  },
+  {
+    "category": "programmation",
+    "ue": "cpp",
+    "doc_type": "cours",
+    "source": "cours_cpp.pdf",
+    "chunk_id": 11,
+    "text": "c2 (10.0); // c1 et c2 partagent la MEME variable pi Cercle :: setPi (3.14); // Modifie pour tous les cercles 27 } Listing 25 – Variable membre static Astuce Les variables static sont utiles pour : — Compter le nombre d’instances créées — Partager des constantes entre tous les objets — Implémenter le pattern Singleton 10.4 Exemple : compteur d’objets 1 class Compteur { 2 private: static int nombreObjets; // Compte le nombre d’objets 5 public: Compteur () { nombreObjets ++; cout << \"Creation : \" << nombreObjets << \" objets\" << endl; ~Compteur () { nombreObjets --; cout << \"Destruction : \" << nombreObjets << \" objets\" << endl; static int getNombre () { return nombreObjets; 19 }; 21 // Initialisation 22 int Compteur :: nombreObjets = 0; 24 int main () { Compteur c1; Arthur - S2 C++ - L1 Informatique Compteur c2 , c3; cout << \"Nombre actuel : \" << Compteur :: getNombre () << endl; } // c2 et c3 sont detruits cout << \"Nombre final : \" << Compteur :: getNombre () << endl; 32 } Listing 26 – Compteur avec static Valeurs par défaut et surcharge 11.1 Valeurs par défaut On peut donner des valeurs par défaut aux paramètres. 1 class Point { 2 public: // Constructeur avec valeurs par defaut Point(double x = 0.0, double y = 0.0) { this ->x = x; this ->y = y; 8 }; 10 int main () { Point p1; // x=0, y=0 Point p2 (5.0); // x=5, y=0 Point p3(5.0 , 3.0); // x=5, y=3 14 } Listing 27 – Paramètres avec valeurs par défaut Règle Règles pour les valeurs par défaut : — Les paramètres avec valeur par défaut doivent être à droite — Déclarés dans le .h, pas dans le .cpp // CORRECT void f(int a, int b = 5, int c = 10); // INCORRECT void f(int a = 1, int b); 11.2 Surcharge de fonctions Plusieurs fonctions peuvent avoir le même nom si elles ont des paramètres différents. Arthur - S2 C++ - L1 Informatique 1 class Point { 2 public: // Version avec deux doubles void initialiser(double x, double y) { this ->x = x; this ->y = y; // Version avec un autre Point void initialiser(const Point& p) { this ->x = p.x; this ->y = p.y; // Version avec un pointeur sur Point void initialiser(const Point* p) { this ->x = p->x; this ->y = p->y; 20 }; 22 int main () { Point p1 , p2 , p3; p1.initialiser (5.0 , 3.0); // Appelle la 1ere version p2.initialiser(p1); // Appelle la 2eme version p3.initialiser (&p1); // Appelle la 3eme version 28 } Listing 28 – Surcharge de fonctions Astuce Le compilateur choisit automatiquement la bonne version en fonction des arguments fournis. C’est ce qu’on appelle la résolution de surcharge. Listes chaînées 12.1 Concept Une liste chaînée est une structure de données où chaque élément pointe vers le suivant. Tete →[12|→] →[33|→] →[25|/] Arthur - S2 C++"
+  },
+  {
+    "category": "programmation",
+    "ue": "cpp",
+    "doc_type": "cours",
+    "source": "cours_cpp.pdf",
+    "chunk_id": 12,
+    "text": "de fonctions Astuce Le compilateur choisit automatiquement la bonne version en fonction des arguments fournis. C’est ce qu’on appelle la résolution de surcharge. Listes chaînées 12.1 Concept Une liste chaînée est une structure de données où chaque élément pointe vers le suivant. Tete →[12|→] →[33|→] →[25|/] Arthur - S2 C++ - L1 Informatique Règle Avantages : — Taille dynamique (peut grandir/rétrécir) — Insertion/suppression en début de liste en O(1) Inconvénients : — Accès séquentiel uniquement (pas d’accès direct comme tab[i]) — Consommation mémoire supplémentaire (pointeurs) 12.2 Structure de base 1 #ifndef LISTE_H 2 #define LISTE_H 4 class Maillon { 5 private: int Info; Maillon* suivant; friend class Liste; // Liste peut acceder membres prives 11 public: Maillon(int valeur = 0, Maillon* suiv = nullptr) { Info = valeur; suivant = suiv; 16 }; 18 class Liste { 19 private: Maillon* tete; 22 public: // Constructeur Liste (); // Destructeur ~Liste (); // Methodes void ajouterDebut(int valeur); void ajouterFin(int valeur); void afficher () const; bool estVide () const; int taille () const; 35 }; 37 #endif Listing 29 – Classe Maillon et Liste - fichier Liste.h Arthur - S2 C++ - L1 Informatique 12.3 Implémentation 1 #include \"Liste.h\" 2 #include <iostream > 3 using namespace std; 5 // Constructeur 6 Liste :: Liste () { tete = nullptr; // Liste vide 10 // Destructeur 11 Liste ::~ Liste () { while (tete != nullptr) { Maillon* temp = tete; tete = tete ->suivant; delete temp; 17 } 19 // Verifier si la liste est vide 20 bool Liste :: estVide () const { return tete == nullptr; 22 } 24 // Ajouter en debut de liste 25 void Liste :: ajouterDebut(int valeur) { tete = new Maillon(valeur , tete); 27 } 29 // Ajouter en fin de liste 30 void Liste :: ajouterFin(int valeur) { // Cas particulier : liste vide if (tete == nullptr) { tete = new Maillon(valeur); return; // Parcourir jusqu ’a la fin Maillon* p = tete; while (p->suivant != nullptr) { p = p->suivant; // Ajouter a la fin p->suivant = new Maillon(valeur); 45 } 47 // Afficher la liste 48 void Liste :: afficher () const { Maillon* p = tete; Arthur - S2 C++ - L1 Informatique cout << \"Liste : \"; while (p != nullptr) { cout << p->Info << \" \"; p = p->suivant; cout << endl; 57 } 59 // Calculer la taille 60 int Liste :: taille () const { compteur = 0; Maillon* p = tete; while (p != nullptr) { compteur ++; p = p->suivant; return compteur; 70 } Listing 30 – Implémentation de Liste - fichier Liste.cpp 12.4 Utilisation 1 #include \"Liste.h\" 2 #include <iostream > 3 using namespace std; 5 int main () { Liste L; // Ajouts L.ajouterDebut (25); L.ajouterDebut (33); L.ajouterDebut (12); L.afficher (); // Liste : 12 33 25 L.ajouterFin (51); L.afficher (); // Liste : 12 33 25 51 cout << \"Taille : \" << L.taille () << endl; return 0; 21"
+  },
+  {
+    "category": "programmation",
+    "ue": "cpp",
+    "doc_type": "cours",
+    "source": "cours_cpp.pdf",
+    "chunk_id": 13,
+    "text": "using namespace std; 5 int main () { Liste L; // Ajouts L.ajouterDebut (25); L.ajouterDebut (33); L.ajouterDebut (12); L.afficher (); // Liste : 12 33 25 L.ajouterFin (51); L.afficher (); // Liste : 12 33 25 51 cout << \"Taille : \" << L.taille () << endl; return 0; 21 } // Le destructeur libere automatiquement toute la liste Listing 31 – Programme principal Arthur - S2 C++ - L1 Informatique 12.5 Schéma d’exécution Après les ajouts en début : L.tete →[12|→] →[33|→] →[25|/] Après l’ajout en fin : L.tete →[12|→] →[33|→] →[25|→] →[51|/] 12.6 Opérations supplémentaires 1 // Rechercher une valeur 2 bool Liste :: contient(int valeur) const { Maillon* p = tete; while (p != nullptr) { if (p->Info == valeur) return true; p = p->suivant; return false; 10 } 12 // Supprimer le premier element 13 void Liste :: supprimerDebut () { if (tete == nullptr) return; Maillon* temp = tete; tete = tete ->suivant; delete temp; 20 } 22 // Supprimer toutes les occurrences d’une valeur 23 void Liste :: supprimer(int valeur) { // Supprimer en tete while (tete != nullptr && tete ->Info == valeur) { Maillon* temp = tete; tete = tete ->suivant; delete temp; // Supprimer dans le reste if (tete == nullptr) return; Maillon* p = tete; while (p->suivant != nullptr) { if (p->suivant ->Info == valeur) { Maillon* temp = p->suivant; p->suivant = temp ->suivant; delete temp; } else { Arthur - S2 C++ - L1 Informatique p = p->suivant; 45 } Listing 32 – Autres opérations utiles Récursivité 13.1 Notion de récursivité Une fonction est dite récursive lorsqu’elle s’appelle elle-même. On dit qu’elle « se répète toute seule indéfiniment » (tant qu’une condition d’arrêt n’est pas atteinte). Exemple La factorielle (n!) est un exemple classique de récursivité : n! = si n ≤1 n × (n −1)! sinon Soit : n! = 1 × 2 × 3 × 4 × . . . × (n −1) × n 1 int factorielle(int n) { if (n <= 1) return 1; else return n * factorielle(n - 1); Listing 33 – Fonction factorielle récursive Règle Toute fonction récursive doit posséder : — Un cas de base (condition d’arrêt) qui stoppe la récursion — Un appel récursif qui se rapproche du cas de base à chaque itération Sans condition d’arrêt, la fonction s’appelle indéfiniment →débordement de pile ! 13.2 Récursivité croisée (ou mutuelle) On parle de récursivité croisée (ou mutuelle) lorsque deux fonctions s’appellent mutuellement. Un exemple classique est le test de parité/imparité avec des fonctions booléennes : 1 bool estPair(int n); // Declaration anticipee 2 bool estImpair(int n); 4 bool estPair(int n) { if (n == 0) Arthur - S2 C++ - L1 Informatique return true; return estImpair(n - 1); 10 bool estImpair(int n) { if (n == 0) return false; return estPair(n - 1); 14 } Listing 34 – Récursivité croisée : parité et imparité Astuce La récursivité croisée nécessite une déclaration anticipée d’au moins une des deux fonctions, car chacune"
+  },
+  {
+    "category": "programmation",
+    "ue": "cpp",
+    "doc_type": "cours",
+    "source": "cours_cpp.pdf",
+    "chunk_id": 14,
+    "text": "L1 Informatique return true; return estImpair(n - 1); 10 bool estImpair(int n) { if (n == 0) return false; return estPair(n - 1); 14 } Listing 34 – Récursivité croisée : parité et imparité Astuce La récursivité croisée nécessite une déclaration anticipée d’au moins une des deux fonctions, car chacune doit connaître la signature de l’autre pour pouvoir l’appeler. Structures chaînées – Arbres 14.1 Introduction On peut voir un arbre comme une généralisation de listes chaînées qui porteraient comme informations des listes. De manière plus intuitive, un arbre est la modélisation d’une organisation hiérarchique de données. Exemple Exemples d’organisations hiérarchiques : — Organigramme d’un service, d’une entreprise, d’une armée (maréchal →géné- raux →colonels →lieutenants →sergents →troufions) — Un livre découpé en volumes →tomes →parties →chapitres →sections 14.2 Définition récursive De manière formelle, un arbre est une structure de données à laquelle on accède par une et une seule donnée, qui donne accès à son information et qui fournit l’accès à plusieurs informations suivantes. Règle Définition récursive : A est un Arbre si A est un ensemble tel que : — il existe un élément particulier appelé racine, — les autres éléments sont partitionnés en ensembles, chaque ensemble étant lui- même un arbre. 14.3 Vocabulaire — Nœud : cellule qui porte une information de l’arbre. — Racine : premier nœud de l’arbre, celui qui donne accès à tous les autres. Arthur - S2 C++ - L1 Informatique — Sous-arbre : sous-ensemble d’un arbre qui constitue lui-même un arbre. Tous les nœuds sont racine d’un sous-arbre. — Fils : nœuds accessibles en suivant une et une seule flèche à partir d’un nœud. — Père : nœud qui donne accès à ses fils. — Frères : nœuds ayant le même père. — Feuille : nœud sans fils. 14.4 Caractéristiques — Degré d’un nœud : nombre de fils d’un nœud. — Profondeur d’un nœud : distance d’un nœud à la racine (en nombre de flèches). — Hauteur d’un arbre : maximum des profondeurs des nœuds de l’arbre. Un arbre réduit à un seul nœud est de hauteur 0. — Niveau d’un arbre : ensemble des nœuds se trouvant à une même profondeur. 14.5 Arbres ordonnés Un arbre est ordonné si il existe une relation d’ordre définie sur tous les fils de tous ses nœuds. Les arbres sont très souvent ordonnés. 14.6 Arbres binaires Les arbres binaires sont des arbres dont tous les nœuds ont au plus 2 fils. Ce sont les arbres les plus utilisés. Règle Définition récursive d’un arbre binaire : Un arbre binaire est : — soit un arbre vide, — soit un triplet constitué d’une information et de 2 arbres binaires : ⟨I, G, D⟩ où I représente l’information, G le fils gauche et D le fils droit. 14.7 Implémentation des arbres binaires Pour représenter des arbres binaires en C++, on utilise deux classes : une pour les nœuds et une pour l’arbre global. 1 class noeud { int info; noeud* fg; // fils gauche noeud* fd; // fils droit friend"
+  },
+  {
+    "category": "programmation",
+    "ue": "cpp",
+    "doc_type": "cours",
+    "source": "cours_cpp.pdf",
+    "chunk_id": 15,
+    "text": "fils gauche et D le fils droit. 14.7 Implémentation des arbres binaires Pour représenter des arbres binaires en C++, on utilise deux classes : une pour les nœuds et une pour l’arbre global. 1 class noeud { int info; noeud* fg; // fils gauche noeud* fd; // fils droit friend class arbre; // arbre peut acceder membres prives 8 public: noeud(int I, noeud* G = nullptr , noeud* D = nullptr) { info = I; fg = G; Arthur - S2 C++ - L1 Informatique fd = D; 14 }; Listing 35 – Classe noeud 1 class arbre { noeud* racine; 4 public: // Constructeur avec valeur par defaut arbre(noeud* N = nullptr) { racine = N; 9 }; Listing 36 – Classe arbre On retrouve bien ici la récursivité de la définition : la classe noeud est définie par elle-même (ses fils sont aussi des pointeurs sur noeud). Astuce La déclaration friend class arbre; dans la classe noeud permet à la classe arbre d’accéder aux données privées (info, fg, fd) des nœuds. 14.8 Création d’un arbre Les constructeurs permettent d’initialiser des arbres directement lors de leur déclara- tion : 1 arbre A(new noeud (12, new noeud (7, new noeud (16) , new noeud (4) new noeud (2) 8 ); Listing 37 – Création d’un arbre binaire Cet appel crée l’arbre suivant : Arthur - S2 C++ - L1 Informatique 14.9 Parcours des arbres On appelle parcours d’un arbre le fait d’énumérer en vue d’un traitement quelconque toutes les informations contenues dans l’arbre. La structure récursive des arbres donne une façon simple de réaliser ce parcours. Règle Le parcours s’aligne sur la structure récursive de l’arbre : Définition Contenu du nœud Action Arbre vide nullptr Rien Info + 2 arbres ⟨I, G, D⟩ Traiter I, Parcourir G, Parcourir D 1 // Fonction membre privee avec parametre 2 void arbre :: Parcours(noeud* N) { if (N == nullptr) return; cout << N->info << endl; // Traiter l’information Parcours(N->fg); // Parcourir le fils gauche Parcours(N->fd); // Parcourir le fils droit 10 // Fonction membre publique sans parametre 11 void arbre :: Parcours () { Parcours(racine); 13 } Listing 38 – Fonction de parcours récursive Important La fonction de parcours a besoin d’accéder à racine (privée dans arbre) et aux données des nœuds (info, fg, fd, privées dans noeud). D’où la solution : — Mettre la fonction de parcours comme fonction membre de la classe arbre — Déclarer friend class arbre; dans la classe noeud — Utiliser deux fonctions : une publique sans paramètre (qui appelle avec racine), et une privée avec un paramètre noeud* L’appel se fait simplement : A.Parcours(); 14.10 Exemple de déroulement Considérons l’arbre suivant : Arthur - S2 C++ - L1 Informatique L’appel de A.Parcours() provoque Parcours(racine) : 1. N (racine) n’est pas nullptr →affichage de 4 2. Appel de Parcours(fg) →affichage de 9 3. Appel de Parcours(fg) →affichage de 8 4. Parcours(nullptr) →retour, Parcours(nullptr) →retour 5. Appel de Parcours(fd) →affichage de 7 6. Retour au nœud 4, appel"
+  },
+  {
+    "category": "programmation",
+    "ue": "cpp",
+    "doc_type": "cours",
+    "source": "cours_cpp.pdf",
+    "chunk_id": 16,
+    "text": "- L1 Informatique L’appel de A.Parcours() provoque Parcours(racine) : 1. N (racine) n’est pas nullptr →affichage de 4 2. Appel de Parcours(fg) →affichage de 9 3. Appel de Parcours(fg) →affichage de 8 4. Parcours(nullptr) →retour, Parcours(nullptr) →retour 5. Appel de Parcours(fd) →affichage de 7 6. Retour au nœud 4, appel de Parcours(fd) →affichage de 6 7. Puis 5, 2, 1 Affichage dans l’ordre : 4, 9, 8, 7, 6, 5, 2, 1 14.11 Les trois types de parcours Il existe 3 ordres possibles pour les parcours (si on exclut les inversions des fils). Ils ne diffèrent que par l’ordre des lignes dans la fonction : 1 void arbre :: ParcoursPrefixe (noeud* N) { if (N == nullptr) return; cout << N->info << endl; // Traitement ParcoursPrefixe (N->fg); // Fils gauche ParcoursPrefixe (N->fd); // Fils droit Listing 39 – Parcours préfixe (racine, puis fils) 1 void arbre :: ParcoursInfixe(noeud* N) { if (N == nullptr) return; ParcoursInfixe (N->fg); // Fils gauche cout << N->info << endl; // Traitement ParcoursInfixe (N->fd); // Fils droit Listing 40 – Parcours infixe (fils gauche, racine, fils droit) 1 void arbre :: ParcoursPostfixe (noeud* N) { if (N == nullptr) return; ParcoursPostfixe (N->fg); // Fils gauche ParcoursPostfixe (N->fd); // Fils droit cout << N->info << endl; // Traitement Listing 41 – Parcours postfixe (fils, puis racine) 14.12 Répartition des fonctions entre Arbre et Nœud Une autre organisation possible : une fonction dans arbre qui gère le cas de l’arbre vide, et une fonction dans noeud qui s’occupe du travail sur un nœud. Arthur - S2 C++ - L1 Informatique 1 // Dans la classe arbre 2 void arbre :: Parcours () { if (racine == nullptr) return; racine ->Parcours (); 8 // Dans la classe noeud 9 void noeud :: Parcours () { cout << info << endl; if (fg != nullptr) fg ->Parcours (); if (fd != nullptr) fd ->Parcours (); 15 } Listing 42 – Parcours réparti entre arbre et noeud Astuce Cette organisation est très élégante mais elle est forcément récursive. N’hésitez pas à envisager plusieurs versions de vos fonctions. 14.13 Arbres binaires ordonnés Un arbre binaire est ordonné si pour tous les nœuds de l’arbre : — tous les nœuds du fils gauche sont inférieurs à la racine, — la racine est inférieure à tous les nœuds du fils droit. Règle Un parcours infixe d’un arbre binaire ordonné énumère les nœuds dans l’ordre crois- sant. Par exemple sur l’arbre ci-dessus : 1, 2, 4, 5, 6, 7, 8, 9, 11 14.14 Quelques arbres particuliers — Arbre binaire homogène : tous les nœuds ont 0 ou 2 fils. — Arbre binaire dégénéré : tous les nœuds ont 1 seul fils (sauf le dernier qui n’en a aucun). Arthur - S2 C++ - L1 Informatique — Arbre en peigne : arbre dégénéré dont tous les fils sont du même côté. Ce sont en fait des listes chaînées. — Arbre binaire parfait : tous les niveaux sont complètement remplis, sauf le dernier qui est totalement"
+  },
+  {
+    "category": "programmation",
+    "ue": "cpp",
+    "doc_type": "cours",
+    "source": "cours_cpp.pdf",
+    "chunk_id": 17,
+    "text": "qui n’en a aucun). Arthur - S2 C++ - L1 Informatique — Arbre en peigne : arbre dégénéré dont tous les fils sont du même côté. Ce sont en fait des listes chaînées. — Arbre binaire parfait : tous les niveaux sont complètement remplis, sauf le dernier qui est totalement vide. — Arbre binaire complet : tous les niveaux sont remplis sauf éventuellement le dernier, et dans ce cas les pointeurs nullptr sont à droite. Règle Soit un arbre binaire parfait de hauteur k : — Nombre de feuilles : 2k — Nombre total de nœuds : 2k+1 −1 Bonnes pratiques et pièges à éviter 15.1 Checklist des bonnes pratiques Allocation dynamique — Chaque new doit avoir son delete — Chaque new[] doit avoir son delete[] — Initialiser les pointeurs à nullptr Classes avec ressources dynamiques — Toujours définir un destructeur — Toujours définir un constructeur par recopie — Toujours définir un opérateur d’affectation — →Règle des trois ! Passage de paramètres — Types simples →par valeur — Objets en lecture →const & — Objets à modifier →& Méthodes const — Marquer const les méthodes qui ne modifient pas l’objet — Notamment les accesseurs (getters) Encapsulation — Données membres en private — Méthodes d’interface en public — Utiliser des accesseurs/mutateurs Arthur - S2 C++ - L1 Informatique 15.2 Pièges fréquents Important Erreurs classiques à éviter : 1. Oublier delete int* p = new int; *p = 42; // Oubli de delete p; Fuite memoire ! 2. Mauvais delete pour un tableau int* tab = new int [100]; delete tab; // ERREUR ! Il faut delete [] delete [] tab; // CORRECT 3. Double delete int* p = new int; delete p; delete p; // CRASH ! 4. Copie superficielle // Sans constructeur recopie defini Tableau t1 (10); Tableau t2 = t1; // t1 et t2 pointent vers le meme tableau // double delete au destructeur ! 5. Accès à nullptr int* p = nullptr; *p = 42; // CRASH ! 6. Dépassement de tableau int tab [10]; tab [10] = 5; // ERREUR : indices 0 a 9 ! 7. Perdre l’adresse d’une allocation int* p = new int [100]; p = new int [50]; // Perd l’adresse du 1er tableau // fuite memoire ! Arthur - S2 C++ - L1 Informatique 15.3 Conseils de débogage Astuce Pour déboguer les problèmes mémoire : — Utiliser valgrind sous Linux — Compiler avec -g pour avoir les infos de debug — Ajouter des cout dans constructeurs/destructeurs — Vérifier systématiquement : if (p != nullptr) — Mettre nullptr après chaque delete Exercices d’entraînement 16.1 Exercice 1 : Classe Rectangle Énoncé : Créer une classe Rectangle avec : — Attributs privés : longueur, largeur — Constructeur avec paramètres — Méthodes : aire(), perimetre(), afficher() Solution : 1 #ifndef RECTANGLE_H 2 #define RECTANGLE_H 4 class Rectangle { 5 private: double longueur; double largeur; 9 public: Rectangle(double l = 1.0, double L = 1.0); double aire () const; double perimetre () const; void afficher () const;"
+  },
+  {
+    "category": "programmation",
+    "ue": "cpp",
+    "doc_type": "cours",
+    "source": "cours_cpp.pdf",
+    "chunk_id": 18,
+    "text": "— Constructeur avec paramètres — Méthodes : aire(), perimetre(), afficher() Solution : 1 #ifndef RECTANGLE_H 2 #define RECTANGLE_H 4 class Rectangle { 5 private: double longueur; double largeur; 9 public: Rectangle(double l = 1.0, double L = 1.0); double aire () const; double perimetre () const; void afficher () const; 14 }; 16 #endif Listing 43 – Rectangle.h 1 #include \"Rectangle.h\" 2 #include <iostream > 3 using namespace std; 5 Rectangle :: Rectangle(double l, double L) { longueur = l; largeur = L; 10 double Rectangle :: aire () const { return longueur * largeur; Arthur - S2 C++ - L1 Informatique 12 } 14 double Rectangle :: perimetre () const { return 2 * (longueur + largeur); 16 } 18 void Rectangle :: afficher () const { cout << \"Rectangle \" << longueur << \"x\" << largeur << endl; cout << \"Aire : \" << aire () << endl; cout << \"Perimetre : \" << perimetre () << endl; 22 } Listing 44 – Rectangle.cpp 16.2 Exercice 2 : Classe Vecteur dynamique Énoncé : Créer une classe Vecteur qui gère un tableau dynamique d’entiers avec : — Constructeur avec taille — Destructeur — Constructeur par recopie — Opérateur d’affectation — Méthode get(int i) et set(int i, int valeur) Solution : 1 #ifndef VECTEUR_H 2 #define VECTEUR_H 4 class Vecteur { 5 private: int* tab; int taille; 9 public: // Constructeur Vecteur(int n); // Destructeur ~Vecteur (); // Constructeur recopie Vecteur(const Vecteur& autre); // Operateur d’affectation Vecteur& operator =( const Vecteur& autre); // Accesseurs int get(int i) const; void set(int i, int valeur); getTaille () const; // Affichage Arthur - S2 C++ - L1 Informatique void afficher () const; 29 }; 31 #endif Listing 45 – Vecteur.h 1 #include \"Vecteur.h\" 2 #include <iostream > 3 using namespace std; 5 Vecteur :: Vecteur(int n) { taille = n; tab = new int[n]; // Initialisation a 0 for (int i = 0; i < n; i++) { tab[i] = 0; 13 } 15 Vecteur ::~ Vecteur () { delete [] tab; 17 } 19 Vecteur :: Vecteur(const Vecteur& autre) { taille = autre.taille; tab = new int[taille ]; for (int i = 0; i < taille; i++) { tab[i] = autre.tab[i]; 26 } 28 Vecteur& Vecteur :: operator =( const Vecteur& autre) { if (this == &autre) return *this; delete [] tab; taille = autre.taille; tab = new int[taille ]; for (int i = 0; i < taille; i++) { tab[i] = autre.tab[i]; return *this; 42 } 44 int Vecteur ::get(int i) const { if (i < 0 || i >= taille) { Arthur - S2 C++ - L1 Informatique cout << \"Erreur : indice hors limites\" << endl; return 0; return tab[i]; 50 } 52 void Vecteur ::set(int i, int valeur) { if (i < 0 || i >= taille) { cout << \"Erreur : indice hors limites\" << endl; return; tab[i] = valeur; 58 } 60 int Vecteur :: getTaille () const { return taille; 62 } 64 void Vecteur"
+  },
+  {
+    "category": "programmation",
+    "ue": "cpp",
+    "doc_type": "cours",
+    "source": "cours_cpp.pdf",
+    "chunk_id": 19,
+    "text": "tab[i]; 50 } 52 void Vecteur ::set(int i, int valeur) { if (i < 0 || i >= taille) { cout << \"Erreur : indice hors limites\" << endl; return; tab[i] = valeur; 58 } 60 int Vecteur :: getTaille () const { return taille; 62 } 64 void Vecteur :: afficher () const { cout << \"[\"; for (int i = 0; i < taille; i++) { cout << tab[i]; if (i < taille - 1) cout << \", \"; cout << \"]\" << endl; 72 } Listing 46 – Vecteur.cpp 16.3 Exercice 3 : Pile (Stack) avec liste chaînée Énoncé : Implémenter une pile (LIFO) avec : — empiler(int x) : ajoute x au sommet — depiler() : retire et retourne l’élément du sommet — estVide() : teste si la pile est vide — sommet() : retourne l’élément du sommet sans le retirer Solution : 1 class Maillon { int valeur; Maillon* suivant; friend class Pile; 5 public: Maillon(int v, Maillon* s = nullptr) : valeur(v), suivant(s ) {} 7 }; 9 class Pile { 10 private: Maillon* sommetPile; Arthur - S2 C++ - L1 Informatique 13 public: Pile () : sommetPile(nullptr) {} ~Pile () { while (! estVide ()) { depiler (); void empiler(int x) { sommetPile = new Maillon(x, sommetPile); depiler () { if (estVide ()) { cout << \"Erreur : pile vide\" << endl; return 0; int valeur = sommetPile ->valeur; Maillon* temp = sommetPile; sommetPile = sommetPile ->suivant; delete temp; return valeur; bool estVide () const { return sommetPile == nullptr; int sommet () const { if (estVide ()) { cout << \"Erreur : pile vide\" << endl; return 0; return sommetPile ->valeur; void afficher () const { cout << \"Pile (sommet -> bas) : \"; Maillon* p = sommetPile; while (p != nullptr) { cout << p->valeur << \" \"; p = p->suivant; cout << endl; 61 }; Arthur - S2 C++ - L1 Informatique Listing 47 – Pile.h et Pile.cpp Aide-mémoire 17.1 Tableau récapitulatif des opérateurs Table 4 – Opérateurs importants en C++ Opérateur Utilisation Adresse Donne l’adresse d’une variable Déréférencement Accède à la valeur pointée Flèche Accède à un membre via un pointeur Point Accède à un membre d’un objet Résolution de portée Définit une fonction hors classe Allocation Alloue de la mémoire dynamique delete Libération Libère de la mémoire dynamique 17.2 Commandes de compilation 1 # Compilation simple 2 g++ programme.cpp -o programme 4 # Compilation avec debug 5 g++ -g programme.cpp -o programme 7 # Compilation avec warnings 8 g++ -Wall -Wextra programme.cpp -o programme 10 # Compilation de plusieurs fichiers 11 g++ main.cpp Point.cpp Rectangle.cpp -o programme 13 # Execution 14 ./ programme 16 # Detection de fuites memoire (Linux) 17 valgrind ./ programme Listing 48 – Compilation et exécution 17.3 Modèle de fichiers .h et .cpp 1 #ifndef NOMCLASSE_H 2 #define NOMCLASSE_H Arthur - S2 C++ - L1 Informatique 4 class NomClasse { 5 private: // Attributs prives 8 public: // Constructeurs NomClasse (); NomClasse(/* parametres */);"
+  },
+  {
+    "category": "programmation",
+    "ue": "cpp",
+    "doc_type": "cours",
+    "source": "cours_cpp.pdf",
+    "chunk_id": 20,
+    "text": "memoire (Linux) 17 valgrind ./ programme Listing 48 – Compilation et exécution 17.3 Modèle de fichiers .h et .cpp 1 #ifndef NOMCLASSE_H 2 #define NOMCLASSE_H Arthur - S2 C++ - L1 Informatique 4 class NomClasse { 5 private: // Attributs prives 8 public: // Constructeurs NomClasse (); NomClasse(/* parametres */); // Destructeur ~NomClasse (); // Constructeur recopie NomClasse(const NomClasse& autre); // Operateur d’affectation NomClasse& operator =( const NomClasse& autre); // Methodes publiques 23 }; 25 #endif Listing 49 – Modèle de fichier .h 1 #include \"NomClasse.h\" 3 NomClasse :: NomClasse () { // Initialisation 7 NomClasse ::~ NomClasse () { // Liberation ressources 11 // Autres implementations ... Listing 50 – Modèle de fichier .cpp Conclusion Ce document couvre les concepts essentiels du C++ pour le semestre 2 de licence informatique : — Gestion de la mémoire (pile vs tas) — Pointeurs et références — Programmation orientée objet — Constructeurs et destructeurs — Allocation dynamique — Listes chaînées — Bonnes pratiques Arthur - S2 C++ - L1 Informatique Règle Les trois règles d’or : 1. Règle des trois : Si vous définissez un destructeur, définissez aussi le construc- teur par recopie et l’opérateur d’affectation 2. RAII (Resource Acquisition Is Initialization) : Acquérir les ressources dans le constructeur, les libérer dans le destructeur 3. const-correctness : Utiliser const partout où c’est pertinent Bon courage pour tes révisions !"
+  },
+  {
+    "category": "programmation",
+    "ue": "cpp",
     "doc_type": "CC",
     "source": "archive_cc1_cpp2025.pdf",
     "chunk_id": 0,
@@ -3201,215 +3369,47 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
-    "doc_type": "cours",
-    "source": "cours_cpp.pdf",
-    "chunk_id": 0,
-    "text": "Cours de C++ Guide complet pour la révision S2 - Licence Informatique Arthur 10 février 2026 Arthur - S2 C++ - L1 Informatique Table des matières Introduction au C++ Caractéristiques du langage . . . . . . . . . . . . . . . . . . . . . . . . . . Structure minimale d’un programme . . . . . . . . . . . . . . . . . . . . . Entrées et sorties . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Les types de base et les tableaux Types de données . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Déclaration de tableaux . . . . . . . . . . . . . . . . . . . . . . . . . . . . Pointeurs et références Les pointeurs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Schéma mémoire . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Les références . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Allocation dynamique La pile (Stack) et le tas (Heap) . . . . . . . . . . . . . . . . . . . . . . . . Allocation dans la pile . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Allocation dans le tas avec new/delete . . . . . . . . . . . . . . . . . . . . Exemple complet . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Passage de paramètres Passage par valeur . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Passage par référence . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Passage par référence constante"
-  },
-  {
-    "category": "programmation",
-    "ue": "CPP",
-    "doc_type": "cours",
-    "source": "cours_cpp.pdf",
-    "chunk_id": 1,
-    "text": ". . . . . . . . . . . . . Passage par référence . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Passage par référence constante . . . . . . . . . . . . . . . . . . . . . . . . Tableau comparatif . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Programmation orientée objet Concepts fondamentaux . . . . . . . . . . . . . . . . . . . . . . . . . . . . Structure d’une classe . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Implémentation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Utilisation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Constructeurs et destructeurs Le constructeur . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Types de constructeurs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Utilisation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Le destructeur . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Constructeur par recopie Le problème . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . La solution : constructeur par recopie . . . . . . . . . . . . . . . . . . . . . Quand est-il appelé ? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Opérateur d’affectation Différence avec le constructeur par recopie . . . . ."
-  },
-  {
-    "category": "programmation",
-    "ue": "CPP",
-    "doc_type": "cours",
-    "source": "cours_cpp.pdf",
-    "chunk_id": 2,
-    "text": ". . . Quand est-il appelé ? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Opérateur d’affectation Différence avec le constructeur par recopie . . . . . . . . . . . . . . . . . . Implémentation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . La règle des trois . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Arthur - S2 C++ - L1 Informatique 10 Variables const et static 10.1 Variables const . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10.2 Fonctions membres const . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10.3 Variables membres static . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10.4 Exemple : compteur d’objets . . . . . . . . . . . . . . . . . . . . . . . . . . 11 Valeurs par défaut et surcharge 11.1 Valeurs par défaut . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11.2 Surcharge de fonctions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12 Listes chaînées 12.1 Concept . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12.2 Structure de base . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12.3 Implémentation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12.4 Utilisation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
-  },
-  {
-    "category": "programmation",
-    "ue": "CPP",
-    "doc_type": "cours",
-    "source": "cours_cpp.pdf",
-    "chunk_id": 3,
-    "text": ". . . . . . . . . . . . . 12.4 Utilisation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12.5 Schéma d’exécution . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12.6 Opérations supplémentaires . . . . . . . . . . . . . . . . . . . . . . . . . . 13 Récursivité 13.1 Notion de récursivité . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13.2 Récursivité croisée (ou mutuelle) . . . . . . . . . . . . . . . . . . . . . . . 14 Structures chaînées – Arbres 14.1 Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14.2 Définition récursive . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14.3 Vocabulaire . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14.4 Caractéristiques . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14.5 Arbres ordonnés . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14.6 Arbres binaires . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14.7 Implémentation des arbres binaires . . . . . . . . . . . . . . . . . . . . . . 14.8 Création d’un arbre . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14.9 Parcours des arbres . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14.10Exemple de déroulement . ."
-  },
-  {
-    "category": "programmation",
-    "ue": "CPP",
-    "doc_type": "cours",
-    "source": "cours_cpp.pdf",
-    "chunk_id": 4,
-    "text": ". . . . . . . . . . 14.9 Parcours des arbres . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14.10Exemple de déroulement . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14.11Les trois types de parcours . . . . . . . . . . . . . . . . . . . . . . . . . . . 14.12Répartition des fonctions entre Arbre et Nœud . . . . . . . . . . . . . . . . 14.13Arbres binaires ordonnés . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14.14Quelques arbres particuliers . . . . . . . . . . . . . . . . . . . . . . . . . . 15 Bonnes pratiques et pièges à éviter 15.1 Checklist des bonnes pratiques . . . . . . . . . . . . . . . . . . . . . . . . . 15.2 Pièges fréquents . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15.3 Conseils de débogage . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16 Exercices d’entraînement 16.1 Exercice 1 : Classe Rectangle . . . . . . . . . . . . . . . . . . . . . . . . . 16.2 Exercice 2 : Classe Vecteur dynamique . . . . . . . . . . . . . . . . . . . . 16.3 Exercice 3 : Pile (Stack) avec liste chaînée . . . . . . . . . . . . . . . . . . Arthur - S2 C++ - L1 Informatique 17 Aide-mémoire 17.1 Tableau récapitulatif des opérateurs . . . . . . . . . . . . . . . . . . . . . . 17.2 Commandes de compilation . . . . . . . . . . . . . . . . . . . . . . . . . . 17.3 Modèle de fichiers .h et .cpp . . . . . . . . . . . . . . . . . . . . . . . . . . 18 Conclusion Arthur - S2 C++ - L1 Informatique Introduction au C++ Caractéristiques du langage"
-  },
-  {
-    "category": "programmation",
-    "ue": "CPP",
-    "doc_type": "cours",
-    "source": "cours_cpp.pdf",
-    "chunk_id": 5,
-    "text": ". . 17.3 Modèle de fichiers .h et .cpp . . . . . . . . . . . . . . . . . . . . . . . . . . 18 Conclusion Arthur - S2 C++ - L1 Informatique Introduction au C++ Caractéristiques du langage Le C++ est un langage compilé, c’est-à-dire qu’avant d’être exécuté, le code source doit être traduit en langage machine par un compilateur. Exemple Processus de compilation et exécution : 1. Écriture du code dans programme.cpp 2. Compilation : g++ programme.cpp -o programme 3. Exécution : ./programme Structure minimale d’un programme 1 #include <iostream > 2 using namespace std; 4 int main () { cout << \"Hello World!\" << endl; return 0; Listing 1 – Programme minimal en C++ — #include <iostream> : inclut la bibliothèque d’entrées/sorties — using namespace std; : permet d’utiliser cout et cin sans préfixe — int main() : fonction principale, point d’entrée du programme Entrées et sorties En C++, on utilise cout et cin à la place de printf et scanf. 1 int age; 2 string nom; 4 // Affichage 5 cout << \"Entrez votre nom : \"; 6 cin >> nom; 8 cout << \"Entrez votre age : \"; 9 cin >> age; 11 cout << \"Bonjour \" << nom << \", vous avez \" << age << \" ans.\" << endl; Listing 2 – Utilisation de cout et cin Arthur - S2 C++ - L1 Informatique Règle Opérateurs de flux : — « : pour envoyer vers la sortie (cout) — » : pour récupérer depuis l’entrée (cin) — endl : retour à la ligne Les types de base et les tableaux Types de données Table 1 – Types de données en C++ Type Description Exemple Entier int x = 42; double Réel double précision double pi = 3.14; float Réel simple précision float f = 2.5f; char Caractère char c = ’A’; bool Booléen bool ok = true; string Chaîne de caractères string s = \"hello\"; Déclaration de tableaux 1 // Tableau a une dimension 2 int tab [10]; // Tableau de 10 entiers 3 tab [0] = 5; // Premier element (indice 0) 4 tab [9] = 12; // Dernier element (indice 9) 6 // Tableau a deux dimensions 7 double matrice [3][4]; // 3 lignes , 4 colonnes 8 matrice [0][0] = 1.5; 10 // Initialisation lors de la declaration 11 int nombres [] = {10, 20, 30, 40, 50}; Listing 3 – Tableaux statiques Important Les tableaux statiques ont une taille fixe définie à la compilation. Cette taille ne peut pas être modifiée pendant l’exécution du programme. Pointeurs et références Les pointeurs Un pointeur est une variable qui contient l’adresse mémoire d’une autre variable. Arthur - S2 C++ - L1 Informatique 1 int x = 42; 2 int* p; // p est un pointeur sur int 4 p = &x; // p contient l’adresse de x 6 cout << x; // Affiche : 42 7 cout << &x; // Affiche"
-  },
-  {
-    "category": "programmation",
-    "ue": "CPP",
-    "doc_type": "cours",
-    "source": "cours_cpp.pdf",
-    "chunk_id": 6,
-    "text": "mémoire d’une autre variable. Arthur - S2 C++ - L1 Informatique 1 int x = 42; 2 int* p; // p est un pointeur sur int 4 p = &x; // p contient l’adresse de x 6 cout << x; // Affiche : 42 7 cout << &x; // Affiche : 0x7fff5a3b524 (adresse de x) 8 cout << p; // Affiche : 0x7fff5a3b524 (meme adresse) 9 cout << *p; // Affiche : 42 (valeur pointee) Listing 4 – Déclaration et utilisation de pointeurs Règle Les deux opérateurs clés : — & : opérateur d’adresse, donne l’adresse d’une variable — * : opérateur de déréférencement, accède à la valeur pointée Schéma mémoire Variable Adresse Valeur 0x1000 0x2000 0x1000 Le pointeur p (stocké à l’adresse 0x2000) contient l’adresse de x (0x1000). Les références Une référence est un alias pour une variable existante. 1 int x = 10; 2 int& ref = x; // ref est une reference sur x 4 ref = 20; // Modifie x 5 cout << x; // Affiche : 20 Listing 5 – Utilisation des références Astuce Une référence doit être initialisée lors de sa déclaration et ne peut plus changer de cible par la suite. Allocation dynamique La pile (Stack) et le tas (Heap) Allocation dans la pile Arthur - S2 C++ - L1 Informatique Table 2 – Comparaison Pile vs Tas Pile (Stack) Tas (Heap) Taille Limitée (∼8 Mo) Quasi-illimitée Libération Automatique Manuelle (delete) Utilisation Variables locales Allocation dynamique Rapidité Rapide Plus lent 1 void fonction () { int x = 5; // Cree dans la pile double tab [10]; // Cree dans la pile // ... 5 } // x et tab sont automatiquement detruits Listing 6 – Variables locales dans la pile Allocation dans le tas avec new/delete 1 // Allocation d’un seul element 2 int* p = new int; 3 *p = 42; 4 delete p; // Libere la memoire 6 // Allocation d’un tableau 7 int n = 100; 8 int* tableau = new int[n]; 9 tableau [0] = 10; 10 tableau [99] = 20; 11 delete [] tableau; // ATTENTION crochets ! Listing 7 – Allocation dynamique avec new Important Règle d’or : — Chaque new doit avoir son delete — Chaque new[] doit avoir son delete[] — Sinon : fuite mémoire ! Exemple complet 1 #include <iostream > 2 using namespace std; 4 int main () { int taille; cout << \"Entrez la taille du tableau : \"; cin >> taille; Arthur - S2 C++ - L1 Informatique // Allocation dynamique int* tab = new int[taille ]; // Remplissage for (int i = 0; i < taille; i++) { tab[i] = i * 10; // Affichage for (int i = 0; i < taille; i++) { cout << tab[i] << \" \"; cout << endl; // Liberation delete [] tab; return 0; 27 } Listing 8 – Gestion dynamique d’un tableau Passage de paramètres Passage par valeur Le paramètre reçoit une copie de la variable. 1 void modifier(int x) {"
-  },
-  {
-    "category": "programmation",
-    "ue": "CPP",
-    "doc_type": "cours",
-    "source": "cours_cpp.pdf",
-    "chunk_id": 7,
-    "text": "0; i < taille; i++) { cout << tab[i] << \" \"; cout << endl; // Liberation delete [] tab; return 0; 27 } Listing 8 – Gestion dynamique d’un tableau Passage de paramètres Passage par valeur Le paramètre reçoit une copie de la variable. 1 void modifier(int x) { x = 10; // Modifie la COPIE 5 int main () { int a = 5; modifier(a); cout << a; // Affiche : 5 (non modifie) Listing 9 – Passage par valeur Passage par référence Le paramètre est un alias de la variable originale. 1 void modifier(int& x) { // Le & est crucial x = 10; // Modifie l’ORIGINAL 5 int main () { int a = 5; Arthur - S2 C++ - L1 Informatique modifier(a); cout << a; // Affiche : 10 (modifie !) Listing 10 – Passage par référence Passage par référence constante Permet d’éviter la copie tout en protégeant la variable. 1 void afficher(const int& x) { cout << x; // x = 10; // ERREUR de compilation Listing 11 – Passage par référence constante Règle Quand utiliser quoi ? — Par valeur : types simples (int, char, bool, double) — Par référence constante (const &) : objets en lecture seule — Par référence (&) : objets à modifier Tableau comparatif Table 3 – Modes de passage de paramètres Mode Copie ? Modifiable ? Syntaxe Par valeur Non (copie) void f(int x) Par référence void f(int& x) Par réf. const. void f(const int& x) Programmation orientée objet Concepts fondamentaux La Programmation Orientée Objet (POO) permet de : — Regrouper données et fonctions dans une même structure (classe) — Protéger les données (encapsulation) — Créer des types personnalisés — Améliorer la maintenabilité et la réutilisabilité du code Structure d’une classe Arthur - S2 C++ - L1 Informatique 1 #ifndef POINT_H 2 #define POINT_H 4 class Point { 5 private: // Donnees membres privees double x; double y; 9 public: // Fonctions membres publiques // Constructeur Point(double abs , double ord); // Methodes void afficher () const; void deplacer(double dx , double dy); // Accesseurs (getters) double getX () const; double getY () const; // Mutateurs (setters) void setX(double valeur); void setY(double valeur); 24 }; 26 #endif Listing 12 – Déclaration d’une classe - fichier Point.h Implémentation 1 #include \"Point.h\" 2 #include <iostream > 3 using namespace std; 5 // Constructeur 6 Point :: Point(double abs , double ord) { x = abs; y = ord; 11 void Point :: afficher () const { cout << \"(\" << x << \", \" << y << \")\" << endl; 13 } 15 void Point :: deplacer(double dx , double dy) { x += dx; y += dy; 18 } Arthur - S2 C++ - L1 Informatique 20 double Point :: getX () const { return x; 22 } 24 double Point :: getY () const { return y; 26 } 28 void Point :: setX(double valeur) { x = valeur; 30 } 32 void Point :: setY(double valeur) {"
-  },
-  {
-    "category": "programmation",
-    "ue": "CPP",
-    "doc_type": "cours",
-    "source": "cours_cpp.pdf",
-    "chunk_id": 8,
-    "text": "Arthur - S2 C++ - L1 Informatique 20 double Point :: getX () const { return x; 22 } 24 double Point :: getY () const { return y; 26 } 28 void Point :: setX(double valeur) { x = valeur; 30 } 32 void Point :: setY(double valeur) { y = valeur; 34 } Listing 13 – Implémentation de la classe - fichier Point.cpp Utilisation 1 #include \"Point.h\" 2 #include <iostream > 3 using namespace std; 5 int main () { // Creation d’objets Point p1(3.0 , 5.0); Point p2(1.0 , 2.0); // Utilisation methodes p1.afficher (); // (3, 5) p1.deplacer (2.0 , 1.0); p1.afficher (); // (5, 6) // Utilisation accesseurs cout << \"x = \" << p1.getX () << endl; // Utilisation mutateurs p1.setX (10.0); p1.afficher (); // (10, 6) // INTERDIT : les donnees sont privees // p1.x = 20; // ERREUR de compilation return 0; 26 } Listing 14 – Programme principal - fichier main.cpp Arthur - S2 C++ - L1 Informatique Règle Principe d’encapsulation : — Les données membres sont private — Les méthodes d’interface sont public — On accède aux données via des accesseurs (getters) et mutateurs (setters) Constructeurs et destructeurs Le constructeur Le constructeur est une fonction appelée automatiquement lors de la création d’un objet. Règle Caractéristiques : — Porte le même nom que la classe — N’a pas de type de retour — Sert à initialiser l’objet — Peut effectuer des allocations dynamiques Types de constructeurs 1 class Tableau { 2 private: int* tab; int taille; 6 public: // 1) Constructeur par defaut Tableau () { taille = 10; tab = new int [10]; // 2) Constructeur avec parametres Tableau(int n) { taille = n; tab = new int[n]; // 3) Constructeur avec valeur par defaut Tableau(int n = 10) { taille = n; tab = new int[n]; 24 }; Listing 15 – Différents types de constructeurs Arthur - S2 C++ - L1 Informatique Utilisation 1 int main () { Tableau t1; // Appelle le constructeur par defaut Tableau t2 (20); // Appelle le constructeur avec n=20 Tableau t3 (50); // Appelle le constructeur avec n=50 // ATTENTION : ceci ne cree PAS un objet ! // Tableau t4(); // Declare fonction ! Listing 16 – Appel des constructeurs Le destructeur Le destructeur est une fonction appelée automatiquement lors de la destruction d’un objet. Règle Caractéristiques : — Porte le nom de la classe précédé de ˜ — N’a pas de paramètres — N’a pas de type de retour — Sert à libérer les ressources (mémoire, fichiers, etc.) 1 class Tableau { 2 private: int* tab; int taille; 6 public: Tableau(int n) { taille = n; tab = new int[n]; cout << \" Construction d’un tableau de \" << n << endl; ~Tableau () { // Destructeur delete [] tab; cout << \"Destruction du tableau\" << endl; 17 }; 19 void fonction () { Tableau t(100); // ... 22 } // Le destructeur est appele ICI automatiquement Listing 17 – Destructeur"
-  },
-  {
-    "category": "programmation",
-    "ue": "CPP",
-    "doc_type": "cours",
-    "source": "cours_cpp.pdf",
-    "chunk_id": 9,
-    "text": "<< \" Construction d’un tableau de \" << n << endl; ~Tableau () { // Destructeur delete [] tab; cout << \"Destruction du tableau\" << endl; 17 }; 19 void fonction () { Tableau t(100); // ... 22 } // Le destructeur est appele ICI automatiquement Listing 17 – Destructeur Arthur - S2 C++ - L1 Informatique Important Si votre classe contient des pointeurs alloués avec new, vous DEVEZ écrire un des- tructeur pour faire les delete correspondants, sinon : fuite mémoire ! Constructeur par recopie Le problème Sans constructeur par recopie défini, le compilateur fait une copie superficielle des pointeurs. 1 class Tableau { int* tab; int taille; 4 public: Tableau(int n) { taille = n; tab = new int[n]; ~Tableau () { delete [] tab; 13 }; 15 int main () { Tableau t1(5); Tableau t2 = t1; // Copie superficielle ! // t1 et t2 pointent vers le MEME tableau 20 } // CRASH : double delete ! Listing 18 – Problème de copie superficielle Schéma du problème : Avant copie : t1.tab →[zone mémoire A] Après copie superficielle : t1.tab →[zone mémoire A] t2.tab À la destruction : ˜t1() fait delete[] sur zone A ˜t2() fait delete[] sur zone A →ERREUR ! La solution : constructeur par recopie 1 class Tableau { Arthur - S2 C++ - L1 Informatique 2 private: int* tab; int taille; 6 public: // Constructeur normal Tableau(int n) { taille = n; tab = new int[n]; // CONSTRUCTEUR RECOPIE Tableau(const Tableau& autre) { taille = autre.taille; // Nouvelle allocation (copie profonde) tab = new int[taille ]; // Copie des valeurs for (int i = 0; i < taille; i++) { tab[i] = autre.tab[i]; // Destructeur ~Tableau () { delete [] tab; 30 }; Listing 19 – Constructeur par recopie (copie profonde) Règle Prototype du constructeur par recopie : NomClasse(const NomClasse& autre) Quand est-il appelé ? 1 Tableau t1 (10); 3 // 1) Initialisation par copie 4 Tableau t2 = t1; // Appelle le constructeur recopie 5 Tableau t3(t1); // Meme chose 7 // 2) Passage par valeur 8 void fonction(Tableau t) { // Copie ! // ... 10 } 11 fonction(t1); // Appelle le constructeur recopie Arthur - S2 C++ - L1 Informatique 13 // 3) Retour par valeur 14 Tableau creerTableau () { Tableau temp (5); return temp; // Copie ! 17 } Listing 20 – Situations d’appel du constructeur par recopie Astuce Pour éviter les copies inutiles, on préfère souvent passer les objets par référence constante : const Tableau& Opérateur d’affectation Différence avec le constructeur par recopie 1 Tableau t1 (10); 3 // Constructeur recopie (creation) 4 Tableau t2 = t1; 6 // Operateur d’affectation (objets existants) 7 Tableau t3(5); 8 t3 = t1; // Affectation Listing 21 – Constructeur par recopie vs opérateur d’affectation Implémentation 1 class Tableau { 2 private: int* tab; int taille; 6 public: // Operateur d’affectation Tableau& operator =( const Tableau& autre) { // 1) Verifier l’auto -affectation if (this == &autre) { return *this;"
-  },
-  {
-    "category": "programmation",
-    "ue": "CPP",
-    "doc_type": "cours",
-    "source": "cours_cpp.pdf",
-    "chunk_id": 10,
-    "text": "8 t3 = t1; // Affectation Listing 21 – Constructeur par recopie vs opérateur d’affectation Implémentation 1 class Tableau { 2 private: int* tab; int taille; 6 public: // Operateur d’affectation Tableau& operator =( const Tableau& autre) { // 1) Verifier l’auto -affectation if (this == &autre) { return *this; // 2) Liberer l’ancienne memoire delete [] tab; // 3) Copier les nouvelles donnees taille = autre.taille; tab = new int[taille ]; for (int i = 0; i < taille; i++) { Arthur - S2 C++ - L1 Informatique tab[i] = autre.tab[i]; // 4) Retourner *this return *this; 27 }; Listing 22 – Opérateur d’affectation Règle Les 4 étapes de l’opérateur d’affectation : 1. Vérifier l’auto-affectation (t = t) 2. Libérer les anciennes ressources 3. Copier les nouvelles données 4. Retourner *this La règle des trois Important Règle des trois : Si votre classe nécessite l’un des trois, elle nécessite probablement les trois : 1. Destructeur 2. Constructeur par recopie 3. Opérateur d’affectation C’est le cas pour toute classe qui gère des ressources dynamiques (pointeurs, fichiers, etc.). Variables const et static 10.1 Variables const Une variable const ne peut pas être modifiée après son initialisation. 1 const int MAX = 100; 2 MAX = 50; // ERREUR de compilation 4 const double PI = 3.14159; 5 PI = 3.14; // ERREUR de compilation Listing 23 – Utilisation de const 10.2 Fonctions membres const Une fonction membre const promet de ne pas modifier l’objet. Arthur - S2 C++ - L1 Informatique 1 class Point { 2 private: double x, y; 5 public: // Methode const : ne modifie pas l’objet void afficher () const { cout << \"(\" << x << \", \" << y << \")\" << endl; // x = 10; // ERREUR de compilation ! // Accesseur const double getX () const { return x; // Mutateur non -const void setX(double valeur) { x = valeur; 21 }; Listing 24 – Méthodes const Règle Quand utiliser const ? — Pour les accesseurs (getters) — Pour toute méthode qui ne modifie pas l’objet — Permet d’appeler ces méthodes sur des objets const 10.3 Variables membres static Une variable membre static est partagée par tous les objets de la classe. 1 class Cercle { 2 private: static double pi; // Partagee par TOUS les cercles double rayon; // Propre a chaque cercle 6 public: Cercle(double r) : rayon(r) {} double aire () const { return pi * rayon * rayon; static void setPi(double valeur) { pi = valeur; 16 }; Arthur - S2 C++ - L1 Informatique 18 // Initialisation (OBLIGATOIRE hors de la classe) 19 double Cercle ::pi = 3.14159; 21 int main () { Cercle c1 (5.0); Cercle c2 (10.0); // c1 et c2 partagent la MEME variable pi Cercle :: setPi (3.14); // Modifie pour tous les cercles 27 } Listing 25 – Variable membre static Astuce Les variables static sont utiles pour : — Compter le nombre d’instances créées — Partager des constantes entre tous les"
-  },
-  {
-    "category": "programmation",
-    "ue": "CPP",
-    "doc_type": "cours",
-    "source": "cours_cpp.pdf",
-    "chunk_id": 11,
-    "text": "c2 (10.0); // c1 et c2 partagent la MEME variable pi Cercle :: setPi (3.14); // Modifie pour tous les cercles 27 } Listing 25 – Variable membre static Astuce Les variables static sont utiles pour : — Compter le nombre d’instances créées — Partager des constantes entre tous les objets — Implémenter le pattern Singleton 10.4 Exemple : compteur d’objets 1 class Compteur { 2 private: static int nombreObjets; // Compte le nombre d’objets 5 public: Compteur () { nombreObjets ++; cout << \"Creation : \" << nombreObjets << \" objets\" << endl; ~Compteur () { nombreObjets --; cout << \"Destruction : \" << nombreObjets << \" objets\" << endl; static int getNombre () { return nombreObjets; 19 }; 21 // Initialisation 22 int Compteur :: nombreObjets = 0; 24 int main () { Compteur c1; Arthur - S2 C++ - L1 Informatique Compteur c2 , c3; cout << \"Nombre actuel : \" << Compteur :: getNombre () << endl; } // c2 et c3 sont detruits cout << \"Nombre final : \" << Compteur :: getNombre () << endl; 32 } Listing 26 – Compteur avec static Valeurs par défaut et surcharge 11.1 Valeurs par défaut On peut donner des valeurs par défaut aux paramètres. 1 class Point { 2 public: // Constructeur avec valeurs par defaut Point(double x = 0.0, double y = 0.0) { this ->x = x; this ->y = y; 8 }; 10 int main () { Point p1; // x=0, y=0 Point p2 (5.0); // x=5, y=0 Point p3(5.0 , 3.0); // x=5, y=3 14 } Listing 27 – Paramètres avec valeurs par défaut Règle Règles pour les valeurs par défaut : — Les paramètres avec valeur par défaut doivent être à droite — Déclarés dans le .h, pas dans le .cpp // CORRECT void f(int a, int b = 5, int c = 10); // INCORRECT void f(int a = 1, int b); 11.2 Surcharge de fonctions Plusieurs fonctions peuvent avoir le même nom si elles ont des paramètres différents. Arthur - S2 C++ - L1 Informatique 1 class Point { 2 public: // Version avec deux doubles void initialiser(double x, double y) { this ->x = x; this ->y = y; // Version avec un autre Point void initialiser(const Point& p) { this ->x = p.x; this ->y = p.y; // Version avec un pointeur sur Point void initialiser(const Point* p) { this ->x = p->x; this ->y = p->y; 20 }; 22 int main () { Point p1 , p2 , p3; p1.initialiser (5.0 , 3.0); // Appelle la 1ere version p2.initialiser(p1); // Appelle la 2eme version p3.initialiser (&p1); // Appelle la 3eme version 28 } Listing 28 – Surcharge de fonctions Astuce Le compilateur choisit automatiquement la bonne version en fonction des arguments fournis. C’est ce qu’on appelle la résolution de surcharge. Listes chaînées 12.1 Concept Une liste chaînée est une structure de données où chaque élément pointe vers le suivant. Tete →[12|→] →[33|→] →[25|/] Arthur - S2 C++"
-  },
-  {
-    "category": "programmation",
-    "ue": "CPP",
-    "doc_type": "cours",
-    "source": "cours_cpp.pdf",
-    "chunk_id": 12,
-    "text": "de fonctions Astuce Le compilateur choisit automatiquement la bonne version en fonction des arguments fournis. C’est ce qu’on appelle la résolution de surcharge. Listes chaînées 12.1 Concept Une liste chaînée est une structure de données où chaque élément pointe vers le suivant. Tete →[12|→] →[33|→] →[25|/] Arthur - S2 C++ - L1 Informatique Règle Avantages : — Taille dynamique (peut grandir/rétrécir) — Insertion/suppression en début de liste en O(1) Inconvénients : — Accès séquentiel uniquement (pas d’accès direct comme tab[i]) — Consommation mémoire supplémentaire (pointeurs) 12.2 Structure de base 1 #ifndef LISTE_H 2 #define LISTE_H 4 class Maillon { 5 private: int Info; Maillon* suivant; friend class Liste; // Liste peut acceder membres prives 11 public: Maillon(int valeur = 0, Maillon* suiv = nullptr) { Info = valeur; suivant = suiv; 16 }; 18 class Liste { 19 private: Maillon* tete; 22 public: // Constructeur Liste (); // Destructeur ~Liste (); // Methodes void ajouterDebut(int valeur); void ajouterFin(int valeur); void afficher () const; bool estVide () const; int taille () const; 35 }; 37 #endif Listing 29 – Classe Maillon et Liste - fichier Liste.h Arthur - S2 C++ - L1 Informatique 12.3 Implémentation 1 #include \"Liste.h\" 2 #include <iostream > 3 using namespace std; 5 // Constructeur 6 Liste :: Liste () { tete = nullptr; // Liste vide 10 // Destructeur 11 Liste ::~ Liste () { while (tete != nullptr) { Maillon* temp = tete; tete = tete ->suivant; delete temp; 17 } 19 // Verifier si la liste est vide 20 bool Liste :: estVide () const { return tete == nullptr; 22 } 24 // Ajouter en debut de liste 25 void Liste :: ajouterDebut(int valeur) { tete = new Maillon(valeur , tete); 27 } 29 // Ajouter en fin de liste 30 void Liste :: ajouterFin(int valeur) { // Cas particulier : liste vide if (tete == nullptr) { tete = new Maillon(valeur); return; // Parcourir jusqu ’a la fin Maillon* p = tete; while (p->suivant != nullptr) { p = p->suivant; // Ajouter a la fin p->suivant = new Maillon(valeur); 45 } 47 // Afficher la liste 48 void Liste :: afficher () const { Maillon* p = tete; Arthur - S2 C++ - L1 Informatique cout << \"Liste : \"; while (p != nullptr) { cout << p->Info << \" \"; p = p->suivant; cout << endl; 57 } 59 // Calculer la taille 60 int Liste :: taille () const { compteur = 0; Maillon* p = tete; while (p != nullptr) { compteur ++; p = p->suivant; return compteur; 70 } Listing 30 – Implémentation de Liste - fichier Liste.cpp 12.4 Utilisation 1 #include \"Liste.h\" 2 #include <iostream > 3 using namespace std; 5 int main () { Liste L; // Ajouts L.ajouterDebut (25); L.ajouterDebut (33); L.ajouterDebut (12); L.afficher (); // Liste : 12 33 25 L.ajouterFin (51); L.afficher (); // Liste : 12 33 25 51 cout << \"Taille : \" << L.taille () << endl; return 0; 21"
-  },
-  {
-    "category": "programmation",
-    "ue": "CPP",
-    "doc_type": "cours",
-    "source": "cours_cpp.pdf",
-    "chunk_id": 13,
-    "text": "using namespace std; 5 int main () { Liste L; // Ajouts L.ajouterDebut (25); L.ajouterDebut (33); L.ajouterDebut (12); L.afficher (); // Liste : 12 33 25 L.ajouterFin (51); L.afficher (); // Liste : 12 33 25 51 cout << \"Taille : \" << L.taille () << endl; return 0; 21 } // Le destructeur libere automatiquement toute la liste Listing 31 – Programme principal Arthur - S2 C++ - L1 Informatique 12.5 Schéma d’exécution Après les ajouts en début : L.tete →[12|→] →[33|→] →[25|/] Après l’ajout en fin : L.tete →[12|→] →[33|→] →[25|→] →[51|/] 12.6 Opérations supplémentaires 1 // Rechercher une valeur 2 bool Liste :: contient(int valeur) const { Maillon* p = tete; while (p != nullptr) { if (p->Info == valeur) return true; p = p->suivant; return false; 10 } 12 // Supprimer le premier element 13 void Liste :: supprimerDebut () { if (tete == nullptr) return; Maillon* temp = tete; tete = tete ->suivant; delete temp; 20 } 22 // Supprimer toutes les occurrences d’une valeur 23 void Liste :: supprimer(int valeur) { // Supprimer en tete while (tete != nullptr && tete ->Info == valeur) { Maillon* temp = tete; tete = tete ->suivant; delete temp; // Supprimer dans le reste if (tete == nullptr) return; Maillon* p = tete; while (p->suivant != nullptr) { if (p->suivant ->Info == valeur) { Maillon* temp = p->suivant; p->suivant = temp ->suivant; delete temp; } else { Arthur - S2 C++ - L1 Informatique p = p->suivant; 45 } Listing 32 – Autres opérations utiles Récursivité 13.1 Notion de récursivité Une fonction est dite récursive lorsqu’elle s’appelle elle-même. On dit qu’elle « se répète toute seule indéfiniment » (tant qu’une condition d’arrêt n’est pas atteinte). Exemple La factorielle (n!) est un exemple classique de récursivité : n! = si n ≤1 n × (n −1)! sinon Soit : n! = 1 × 2 × 3 × 4 × . . . × (n −1) × n 1 int factorielle(int n) { if (n <= 1) return 1; else return n * factorielle(n - 1); Listing 33 – Fonction factorielle récursive Règle Toute fonction récursive doit posséder : — Un cas de base (condition d’arrêt) qui stoppe la récursion — Un appel récursif qui se rapproche du cas de base à chaque itération Sans condition d’arrêt, la fonction s’appelle indéfiniment →débordement de pile ! 13.2 Récursivité croisée (ou mutuelle) On parle de récursivité croisée (ou mutuelle) lorsque deux fonctions s’appellent mutuellement. Un exemple classique est le test de parité/imparité avec des fonctions booléennes : 1 bool estPair(int n); // Declaration anticipee 2 bool estImpair(int n); 4 bool estPair(int n) { if (n == 0) Arthur - S2 C++ - L1 Informatique return true; return estImpair(n - 1); 10 bool estImpair(int n) { if (n == 0) return false; return estPair(n - 1); 14 } Listing 34 – Récursivité croisée : parité et imparité Astuce La récursivité croisée nécessite une déclaration anticipée d’au moins une des deux fonctions, car chacune"
-  },
-  {
-    "category": "programmation",
-    "ue": "CPP",
-    "doc_type": "cours",
-    "source": "cours_cpp.pdf",
-    "chunk_id": 14,
-    "text": "L1 Informatique return true; return estImpair(n - 1); 10 bool estImpair(int n) { if (n == 0) return false; return estPair(n - 1); 14 } Listing 34 – Récursivité croisée : parité et imparité Astuce La récursivité croisée nécessite une déclaration anticipée d’au moins une des deux fonctions, car chacune doit connaître la signature de l’autre pour pouvoir l’appeler. Structures chaînées – Arbres 14.1 Introduction On peut voir un arbre comme une généralisation de listes chaînées qui porteraient comme informations des listes. De manière plus intuitive, un arbre est la modélisation d’une organisation hiérarchique de données. Exemple Exemples d’organisations hiérarchiques : — Organigramme d’un service, d’une entreprise, d’une armée (maréchal →géné- raux →colonels →lieutenants →sergents →troufions) — Un livre découpé en volumes →tomes →parties →chapitres →sections 14.2 Définition récursive De manière formelle, un arbre est une structure de données à laquelle on accède par une et une seule donnée, qui donne accès à son information et qui fournit l’accès à plusieurs informations suivantes. Règle Définition récursive : A est un Arbre si A est un ensemble tel que : — il existe un élément particulier appelé racine, — les autres éléments sont partitionnés en ensembles, chaque ensemble étant lui- même un arbre. 14.3 Vocabulaire — Nœud : cellule qui porte une information de l’arbre. — Racine : premier nœud de l’arbre, celui qui donne accès à tous les autres. Arthur - S2 C++ - L1 Informatique — Sous-arbre : sous-ensemble d’un arbre qui constitue lui-même un arbre. Tous les nœuds sont racine d’un sous-arbre. — Fils : nœuds accessibles en suivant une et une seule flèche à partir d’un nœud. — Père : nœud qui donne accès à ses fils. — Frères : nœuds ayant le même père. — Feuille : nœud sans fils. 14.4 Caractéristiques — Degré d’un nœud : nombre de fils d’un nœud. — Profondeur d’un nœud : distance d’un nœud à la racine (en nombre de flèches). — Hauteur d’un arbre : maximum des profondeurs des nœuds de l’arbre. Un arbre réduit à un seul nœud est de hauteur 0. — Niveau d’un arbre : ensemble des nœuds se trouvant à une même profondeur. 14.5 Arbres ordonnés Un arbre est ordonné si il existe une relation d’ordre définie sur tous les fils de tous ses nœuds. Les arbres sont très souvent ordonnés. 14.6 Arbres binaires Les arbres binaires sont des arbres dont tous les nœuds ont au plus 2 fils. Ce sont les arbres les plus utilisés. Règle Définition récursive d’un arbre binaire : Un arbre binaire est : — soit un arbre vide, — soit un triplet constitué d’une information et de 2 arbres binaires : ⟨I, G, D⟩ où I représente l’information, G le fils gauche et D le fils droit. 14.7 Implémentation des arbres binaires Pour représenter des arbres binaires en C++, on utilise deux classes : une pour les nœuds et une pour l’arbre global. 1 class noeud { int info; noeud* fg; // fils gauche noeud* fd; // fils droit friend"
-  },
-  {
-    "category": "programmation",
-    "ue": "CPP",
-    "doc_type": "cours",
-    "source": "cours_cpp.pdf",
-    "chunk_id": 15,
-    "text": "fils gauche et D le fils droit. 14.7 Implémentation des arbres binaires Pour représenter des arbres binaires en C++, on utilise deux classes : une pour les nœuds et une pour l’arbre global. 1 class noeud { int info; noeud* fg; // fils gauche noeud* fd; // fils droit friend class arbre; // arbre peut acceder membres prives 8 public: noeud(int I, noeud* G = nullptr , noeud* D = nullptr) { info = I; fg = G; Arthur - S2 C++ - L1 Informatique fd = D; 14 }; Listing 35 – Classe noeud 1 class arbre { noeud* racine; 4 public: // Constructeur avec valeur par defaut arbre(noeud* N = nullptr) { racine = N; 9 }; Listing 36 – Classe arbre On retrouve bien ici la récursivité de la définition : la classe noeud est définie par elle-même (ses fils sont aussi des pointeurs sur noeud). Astuce La déclaration friend class arbre; dans la classe noeud permet à la classe arbre d’accéder aux données privées (info, fg, fd) des nœuds. 14.8 Création d’un arbre Les constructeurs permettent d’initialiser des arbres directement lors de leur déclara- tion : 1 arbre A(new noeud (12, new noeud (7, new noeud (16) , new noeud (4) new noeud (2) 8 ); Listing 37 – Création d’un arbre binaire Cet appel crée l’arbre suivant : Arthur - S2 C++ - L1 Informatique 14.9 Parcours des arbres On appelle parcours d’un arbre le fait d’énumérer en vue d’un traitement quelconque toutes les informations contenues dans l’arbre. La structure récursive des arbres donne une façon simple de réaliser ce parcours. Règle Le parcours s’aligne sur la structure récursive de l’arbre : Définition Contenu du nœud Action Arbre vide nullptr Rien Info + 2 arbres ⟨I, G, D⟩ Traiter I, Parcourir G, Parcourir D 1 // Fonction membre privee avec parametre 2 void arbre :: Parcours(noeud* N) { if (N == nullptr) return; cout << N->info << endl; // Traiter l’information Parcours(N->fg); // Parcourir le fils gauche Parcours(N->fd); // Parcourir le fils droit 10 // Fonction membre publique sans parametre 11 void arbre :: Parcours () { Parcours(racine); 13 } Listing 38 – Fonction de parcours récursive Important La fonction de parcours a besoin d’accéder à racine (privée dans arbre) et aux données des nœuds (info, fg, fd, privées dans noeud). D’où la solution : — Mettre la fonction de parcours comme fonction membre de la classe arbre — Déclarer friend class arbre; dans la classe noeud — Utiliser deux fonctions : une publique sans paramètre (qui appelle avec racine), et une privée avec un paramètre noeud* L’appel se fait simplement : A.Parcours(); 14.10 Exemple de déroulement Considérons l’arbre suivant : Arthur - S2 C++ - L1 Informatique L’appel de A.Parcours() provoque Parcours(racine) : 1. N (racine) n’est pas nullptr →affichage de 4 2. Appel de Parcours(fg) →affichage de 9 3. Appel de Parcours(fg) →affichage de 8 4. Parcours(nullptr) →retour, Parcours(nullptr) →retour 5. Appel de Parcours(fd) →affichage de 7 6. Retour au nœud 4, appel"
-  },
-  {
-    "category": "programmation",
-    "ue": "CPP",
-    "doc_type": "cours",
-    "source": "cours_cpp.pdf",
-    "chunk_id": 16,
-    "text": "- L1 Informatique L’appel de A.Parcours() provoque Parcours(racine) : 1. N (racine) n’est pas nullptr →affichage de 4 2. Appel de Parcours(fg) →affichage de 9 3. Appel de Parcours(fg) →affichage de 8 4. Parcours(nullptr) →retour, Parcours(nullptr) →retour 5. Appel de Parcours(fd) →affichage de 7 6. Retour au nœud 4, appel de Parcours(fd) →affichage de 6 7. Puis 5, 2, 1 Affichage dans l’ordre : 4, 9, 8, 7, 6, 5, 2, 1 14.11 Les trois types de parcours Il existe 3 ordres possibles pour les parcours (si on exclut les inversions des fils). Ils ne diffèrent que par l’ordre des lignes dans la fonction : 1 void arbre :: ParcoursPrefixe (noeud* N) { if (N == nullptr) return; cout << N->info << endl; // Traitement ParcoursPrefixe (N->fg); // Fils gauche ParcoursPrefixe (N->fd); // Fils droit Listing 39 – Parcours préfixe (racine, puis fils) 1 void arbre :: ParcoursInfixe(noeud* N) { if (N == nullptr) return; ParcoursInfixe (N->fg); // Fils gauche cout << N->info << endl; // Traitement ParcoursInfixe (N->fd); // Fils droit Listing 40 – Parcours infixe (fils gauche, racine, fils droit) 1 void arbre :: ParcoursPostfixe (noeud* N) { if (N == nullptr) return; ParcoursPostfixe (N->fg); // Fils gauche ParcoursPostfixe (N->fd); // Fils droit cout << N->info << endl; // Traitement Listing 41 – Parcours postfixe (fils, puis racine) 14.12 Répartition des fonctions entre Arbre et Nœud Une autre organisation possible : une fonction dans arbre qui gère le cas de l’arbre vide, et une fonction dans noeud qui s’occupe du travail sur un nœud. Arthur - S2 C++ - L1 Informatique 1 // Dans la classe arbre 2 void arbre :: Parcours () { if (racine == nullptr) return; racine ->Parcours (); 8 // Dans la classe noeud 9 void noeud :: Parcours () { cout << info << endl; if (fg != nullptr) fg ->Parcours (); if (fd != nullptr) fd ->Parcours (); 15 } Listing 42 – Parcours réparti entre arbre et noeud Astuce Cette organisation est très élégante mais elle est forcément récursive. N’hésitez pas à envisager plusieurs versions de vos fonctions. 14.13 Arbres binaires ordonnés Un arbre binaire est ordonné si pour tous les nœuds de l’arbre : — tous les nœuds du fils gauche sont inférieurs à la racine, — la racine est inférieure à tous les nœuds du fils droit. Règle Un parcours infixe d’un arbre binaire ordonné énumère les nœuds dans l’ordre crois- sant. Par exemple sur l’arbre ci-dessus : 1, 2, 4, 5, 6, 7, 8, 9, 11 14.14 Quelques arbres particuliers — Arbre binaire homogène : tous les nœuds ont 0 ou 2 fils. — Arbre binaire dégénéré : tous les nœuds ont 1 seul fils (sauf le dernier qui n’en a aucun). Arthur - S2 C++ - L1 Informatique — Arbre en peigne : arbre dégénéré dont tous les fils sont du même côté. Ce sont en fait des listes chaînées. — Arbre binaire parfait : tous les niveaux sont complètement remplis, sauf le dernier qui est totalement"
-  },
-  {
-    "category": "programmation",
-    "ue": "CPP",
-    "doc_type": "cours",
-    "source": "cours_cpp.pdf",
-    "chunk_id": 17,
-    "text": "qui n’en a aucun). Arthur - S2 C++ - L1 Informatique — Arbre en peigne : arbre dégénéré dont tous les fils sont du même côté. Ce sont en fait des listes chaînées. — Arbre binaire parfait : tous les niveaux sont complètement remplis, sauf le dernier qui est totalement vide. — Arbre binaire complet : tous les niveaux sont remplis sauf éventuellement le dernier, et dans ce cas les pointeurs nullptr sont à droite. Règle Soit un arbre binaire parfait de hauteur k : — Nombre de feuilles : 2k — Nombre total de nœuds : 2k+1 −1 Bonnes pratiques et pièges à éviter 15.1 Checklist des bonnes pratiques Allocation dynamique — Chaque new doit avoir son delete — Chaque new[] doit avoir son delete[] — Initialiser les pointeurs à nullptr Classes avec ressources dynamiques — Toujours définir un destructeur — Toujours définir un constructeur par recopie — Toujours définir un opérateur d’affectation — →Règle des trois ! Passage de paramètres — Types simples →par valeur — Objets en lecture →const & — Objets à modifier →& Méthodes const — Marquer const les méthodes qui ne modifient pas l’objet — Notamment les accesseurs (getters) Encapsulation — Données membres en private — Méthodes d’interface en public — Utiliser des accesseurs/mutateurs Arthur - S2 C++ - L1 Informatique 15.2 Pièges fréquents Important Erreurs classiques à éviter : 1. Oublier delete int* p = new int; *p = 42; // Oubli de delete p; Fuite memoire ! 2. Mauvais delete pour un tableau int* tab = new int [100]; delete tab; // ERREUR ! Il faut delete [] delete [] tab; // CORRECT 3. Double delete int* p = new int; delete p; delete p; // CRASH ! 4. Copie superficielle // Sans constructeur recopie defini Tableau t1 (10); Tableau t2 = t1; // t1 et t2 pointent vers le meme tableau // double delete au destructeur ! 5. Accès à nullptr int* p = nullptr; *p = 42; // CRASH ! 6. Dépassement de tableau int tab [10]; tab [10] = 5; // ERREUR : indices 0 a 9 ! 7. Perdre l’adresse d’une allocation int* p = new int [100]; p = new int [50]; // Perd l’adresse du 1er tableau // fuite memoire ! Arthur - S2 C++ - L1 Informatique 15.3 Conseils de débogage Astuce Pour déboguer les problèmes mémoire : — Utiliser valgrind sous Linux — Compiler avec -g pour avoir les infos de debug — Ajouter des cout dans constructeurs/destructeurs — Vérifier systématiquement : if (p != nullptr) — Mettre nullptr après chaque delete Exercices d’entraînement 16.1 Exercice 1 : Classe Rectangle Énoncé : Créer une classe Rectangle avec : — Attributs privés : longueur, largeur — Constructeur avec paramètres — Méthodes : aire(), perimetre(), afficher() Solution : 1 #ifndef RECTANGLE_H 2 #define RECTANGLE_H 4 class Rectangle { 5 private: double longueur; double largeur; 9 public: Rectangle(double l = 1.0, double L = 1.0); double aire () const; double perimetre () const; void afficher () const;"
-  },
-  {
-    "category": "programmation",
-    "ue": "CPP",
-    "doc_type": "cours",
-    "source": "cours_cpp.pdf",
-    "chunk_id": 18,
-    "text": "— Constructeur avec paramètres — Méthodes : aire(), perimetre(), afficher() Solution : 1 #ifndef RECTANGLE_H 2 #define RECTANGLE_H 4 class Rectangle { 5 private: double longueur; double largeur; 9 public: Rectangle(double l = 1.0, double L = 1.0); double aire () const; double perimetre () const; void afficher () const; 14 }; 16 #endif Listing 43 – Rectangle.h 1 #include \"Rectangle.h\" 2 #include <iostream > 3 using namespace std; 5 Rectangle :: Rectangle(double l, double L) { longueur = l; largeur = L; 10 double Rectangle :: aire () const { return longueur * largeur; Arthur - S2 C++ - L1 Informatique 12 } 14 double Rectangle :: perimetre () const { return 2 * (longueur + largeur); 16 } 18 void Rectangle :: afficher () const { cout << \"Rectangle \" << longueur << \"x\" << largeur << endl; cout << \"Aire : \" << aire () << endl; cout << \"Perimetre : \" << perimetre () << endl; 22 } Listing 44 – Rectangle.cpp 16.2 Exercice 2 : Classe Vecteur dynamique Énoncé : Créer une classe Vecteur qui gère un tableau dynamique d’entiers avec : — Constructeur avec taille — Destructeur — Constructeur par recopie — Opérateur d’affectation — Méthode get(int i) et set(int i, int valeur) Solution : 1 #ifndef VECTEUR_H 2 #define VECTEUR_H 4 class Vecteur { 5 private: int* tab; int taille; 9 public: // Constructeur Vecteur(int n); // Destructeur ~Vecteur (); // Constructeur recopie Vecteur(const Vecteur& autre); // Operateur d’affectation Vecteur& operator =( const Vecteur& autre); // Accesseurs int get(int i) const; void set(int i, int valeur); getTaille () const; // Affichage Arthur - S2 C++ - L1 Informatique void afficher () const; 29 }; 31 #endif Listing 45 – Vecteur.h 1 #include \"Vecteur.h\" 2 #include <iostream > 3 using namespace std; 5 Vecteur :: Vecteur(int n) { taille = n; tab = new int[n]; // Initialisation a 0 for (int i = 0; i < n; i++) { tab[i] = 0; 13 } 15 Vecteur ::~ Vecteur () { delete [] tab; 17 } 19 Vecteur :: Vecteur(const Vecteur& autre) { taille = autre.taille; tab = new int[taille ]; for (int i = 0; i < taille; i++) { tab[i] = autre.tab[i]; 26 } 28 Vecteur& Vecteur :: operator =( const Vecteur& autre) { if (this == &autre) return *this; delete [] tab; taille = autre.taille; tab = new int[taille ]; for (int i = 0; i < taille; i++) { tab[i] = autre.tab[i]; return *this; 42 } 44 int Vecteur ::get(int i) const { if (i < 0 || i >= taille) { Arthur - S2 C++ - L1 Informatique cout << \"Erreur : indice hors limites\" << endl; return 0; return tab[i]; 50 } 52 void Vecteur ::set(int i, int valeur) { if (i < 0 || i >= taille) { cout << \"Erreur : indice hors limites\" << endl; return; tab[i] = valeur; 58 } 60 int Vecteur :: getTaille () const { return taille; 62 } 64 void Vecteur"
-  },
-  {
-    "category": "programmation",
-    "ue": "CPP",
-    "doc_type": "cours",
-    "source": "cours_cpp.pdf",
-    "chunk_id": 19,
-    "text": "tab[i]; 50 } 52 void Vecteur ::set(int i, int valeur) { if (i < 0 || i >= taille) { cout << \"Erreur : indice hors limites\" << endl; return; tab[i] = valeur; 58 } 60 int Vecteur :: getTaille () const { return taille; 62 } 64 void Vecteur :: afficher () const { cout << \"[\"; for (int i = 0; i < taille; i++) { cout << tab[i]; if (i < taille - 1) cout << \", \"; cout << \"]\" << endl; 72 } Listing 46 – Vecteur.cpp 16.3 Exercice 3 : Pile (Stack) avec liste chaînée Énoncé : Implémenter une pile (LIFO) avec : — empiler(int x) : ajoute x au sommet — depiler() : retire et retourne l’élément du sommet — estVide() : teste si la pile est vide — sommet() : retourne l’élément du sommet sans le retirer Solution : 1 class Maillon { int valeur; Maillon* suivant; friend class Pile; 5 public: Maillon(int v, Maillon* s = nullptr) : valeur(v), suivant(s ) {} 7 }; 9 class Pile { 10 private: Maillon* sommetPile; Arthur - S2 C++ - L1 Informatique 13 public: Pile () : sommetPile(nullptr) {} ~Pile () { while (! estVide ()) { depiler (); void empiler(int x) { sommetPile = new Maillon(x, sommetPile); depiler () { if (estVide ()) { cout << \"Erreur : pile vide\" << endl; return 0; int valeur = sommetPile ->valeur; Maillon* temp = sommetPile; sommetPile = sommetPile ->suivant; delete temp; return valeur; bool estVide () const { return sommetPile == nullptr; int sommet () const { if (estVide ()) { cout << \"Erreur : pile vide\" << endl; return 0; return sommetPile ->valeur; void afficher () const { cout << \"Pile (sommet -> bas) : \"; Maillon* p = sommetPile; while (p != nullptr) { cout << p->valeur << \" \"; p = p->suivant; cout << endl; 61 }; Arthur - S2 C++ - L1 Informatique Listing 47 – Pile.h et Pile.cpp Aide-mémoire 17.1 Tableau récapitulatif des opérateurs Table 4 – Opérateurs importants en C++ Opérateur Utilisation Adresse Donne l’adresse d’une variable Déréférencement Accède à la valeur pointée Flèche Accède à un membre via un pointeur Point Accède à un membre d’un objet Résolution de portée Définit une fonction hors classe Allocation Alloue de la mémoire dynamique delete Libération Libère de la mémoire dynamique 17.2 Commandes de compilation 1 # Compilation simple 2 g++ programme.cpp -o programme 4 # Compilation avec debug 5 g++ -g programme.cpp -o programme 7 # Compilation avec warnings 8 g++ -Wall -Wextra programme.cpp -o programme 10 # Compilation de plusieurs fichiers 11 g++ main.cpp Point.cpp Rectangle.cpp -o programme 13 # Execution 14 ./ programme 16 # Detection de fuites memoire (Linux) 17 valgrind ./ programme Listing 48 – Compilation et exécution 17.3 Modèle de fichiers .h et .cpp 1 #ifndef NOMCLASSE_H 2 #define NOMCLASSE_H Arthur - S2 C++ - L1 Informatique 4 class NomClasse { 5 private: // Attributs prives 8 public: // Constructeurs NomClasse (); NomClasse(/* parametres */);"
-  },
-  {
-    "category": "programmation",
-    "ue": "CPP",
-    "doc_type": "cours",
-    "source": "cours_cpp.pdf",
-    "chunk_id": 20,
-    "text": "memoire (Linux) 17 valgrind ./ programme Listing 48 – Compilation et exécution 17.3 Modèle de fichiers .h et .cpp 1 #ifndef NOMCLASSE_H 2 #define NOMCLASSE_H Arthur - S2 C++ - L1 Informatique 4 class NomClasse { 5 private: // Attributs prives 8 public: // Constructeurs NomClasse (); NomClasse(/* parametres */); // Destructeur ~NomClasse (); // Constructeur recopie NomClasse(const NomClasse& autre); // Operateur d’affectation NomClasse& operator =( const NomClasse& autre); // Methodes publiques 23 }; 25 #endif Listing 49 – Modèle de fichier .h 1 #include \"NomClasse.h\" 3 NomClasse :: NomClasse () { // Initialisation 7 NomClasse ::~ NomClasse () { // Liberation ressources 11 // Autres implementations ... Listing 50 – Modèle de fichier .cpp Conclusion Ce document couvre les concepts essentiels du C++ pour le semestre 2 de licence informatique : — Gestion de la mémoire (pile vs tas) — Pointeurs et références — Programmation orientée objet — Constructeurs et destructeurs — Allocation dynamique — Listes chaînées — Bonnes pratiques Arthur - S2 C++ - L1 Informatique Règle Les trois règles d’or : 1. Règle des trois : Si vous définissez un destructeur, définissez aussi le construc- teur par recopie et l’opérateur d’affectation 2. RAII (Resource Acquisition Is Initialization) : Acquérir les ressources dans le constructeur, les libérer dans le destructeur 3. const-correctness : Utiliser const partout où c’est pertinent Bon courage pour tes révisions !"
-  },
-  {
-    "category": "programmation",
-    "ue": "CPP",
-    "doc_type": "TD",
+    "ue": "cpp",
+    "doc_type": "TP",
     "source": "TD-ArbreBinaire.pdf",
     "chunk_id": 0,
     "text": "Programmation structurée Arbres binaires Dans les exercices de cette série, on considère des arbres binaires de nombres entiers. Ces arbres sont codés dans ces structures : class Noeud int info; Noeud * fg, * fd; class Arbre Noeud *racine; public : Arbre(); ~Arbre(); 1. Constructeur Écrire un constructeur d'arbre vide, un constructeur d’arbre avec un pointeur de Noeud en argument et un constructeur de Noeud avec un int et 2 pointeurs de Noeud. Arbre A(new Noeud(5,new Noeud(4, null, null),new Noeud(2,null,new Noeud(12,null,null)))) ; 2. Destructeur Écrire les destructeurs des classes Noeud et Arbre 3. Profondeur d’un nœud Fonction qui affiche pour chaque nœud sa profondeur. 4. Hauteur d’un arbre Fonction qui retourne la hauteur d’un arbre. La hauteur d’un arbre vide est 0, la hauteur d’un arbre à 1 nœud est 1. 5. Maximum Fonction qui détermine le maximum des valeurs contenues dans l’arbre. 6. Maximum dans un arbre ordonné Même question, mais en supposant que l’arbre est ordonné. 7. Insertion dans un arbre ordonné Écrire une fonction qui insère, en feuille, une valeur dans un arbre ordonné. 8. Égalité de deux arbres Fonction booléenne testant si deux arbres sont égaux, c'est à dire s'ils contiennent les mêmes valeurs aux mêmes « endroits ». 9. Constructeur de recopie Écrire une fonction d’en-tête noeud * arbre::copie(noeud * n) qui fabrique la copie d'un sous-arbre et retourne un pointeur sur la racine de la copie. Utiliser cette fonction pour écrire le constructeur de recopie. Fabrication de l'arbre miroir d'un arbre binaire. Fabrication d’un nouvel arbre binaire, image inversée de l'arbre de départ. Deux arbres binaires sont-ils des images inversées l'un de l'autre ? Fonction booléenne testant si un arbre binaire est image miroir d’un autre. Sous-arbre Fonction booléenne testant si un arbre est contenu dans un autre."
   },
   {
     "category": "programmation",
-    "ue": "CPP",
-    "doc_type": "TD",
+    "ue": "cpp",
+    "doc_type": "TP",
     "source": "TD-Recursivite.pdf",
     "chunk_id": 0,
     "text": "Algorithmique et Programmation en C++ Récursivité 1. Puissance Considérant : n=x∗x∗...∗x nfois = x∗x Écrire une fonction récursive qui calcule et retourne x puissance n (x double donné en argument et n entier positif ou nul donné en argument). 2. Cardinal d'une liste chaînée Écrire une version récursive de la fonction qui compte le nombre de maillon d'une liste chaînée. 3. Puissance plus efficace En considérant pour Xn les cas où N est pair, il est possible de programmer une fonction qui effectue moins de multiplication. Déterminer la formule, la programmer et estimer le gain en nombre de multiplication. Vérifier votre estimation en ajoutant un compteur de multiplications dans votre programme. 4. Sinus et cosinus Avec les formules : sin(2∗x)=2∗sin(x)∗cos(x) cos(2∗x)=cos 2(x)−sin 2( x) sin(x)=x cos(x)=1} si x< epsilon Écrire deux fonctions récursives sinus et cosinus calculant respectivement les … sinus et cosinus d'une valeur donnée en argument 5. Miroir Écrire la procédure récursive miroir qui lit une suite de caractères terminée par un \".\", et l'affiche dans l'ordre inverse. 6. Tri par fusion Pour trier N objets, il suffit de trier les N/2 de la première moitié, puis de trier les N/2 de la seconde moitié, puis de fusionner les 2 moitiés. a) Écrire une fonction fusionner, prenant en argument un tableau de N valeurs, l'indice de début d'une première moitié, l'indice de fin d'une première moitié, l'indice de début d'une deuxième moitié et l'indice de fin d'une deuxième moitié et fusionnant les 2 moitiés de manière ordonnée (en utilisant un tableau dynamique temporaire). b) Écrire une fonction récursive trier utilisant la fonction fusionner et triant un tableau donné en argument suivant la proposition du début. 7. Taille d'une feuille de papier Les tailles des feuilles de papier (en France) sont définies par la lettre A suivi d'un chiffre indiquant ses dimensions ainsi : la plus grande nommée A0 a une longueur de 118,9 cm et une largeur de 84,1 cm, la taille en-dessous A1 est telle que 2 feuille côte à côte correspondent exactement à une feuille A0, ainsi de suite pour les tailles A2, A3, etc. Écrire une fonction récursive qui prend un argument en entrée pour la taille de la feuille et qui calcule 2 arguments en sortie correspondant aux dimensions de la feuille : void feuilleA(int n, float & lo, float & la) 8. Palindrome Un palindrome est une chaîne de caractères symétrique, c'est à dire que le premier caractère est égal au dernier, le deuxième à l'avant-dernier, etc. Exemples : BOB, RADAR, \"zeusaeteasuez\", \"esoperesteicietserepose\". On peut donner une définition récursive d'un palindrome : une chaîne est un palindrome si son premier et son dernier caractère sont identiques et si la sous-chaîne obtenue en les retirant est elle aussi un palindrome, une chaîne de longueur 0 ou 1 est un palindrome, Écrire une fonction récursive vérifiant qu'une chaîne est un palindrome. Une chaîne sera représentée par un tableau de caractères dont la longueur est contenue dans N."
   },
   {
     "category": "programmation",
-    "ue": "CPP",
-    "doc_type": "TD",
+    "ue": "cpp",
+    "doc_type": "TP",
     "source": "TD-Recursivite.pdf",
     "chunk_id": 1,
     "text": "retirant est elle aussi un palindrome, une chaîne de longueur 0 ou 1 est un palindrome, Écrire une fonction récursive vérifiant qu'une chaîne est un palindrome. Une chaîne sera représentée par un tableau de caractères dont la longueur est contenue dans N."
   },
   {
     "category": "programmation",
-    "ue": "CPP",
-    "doc_type": "TD",
+    "ue": "cpp",
+    "doc_type": "TP",
     "source": "TD3_SUJET.pdf",
     "chunk_id": 0,
     "text": "Algorithmique et Programmation en C++ Listes chaînées Rappel structure pour coder une liste chaînée d’entiers : class Maillon friend class Liste ; int Info; Maillon * suivant; class Liste Maillon * tete; public : Liste(); ~Liste(); 1) Écrire le constructeur de liste vide. 2) Écrire un constructeur de Maillon vide, un constructeur de Maillon avec une valeur, un constructeur de Maillon avec une valeur et un pointeur suivant. 3) Écrire un constructeur créant une liste à partir d'un tableau d'entiers. Ce constructeur aura 2 arguments : le tableau d'entiers et le nombre de valeurs à prendre dedans. 4) Écrire la fonction membre Afficher sans argument qui affiche tous les éléments d'une liste. 5) Écrire le destructeur de la classe Liste. Proposer 2 versions du destructeur de Liste suivant qu'il existe ou pas un destructeur pour Maillon. 6) Écrire la fonction membre Cardinal sans argument, qui renvoie le nombre d’éléments de la liste. 7) Écrire la fonction membre Chercher à un argument entier, qui renvoie true si cet élément appartient à la liste, false sinon. 8) En considérant que les informations portées par la liste chaînées sont ordonnées en ordre croissant, écrire la fonction membre Chercher2 à un argument entier, qui renvoie true si cet élément appartient à la liste, false sinon. 9) Écrire la fonction Nb_Occurence à un argument entier qui retourne le nombre d'occurrences (nombre d'exemplaires) de l'argument dans la liste. 10)Écrire la fonction membre Supprimer à un argument entier, qui supprime la première occurrence de cet élément de la liste, s’il existe. 11)Écrire la fonction membre Supprimer_Tout à un argument entier, qui supprime toutes les occurrences de cet élément de la liste, s’il existe. 12)Écrire le constructeur de recopie. 13)Écrire une fonction Liste::Ajout_tete(int) qui ajoute la valeur en argument au début de la liste. 14)Écrire une fonction Liste::Ajout_queue(int)qui ajoute la valeur en argument à la fin de la liste."
   },
   {
     "category": "programmation",
-    "ue": "CPP",
-    "doc_type": "TD",
+    "ue": "cpp",
+    "doc_type": "TP",
     "source": "TD4_SUJET.pdf",
     "chunk_id": 0,
     "text": "Algorithmique et Programmation en C++ Listes chaînées - 2 Rappel structure pour coder une liste chaînée de base : class Maillon friend class Liste ; int info; Maillon *suiv; class Liste Maillon *tete; public : Liste(); ~Liste(); 1) En considérant qu'une liste est ordonnée en ordre croissant, écrire une fonction qui insère l'élément de valeur X (donné en argument) dans la liste à sa place. 2) En considérant qu'une liste est ordonnée en ordre croissant, écrire une fonction qui supprime le premier élément de valeur X dans la liste. 3) En considérant qu'une liste est ordonnée en ordre croissant, écrire une fonction qui supprime tous les élément de valeur X dans la liste. 4) Écrire une fonction qui concatène 2 listes chaînées dans une 3e, les 2 listes de départ seront vidées. Si L1 et L2 sont 2 listes cette fonction sera appelée ainsi pour remplir la liste L3 : L3.concat(L1, L2) ; La liste L3 sera formée des maillons de L1 d'abord puis des maillons de L2. 5) En considérant que L1 et L2 sont ordonnées en ordre croissant, écrire une fonction qui crée la liste L3 formée des maillons de L1 et L2 et qui est ordonnée. Les 2 listes L1 et L2 seront vides à la fin de la fonction : L3.fusion(L1, L2) ; 6) Écrire une fonction qui trie une liste chaînée en ordre croissant suivant la méthode suivante : chercher le plus gros élément et le placer, puis recommencer. 7) Écrire une fonction qui trie une liste chaînée en ordre croissant suivant la méthode suivante : chercher le plus petit élément et le placer, puis recommencer. 8) Écrire une fonction qui retourne une liste, c'est à dire que le 1er Maillon se retrouve dernier, le 2e se retrouve avant dernier, etc. Cette fonction ne doit ni créer ni détruire de Maillon."
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "TP",
     "source": "TP3_SUJET.pdf",
     "chunk_id": 0,
@@ -3417,23 +3417,23 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
-    "doc_type": "TD",
+    "ue": "cpp",
+    "doc_type": "TP",
     "source": "TD1.pdf",
     "chunk_id": 0,
     "text": "Série dur les classes TD1, L1 informatique 2025-2026 L’implémentation du main facilite la conception de la fonction en permettant d’anticiper son utilisation. Vous devez donc avant de réaliser une fonction mettre en place un contexte d’utilisation : un main. On souhaite modéliser des objets géométriques à l’aide de la programmation orientée objet en C++. 1. Classe Point On considère un point du plan défini par deux coordonnées réelles x et y. Exercice 1 Écrire la classe Point contenant : • deux données membres privées x et y • une fonction membre afficher() permettant d’afficher un point sous la forme (x , y) Exercice 2 Écrire un programme principal (main) dans lequel : • on crée un point • on l’affiche à l’écran Exercice 3 Ajouter à la classe Point une fonction membre saisir() permettant de lire les coordonnées du point au clavier. Dans le main : • créer un point • saisir ses coordonnées • l’afficher Exercice 4 — Constructeurs a) Écrire un constructeur prenant deux réels en paramètres afin de permettre l’instruction : Point P(5.2, 3.8); b) Écrire un constructeur sans paramètres permettant l’instruction : Point P; Rappel : Le constructeur est une fonction membre ayant le même nom que la classe. Il ne possède aucun type de retour et sert (entre autres) à initialiser correctement l’objet. Exercice 5 — Distance entre deux points Écrire une fonction membre : double distance(const Point& P) const; Cette fonction retourne la distance entre le point courant (le point qui appelle la méthode) et le point passé en argument. Expliquez le rôle des « const » dans le prototype Exercice 6 — Tableau de points Écrire une fonction qui permet d’afficher un tableau de points. Question : Cette fonction doit-elle nécessairement faire partie de la classe Point ? Justifier la réponse. Exercice 7 — Saisie d’un tableau de points Écrire une fonction permettant de saisir un tableau de points. Le tableau et sa taille sont fournis en paramètres. Exercice 8 — Accesseurs et mutateurs Les données membres étant privées, écrire les fonctions suivantes : • getX(), getY() • setX(), setY() Exercice 9 — Comparaison de deux points Écrire une fonction egale qui retourne true si deux points sont considérés comme identiques. Deux points sont dits identiques si la distance qui les sépare est inférieure à 0.0001. Exercice 10 — Points dans un cercle Écrire une fonction qui reçoit : • un tableau de points • sa taille • un point cible (centre) // c’est le point qui va invoquer la fonction • un rayon R La fonction doit retourner le nombre de points situés à l’intérieur du cercle de centre la cible et de rayon R. Exercice 11 — Suppression de points Écrire une fonction qui : •reçoit un tableau de points et sa taille •supprime tous les points situés à l’extérieur du cercle de centre le point courant et de rayon R •met à jour la taille du tableau après suppression 2. Classe Cercle Un cercle est défini par : • un"
   },
   {
     "category": "programmation",
-    "ue": "CPP",
-    "doc_type": "TD",
+    "ue": "cpp",
+    "doc_type": "TP",
     "source": "TD1.pdf",
     "chunk_id": 1,
     "text": "une fonction qui : •reçoit un tableau de points et sa taille •supprime tous les points situés à l’extérieur du cercle de centre le point courant et de rayon R •met à jour la taille du tableau après suppression 2. Classe Cercle Un cercle est défini par : • un centre de type Point • un rayon de type double Exercice 12 Définir la classe Cercle en respectant l’encapsulation. Exercice 13 — Constructeurs Écrire : • un constructeur sans paramètres • un constructeur avec paramètres Les deux constructeurs doivent être unis dans une même fonction. Exercice 14 — Affichage Écrire une fonction permettant d’afficher les caractéristiques d’un cercle. Exercice 15 — Périmètre Écrire une fonction qui calcule le périmètre du cercle. Exercice 16 — Surface par méthode Monte-Carlo Sans utiliser la formule, écrire une fonction qui estime la surface du cercle à l’aide de la méthode Monte-Carlo : 1. On considère un carré contenant le cercle (côté = 2R). 2. On effectue N tirages aléatoires dans ce carré. 3. On compte le nombre de points appartenant au cercle. 4. La surface du cercle est estimée par : Astuce : travailler sur le quart du cercle de centre O (0,0) et de rayon R. Et multiplier par 4 le résultat. double x = (double) rand() / RAND_MAX * R; // permet de générer un nombre aléatoire entre 0 et R Exercice 17 — Appartenance d’un point Écrire une fonction qui indique si un point est à l’intérieur d’un cercle donné ou non. Exercice 18 — Intersection de deux cercles Écrire une fonction qui permet de déterminer si deux cercles s’intersectent."
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "TP",
     "source": "TP1_Classes.pdf",
     "chunk_id": 0,
@@ -3441,7 +3441,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "TP",
     "source": "TP2-Collection de points.pdf",
     "chunk_id": 0,
@@ -3449,7 +3449,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "TP",
     "source": "TP2-Collection de points.pdf",
     "chunk_id": 1,
@@ -3457,7 +3457,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "TP",
     "source": "TP4_SUJET.pdf",
     "chunk_id": 0,
@@ -3465,7 +3465,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "TP",
     "source": "TP4_SUJET.pdf",
     "chunk_id": 1,
@@ -3473,7 +3473,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_allocDynamique.pdf",
     "chunk_id": 0,
@@ -3481,7 +3481,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_allocDynamique.pdf",
     "chunk_id": 1,
@@ -3489,7 +3489,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_allocDynamique.pdf",
     "chunk_id": 2,
@@ -3497,7 +3497,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_allocDynamique.pdf",
     "chunk_id": 3,
@@ -3505,7 +3505,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_allocDynamique.pdf",
     "chunk_id": 4,
@@ -3513,7 +3513,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_lesArbres.pdf",
     "chunk_id": 0,
@@ -3521,7 +3521,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_lesArbres.pdf",
     "chunk_id": 1,
@@ -3529,7 +3529,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_lesArbres.pdf",
     "chunk_id": 2,
@@ -3537,7 +3537,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_lesArbres.pdf",
     "chunk_id": 3,
@@ -3545,7 +3545,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_lesArbres.pdf",
     "chunk_id": 4,
@@ -3553,7 +3553,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_lesArbres.pdf",
     "chunk_id": 5,
@@ -3561,7 +3561,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_lesBases.pdf",
     "chunk_id": 0,
@@ -3569,7 +3569,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_lesBases.pdf",
     "chunk_id": 1,
@@ -3577,7 +3577,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_lesBases.pdf",
     "chunk_id": 2,
@@ -3585,7 +3585,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_lesBases.pdf",
     "chunk_id": 3,
@@ -3593,7 +3593,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_lesBases.pdf",
     "chunk_id": 4,
@@ -3601,7 +3601,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_lesBases.pdf",
     "chunk_id": 5,
@@ -3609,7 +3609,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_lesBases.pdf",
     "chunk_id": 6,
@@ -3617,7 +3617,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_lesBases.pdf",
     "chunk_id": 7,
@@ -3625,7 +3625,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_lesBases.pdf",
     "chunk_id": 8,
@@ -3633,7 +3633,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_lesBases.pdf",
     "chunk_id": 9,
@@ -3641,7 +3641,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_lesBases.pdf",
     "chunk_id": 10,
@@ -3649,7 +3649,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_lesBases.pdf",
     "chunk_id": 11,
@@ -3657,7 +3657,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_lesClasses.pdf",
     "chunk_id": 0,
@@ -3665,7 +3665,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_lesClasses.pdf",
     "chunk_id": 1,
@@ -3673,7 +3673,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_lesClasses.pdf",
     "chunk_id": 2,
@@ -3681,7 +3681,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_lesClasses.pdf",
     "chunk_id": 3,
@@ -3689,7 +3689,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_lesListes.pdf",
     "chunk_id": 0,
@@ -3697,7 +3697,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_lesListes.pdf",
     "chunk_id": 1,
@@ -3705,7 +3705,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_lesListes.pdf",
     "chunk_id": 2,
@@ -3713,7 +3713,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_lesListes.pdf",
     "chunk_id": 3,
@@ -3721,7 +3721,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_lesListes.pdf",
     "chunk_id": 4,
@@ -3729,7 +3729,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_makefile.pdf",
     "chunk_id": 0,
@@ -3737,7 +3737,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_makefile.pdf",
     "chunk_id": 1,
@@ -3745,7 +3745,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_makefile.pdf",
     "chunk_id": 2,
@@ -3753,7 +3753,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_makefile.pdf",
     "chunk_id": 3,
@@ -3761,7 +3761,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_recurcivite.pdf",
     "chunk_id": 0,
@@ -3769,7 +3769,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_recurcivite.pdf",
     "chunk_id": 1,
@@ -3777,7 +3777,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_recurcivite.pdf",
     "chunk_id": 2,
@@ -3785,7 +3785,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_recurcivite.pdf",
     "chunk_id": 3,
@@ -3793,7 +3793,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_recurcivite.pdf",
     "chunk_id": 4,
@@ -3801,7 +3801,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_recurcivite.pdf",
     "chunk_id": 5,
@@ -3809,7 +3809,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_recurcivite.pdf",
     "chunk_id": 6,
@@ -3817,7 +3817,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_recurcivite.pdf",
     "chunk_id": 7,
@@ -3825,7 +3825,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_structuresChainees.pdf",
     "chunk_id": 0,
@@ -3833,7 +3833,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_structuresChainees.pdf",
     "chunk_id": 1,
@@ -3841,7 +3841,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_structuresChainees.pdf",
     "chunk_id": 2,
@@ -3849,7 +3849,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_structuresChainees.pdf",
     "chunk_id": 3,
@@ -3857,7 +3857,7 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_structuresChainees.pdf",
     "chunk_id": 4,
@@ -3865,11 +3865,115 @@
   },
   {
     "category": "programmation",
-    "ue": "CPP",
+    "ue": "cpp",
     "doc_type": "cours",
     "source": "cpp_structuresChainees.pdf",
     "chunk_id": 5,
     "text": "vide. Arbre binaire complet : tous les niveaux sont remplis sauf éventuellement le dernier, et dans ce cas les pointeurs NULL sont à droite. Remarque : Soit un arbre binaire parfait de hauteur k, - combien de feuilles possède cet arbre ? - combien de nœuds en tout possède cet arbre ? 2k+1 - 1 P. Gilles 2025-2026 - CC By-Sa"
+  },
+  {
+    "category": "programmation",
+    "ue": "C",
+    "doc_type": "cours",
+    "source": "1- Rappels Variables Boucles Conditions_annoté.pdf",
+    "chunk_id": 0,
+    "text": "Base de programmation C/C++ Semestre 1 2024/2025 Algorithme, variables, conditions et boucles. ludovic.bonnefoy@univ-avignon.fr Bas et Haut niveau Bas niveau Proche du langage machine / de la logique des composants + de contrôle (ex : la mémoire) Haut niveau Proche du langage humain + lisible et facile à coder + facile à corriger + portable Compilation Utilisation d'un compilateur pour : o Transformer le code source en langage machine exécutable o Optimiser le code o Analyse lexicale, syntaxique et sémantique • Signale des erreurs (de compilation) • Émet des avertissements Un algorithme, c'est quoi ? Définition Un algorithme : Est une suite d'instruction o Finie o Exécutée dans l'ordre Prend des entrées Produit un résultat Un bon algorithme est : Peu \"complexe\" Rapide Peu gourmand en ressources Définition Recette Monter un meuble Rubik's Cube Invoquer un démon Un itinéraire Production industrielle Tutoriel de jeu vidéo Programme de machine à laver Exemples Pseudo-code Algorigramme Représentations Travail d'un programmeur Je veux un smoothie fraise/banane vegan Recette de Smoothie aux Fruits 2 bananes mûres 1 tasse de fraises fraîches 1/2 tasse de lait d'amande 1 cuillère à soupe de sirop d'agave Ajouter le sirop d'agave dans le blender. (facultatif) Ajouter les fruits dans le blender. Verser le lait d'amande dans le blender. Mixer 30 secondes. Vérifier la consistance : elle doit être lisse et crémeuse. Sinon remixer à nouveau 30 secondes avant de vérifier à nouveau la consistance et répéter ce jusqu'à ce qu'elle soit satisfaisante. Dégustez votre smoothie frais et fruité ! Sortie attendue Entrées Instructions Travail d'un programmeur Recette de Smoothie aux Fruits bananes = 2 fraises fraiches = 1 tasse lait d' amande = 1/2 tasse Sirop agave = 1 cas Condition SI vous avez du sirop d'agave Ajouter le sirop d'agave dans le blender Ajouter les fruits dans le blender. Verser le lait d'amande dans le blender. Boucle TANT QUE la consistance n'est pas lisse Boucle POUR 30 secondes Mixer Dégustez votre smoothie frais et fruité ! Variables Recette de Smoothie aux Fruits 2 bananes mûres 1 tasse de fraises fraîches 1/2 tasse de lait d'amande 1 cuillère à soupe de sirop d'agave Ajouter le sirop d'agave dans le blender. (facultatif) Ajouter les fruits dans le blender. Verser le lait d'amande dans le blender. Mixer 30 secondes. Vérifier la consistance : elle doit être lisse et crémeuse. Sinon remixer à nouveau 30 secondes avant de vérifier à nouveau la consistance et répéter ce jusqu'à ce qu'elle soit satisfaisante. Dégustez votre smoothie frais et fruité ! Les variables Pour quoi faire ? Sauvegarder temporairement des informations ou résultats pour nous en resservir plus tard. Comment ? Stocker les valeurs dans la mémoire. Puis ensuite les lire, les remplacer ou les effacer. 0 1 1 0 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 1 0 0 0 1 0 0 1 Valeur stockée Mémoire Une variable : un nom, une adresse, un type, une valeur. Déclarer une variable : Typage Mémoire Pourquoi : Combien"
+  },
+  {
+    "category": "programmation",
+    "ue": "C",
+    "doc_type": "cours",
+    "source": "1- Rappels Variables Boucles Conditions_annoté.pdf",
+    "chunk_id": 1,
+    "text": "0 1 1 0 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 1 0 0 0 1 0 0 1 Valeur stockée Mémoire Une variable : un nom, une adresse, un type, une valeur. Déclarer une variable : Typage Mémoire Pourquoi : Combien bits (cases) pour stocker la valeur puis la lire ? Ne pas gaspiller de la mémoire : réserver la mémoire nécessaire mais pas plus. Gestion des erreurs : ne pas mettre une poire à la place d'une pomme qui était attendue. Les principaux types (pour le moment) : Les entiers : int -> 32 bits Les décimaux : double -> 64 bits Les booléens (vrai/faux) : bool -> 8 bit 0 1 1 0 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 1 0 0 0 1 0 0 1 Adresse (numéro de la case) Valeur stockée Déclarer une variable : nommage 0 1 1 0 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 1 0 0 0 1 0 0 1 Adresse (numéro de la case) Valeur stockée Mémoire Langage haut niveau : manipuler un nom qui a du sens pour nous est plus simple qu'une adresse. prix_final = prix_ht + tva plus simple que #121846184 = #8164843 + #1544684 Conventions pour nommer une variable : o En anglais o Minuscules o Démarre par une lettre de l'alphabet o Numéros autorisés o Seul symbole : _ ▪ pour séparer les mots du nom o Pas de mots clés réservés Ici : snake_case Pas de noms de variable peu explicites Déclaration Réserve en mémoire des blocs côte à côte pour stocker l'information. Obligatoire avant d'utiliser une variable Initialisation / affectation 1 1 1 1 1 1 1 1 0 0 0 1 0 0 1 Mémoire Il y a déjà des valeurs dans la mémoire réservée. Il faut y mettre une valeur à nous avant de l'utiliser. Fonction printf() Permet d'afficher du texte dans la console printf(\"bonjour \\n\"); Pour affiche le contenu d'une variable, il faut donner le type de variable puis son nom à la fin %d = int, %f = double, %d bool int age = 20; printf(\"Age : %d and\\n\", age) double taille = 1.78 printf(\"Taille : %f metres\\n\", taille) bool vivant = true; printf(\"Est vivant : %d \\n\", vivant) Fonction scanf() Permet de lire des entrées utilisateur scanf(\"%type\", &nom_variable); %d = int, %lf = double, %d bool int valeur; printf(\"Votre nombre entier :\") scanf(\"%d\", %valeur) Les conditions Structure et mots clés en C++ 1. Si 1. Si 2. Sinon 1. Si 2. Sinon Si 3. Sinon Si 4. ... 1. Si 2. Sinon Si 3. Sinon Si 4. … 5. Sinon 1. if 1. if 2. else 1. if 2. else if 3. else if 4. ... 1. if 2. else if 3. else if 4. … 5. else Si doigt = 1 \"THUMB UP !\" Sinon Si doigt = 2 \"ON"
+  },
+  {
+    "category": "programmation",
+    "ue": "C",
+    "doc_type": "cours",
+    "source": "1- Rappels Variables Boucles Conditions_annoté.pdf",
+    "chunk_id": 2,
+    "text": "Sinon Si 3. Sinon Si 4. … 5. Sinon 1. if 1. if 2. else 1. if 2. else if 3. else if 4. ... 1. if 2. else if 3. else if 4. … 5. else Si doigt = 1 \"THUMB UP !\" Sinon Si doigt = 2 \"ON MONTRE PAS DU DOIGT !\" Sinon Si doigt = 3 \"SOIS POLI !\" Sinon Si doigt = 4 OU doigt = 5 \"ILS SERVENT A RIEN\" Sinon \"HEU... C'EST QUOI CETTE TENTACULE ?!\" Faire suivre différents voies à l'algorithme pour faire des traitements différents selon la valeur de certaines données. Tests Les opérateurs relationnels Egal Inférieur Inférieur ou égal Supérieur Supérieur ou égal Différent Tests multiples NOT (inverse la valeur) Exemples Les opérateurs logiques Les boucles For / Pour : boucle définie Répète un bloc d'instructions un nombre de fois prédéterminé, défini, connu à l'avance. Initialisation On démarre à combien ? Condition(s) de fin Tant que c'est bon on continue Pas de l'itération On modifie de combien le compteur avant de reboucler ? While / Tant que : boucle indéfinie Répète un bloc d'instructions un nombre de fois indéfini, inconnu à l'avance, fixé par une condition. Répète TANT QUE la condition est vraie. C'est un if qui se répète. Une partie : condition de poursuite La pile (stack) Organisation LIFO (Last In, First Out) Type de mémoire rapide À chaque nouveau bloc -> Une nouvelle zone (\"frame\") est empliée Quand on accède au premier élément de la pile, c'est le dernier élément rentré qui sort Les variables … … et leur portée La portée Portée locale Erreur : c n'existe plus Zone dans laquelle la variable existe. Une variable existe dans : o le bloc dans lequel elle est déclarée o les blocs fils (bloc imbriqué). Dès que l'on sort du bloc elle n'existe plus."
+  },
+  {
+    "category": "programmation",
+    "ue": "C",
+    "doc_type": "cours",
+    "source": "2- Fonctions_annoté.pdf",
+    "chunk_id": 0,
+    "text": "Défrichage Chat Gpt entrées : Je suis un étudiant en première année de licence et je découvre le C. Je veux que tu me fasses un petit cours sur les fonctions en C. Jusque là je n'ai vu que les variables, les conditions et les boucles. Je ne souhaite pas voir les passages par références, ni les pointeurs. Je souhaite en revanche avoir une vue d'ensemble des fonctions et des détails sur les liens avec la portée des variables et ce que signifie passage par valeur ou copie. Quelles sont les différences entre les fonctions en python et en C ? Qu'est-ce qu'une fonction / méthode ? Une boîte qui contient un algorithme : o Des entrées o Un traitement (du code) o Une sortie (pour le moment) Pour quoi faire ? o Ne pas répéter o Faciliter la maj o Rendre plus lisible le code o Ranger les fichiers / bibliothèques FONCTION SORTIE SORTIE Déclarer une fonction Nom de la fonction Les entrées : nom de variables avec leur type. Sont aussi appelés : arguments ou paramètres. Type de l'information en sortie Déclarer une fonction : le nom Conventions pour nommer une fonction : o En anglais o Commence par un verbe o Démarre par une lettre de l'alphabet, en minuscule o Chaque autre mot démarre par une majuscule o Des numéros sont possibles (mais pas en premier caractère) o Pas de symboles spéciaux Portée des variables & fonctions La portée : où une variable peut-elle être appelée dans le code ? Portée d'une variable en C/C++ : un bloc {} ( et ceux imbriqués ). Le main est un bloc. Une fonction en est un autre. Les variables dans le main sont invisibles dans la fonction et vice-versa. Portée des variables et paramètres Les paramètres (ou arguments) sont le moyen de faire passer des valeurs à la fonction. Des variables sont créées et les valeurs y sont stockées. Appel de la fonction : Paramètres : passage par copie nombre1 nombre2 result Mémoire Variables On envoie les valeurs de a et b ATTENTION : En python, le passage par défaut est le passage par référence Paramètres : passage par copie (main) (fonction) Mémoire Variables Paramètres : passage par copie number Mémoire Variables La pile et les fonctions main() : w main : if : v a() : x b() : y c-() : z Rappel Zone dans laquelle la variable existe, l'état de la pile actuelle. Une variable existe dans : o le bloc dans lequel elle est déclarée o les blocs fils (bloc imbriqué). Dès que l'on sort du bloc elle n'existe plus. main : if : v --> [ 5 ] Pile, portée des variables et retour du résultat number Mémoire Variables erreur Quand on sort de la fonction Portée des variables et retour du résultat par copie Comment la fonction peut-elle alors renvoyer un résultat ? Type attendu (si aucun retour attendu alors le type est void) return quitte la fonction Où mettre le code ?"
+  },
+  {
+    "category": "programmation",
+    "ue": "C",
+    "doc_type": "cours",
+    "source": "2- Fonctions_annoté.pdf",
+    "chunk_id": 1,
+    "text": "du résultat number Mémoire Variables erreur Quand on sort de la fonction Portée des variables et retour du résultat par copie Comment la fonction peut-elle alors renvoyer un résultat ? Type attendu (si aucun retour attendu alors le type est void) return quitte la fonction Où mettre le code ? : créer des \"bibliothèques\" Inclusion de la bibliothèque stdio : printf scanf Fichier .h main.c mathematicOperations.h Fichier .c mathematicOperations.c Surcharge Deux fonctions peuvent s'appeler pareil si la liste des arguments est différente. Permet des traitements différents selon la qualité et quantité des paramètres (et non leur valeur). Le type de retour peut changer ou rester le même Il doit y avoir des modifications ici : ajout ou suppression de variables et/ou changement des types. Les noms ne compte pas. Exemples:"
+  },
+  {
+    "category": "programmation",
+    "ue": "C",
+    "doc_type": "cours",
+    "source": "3-Pointeurs.pdf",
+    "chunk_id": 0,
+    "text": "Défrichage Chat Gpt entrées : Je suis un étudiant en première année de licence et je découvre le C. Je veux que tu me fasses un petit cours sur les pointeurs en C. Jusque-là je n'ai vu que les variables, les conditions, les boucles et les fonctions. Je ne veux pas l'allocation dynamique ni la passage par référence. : un nom, un type, une valeur : pe Rappel : utiliser la mémoire Dans un programme on a besoin de : Stocker les valeurs dans la mémoire. Puis ensuite les lire, les remplacer ou les effacer. Déclarer une variable : allouer un espace mémoire et le manipuler 0 1 1 0 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 1 0 0 0 1 0 0 1 Adresse (numéro de la case) Valeur stockée Mémoire Mais on peut aussi utiliser uniquement l'adresse et le type : sans passer par une variable. Variable : un nom, un type, une valeur , une adresse de départ Un pointeur stocke une adresse mémoire et le type d'information qui s'y trouve. 0x7ffcc0bee04c Adresse (numéro de la case) Valeur stockée pAge 0x7ffcc0bee04c 0x9ffdce1f45ee Type de la variable : pointeur Type de l'information pointée Nom de la variable Conventions : Le nom démarre par p * collée au nom de la variable Accéder à l'adresse d'une variable : & Récupérer l'adresse d'une variable : & devant Stocker l'adresse dans un pointeur : Lancement 1 : Lancement 2: Lancement 3 : %p pour les adresses (pointeurs) En mémoire que se passe-t-il ? 0x7ffcc Adresse (numéro de la case) Valeur stockée pAge 0x7ffcc 0x9ffd 0x7ffcc Comment accéder à l'information pointée : * 0x7ffcc Adresse (numéro de la case) Valeur stockée pAge 0x7ffcc 0x9ffd 0x7ffcc pAge 0x7ffcc 0x9ffd 0x7ffcc pAge 0x7ffcc 0x9ffd 0x7ffcc affiche la valeur contenu dans l'adresse mémoire dans ce contexte Ne pas confondre à la déclaration à l'utilisation Indication du type de la variable : pointeur Permet d'accéder à la valeur pointée (au lieu d'accéder à l'adresse) Erreurs courantes Null Pointer Exception Le pointeur vaut NULL Invalid Pointer Error Le pointeur contient une adresse vers un espace non alloué. Pas d'initialisation Mise à NULL volontaire Désallocation dynamique (voir CM6) L'adresse a été modifiée (au lieu de la valeur par exemple) L'espace a été désalloué Ex : 0x7ffcc pAge 0x7ffcc 0x9ffd 0x7ffcc pAge 0x7ffcc 0x9ffd Application dans les fonctions Mettre des pointeurs en paramètres pour contourner la limite d'un seul élément retourné. out (1) in-out out (x) Paramètre return Pointeurs Paramètre return Paramètres in-out Le pointeur permet de modifier l'espace mémoire initial (et donc de faire une sorte de retour). pBase 0x7ffcc 0x9ffd Adresse (numéro de la case) Valeur stockée 0x7ffcc Application dans les fonctions Toujours un passage par valeur pDay (fonction) pDay (main) 0x7ffcc 0x12e56 0x9ffd Adresse (numéro de la case) Valeur stockée 0x12e56 0x12e56 Pointeur de pointeur Possible de pointer vers un pointeur. L'adresse stockée dans pPC (donc l'adresse de pB) L'adresse stockée dans pB (donc l'adresse de a)"
+  },
+  {
+    "category": "programmation",
+    "ue": "C",
+    "doc_type": "cours",
+    "source": "3-Pointeurs.pdf",
+    "chunk_id": 1,
+    "text": "Application dans les fonctions Toujours un passage par valeur pDay (fonction) pDay (main) 0x7ffcc 0x12e56 0x9ffd Adresse (numéro de la case) Valeur stockée 0x12e56 0x12e56 Pointeur de pointeur Possible de pointer vers un pointeur. L'adresse stockée dans pPC (donc l'adresse de pB) L'adresse stockée dans pB (donc l'adresse de a) La valeur stockée dans a (donc 42) 0x7ffcc 0x12e56 0x9ffd 0x7ffcc 0x12e56 Adresse (numéro de la case) Valeur stockée"
+  },
+  {
+    "category": "programmation",
+    "ue": "C",
+    "doc_type": "cours",
+    "source": "4- Tableaux.pdf",
+    "chunk_id": 0,
+    "text": "Exemple : je veux stocker les notes des 300 étudiants Avec des variables En créer manuellement 300... Toutes les passer aux fonctions Toutes les écrire dans les calculs Avec un tableau Une seule variable à créer Une seule variable à passer aux fonctions Une seule boucle pour les traiter toutes Déclarer un tableau statique Nom de la variable tableau Type de l'information stockée Nombre de cases Une suite de cases pouvant contenir chacune une information. Une seule dimension Initialiser (au moment de la déclaration) Initialisation totale Je donne toutes les valeurs, séparées par des virgules. Initialisation partielle Je ne donne que les premières, toute la suite est mise à 0. 3, 5, 8, 0, 0 3.5, 0.0, 0.0 0, 1, 0, 0 Comment passe-t-on de 300 variables à une seule ? 1. Un tableau réserve des espaces mémoires contigus (les uns à côté des autres). 2. La variable du tableau contient une adresse ! -> Un tableau se comporte comme un pointeur vers le premier espace mémoire (Ça pourrait ressembler à un pointeur constant car on ne peut plus changer l'adresse qui est stockée dedans) 0x7ffe64 3. Pour accéder aux autres cases : décaler l'adresse d'un espace mémoire (pour ça qu'ils sont côte à côte !) Comment accéder aux données ? (notation pointeur – ne pas utiliser) 0x7ffe64 0x7ffe64 On peut manipuler un tableau comme un pointeur Pour la case 2 : décaler l'adresse de 1 espace mémoire (autant de bits qu'il faut pour le type de variable déclaré) N'ajoute pas 1 à l'adresse mais ce qu'il faut pour décaler de 1 espace mémoire La \"numérotation\" commence à 0 pour la 1ère case, puis 1 pour la seconde case, etc. Pour la case x : *(tab + x - 1) Pour modifier la valeur : Mets la valeur 14 dans la 4ième case Comment accéder aux données ? (notation en tableau - version conseillée) 0x7ffe64 0x7ffe64 La \"numérotation\" commence à 0 pour la 1ère case, puis 1 pour la seconde case, etc. Le nombre dans les crochets dit de combien il faut décaler le pointeur. Donc pour la première case on ne décale pas. Pour la seconde on décale de 1. Première case : Deuxième case : Case x : Modifier la valeur : Mets la valeur 14 dans la 4ième case Initialiser (2) Initialisation à la déclaration (rappel) Totale Partielle Initialisation après la déclaration Taille d'un tableau Taille \"en dur\" dans le code La taille d'un tableau est statique, écrite directement dans le code. Impossible de demander à l'utilisateur la taille. Par contre il est important de stocker la taille du tableau tout de même. Taille d'un tableau réelle vs max Taille \"en dur\" dans le code Impossible de demander à l'utilisateur la taille. Réserver beaucoup pour couvrir tous les cas Ex : pour fonctionner avec toutes les promos je prends 2000 cases. Conserver la taille max et la taille réelle Ex : le tableau fait 2000 cases mais dans ma promo je n'ai que 215 élèves, donc j'utilise"
+  },
+  {
+    "category": "programmation",
+    "ue": "C",
+    "doc_type": "cours",
+    "source": "4- Tableaux.pdf",
+    "chunk_id": 1,
+    "text": "demander à l'utilisateur la taille. Réserver beaucoup pour couvrir tous les cas Ex : pour fonctionner avec toutes les promos je prends 2000 cases. Conserver la taille max et la taille réelle Ex : le tableau fait 2000 cases mais dans ma promo je n'ai que 215 élèves, donc j'utilise que les 215 premières. Application dans les fonctions : passage en paramètre Passer le tableau et sa taille ! Possible aussi car ça peut se manipuler comme un pointeur Application dans les fonctions : portée des variables Puisque l'on manipule des adresses (comme un pointeur) si on modifie le tableau dans la fonction il sera modifié partout (puisque l'on accède aux mêmes cases mémoires). 0x7ffe64 0x7ffe64 0x7ffe64 tableau Application dans les fonctions : retourner un tableau (à éviter, passer le plutôt comme paramètre) Un tableau se \"retourne\" comme un pointeur. Si le tableau est créé dans la fonction : il est détruit à sa sortie donc le pointeur retourné pointe sur un endroit invalide (car désalloué). L'espace mémoire est désalloué en sortant de la fonction Tableau multidimensionnel Déclaration Initialisation Représentation matricielle En mémoire tab[0][x] tab[1][x] tab[2][x] tab[0][x] tab[1][x] tab[2][x] Tableau multidimensionnel Parcours du tableau avec des boucles imbriquées Passage dans une fonction"
+  },
+  {
+    "category": "programmation",
+    "ue": "C",
+    "doc_type": "cours",
+    "source": "5- Structures.pdf",
+    "chunk_id": 0,
+    "text": "Défrichage Chat Gpt entrées : Je suis un étudiant en première année de licence et je découvre le C. Je veux que tu me fasses un petit cours sur les structures en C. Jusque-là je n'ai vu que les variables, les conditions, les boucles, les fonctions, les pointeurs et les tableaux. Je ne veux pas l'allocation dynamique. Définir une classe Tamagotchi.hpp Problèmes : Difficile de lire à qui appartient quelle date. Si on veut afficher le nom de la personne la plus âgée il faut recouper les infos \"à la main\" o Le code ne sait pas quelles infos vont ensemble ! Si on ajoute une 4e personne, il faut modifier la fonction. Quand les variables se multiplient… Structurer, c’est donner du sens aux données Prénom Date de naissance Numéro de rue Nom de la rue Code postal Ville Numéro de sécurité sociale EtatCivil Structures : encapsuler des variables Une structure correspond à un \"concept\". Regroupe plusieurs variables de types différents qui décrivent une même entité Tas de variables éparpillées ➜ modèle de donnée cohérent. Un nouveau type de variable est créé. Le code devient lisible et réutilisableTamagotchi.hpp • Le code “parle”. On comprend qu’on manipule des personnes. • trouverPlusVieux manipule des personnes, pas des morceaux de données ➜ moins d'erreurs ! ➜ C’est ça, structurer : regrouper, nommer, clarifier. Définir une structure Tamagotchi.h Dans un fichier \".h\" du nom de la structure. Nom de la struct: Doit être un nom (pas un verbe) Pas de caractères spéciaux ni de _ struct se termine par \" ; \" Peut contenir des variables de tous types (dont struct, pointeurs, tableaux, etc.) Attention à ne pas oublier le ; Données membres / attributs / champs Accéder aux données membres de la structure Tamagotchi.hpp Tamagotchi.h Main.c // Inclure le fichier \".h\" // NomInstance.NomDonneeMembre NomAttribut Initialisation à la déclaration Initialisation séquentielle Dans l'ordre de la définition des données Initialisation sélective Le reste est initialisé à zéro ou à null (pointeurs) Fonctions et structures Tamagotchi.hpp Utilisé comme n'importe quel autre type de variable La fonction reçoit une copie de la structure Les modifications n'impactent pas l'original Associer des fonctions à des structures Dans un fichier \".c\" du nom de la structure Inclure le fichier \".h\" Tamagotchi.c Donne du contrôle Les structures regroupent les données, Les fonctions regroupent les comportements, permet de manipuler les structures. ➜ Isoler la logique liée à une structure dans des fonctions dédiées. Comme tout autre type on peut retourner une structure Structures et pointeurs Tamagotchi.hpp Structure : regroupe des informations cohérentes. Pointeur : manipule des informations sans tout recopier. Ensemble : gérer de grandes collections de données Copie vs Pointeurs Tamagotchi.hpp Deux copies Manipuler un pointeur vers une structure Une structure en mémoire = *(pTama.sante) Risque de provoquer une erreur typedef struct { int x; int y; } Point; Si on écrit Point p = { 3 };, alors p.x == 3 et p.y n’est pas défini. Une fonction peut recevoir une structure en paramètre, mais cela crée une copie de"
+  },
+  {
+    "category": "programmation",
+    "ue": "C",
+    "doc_type": "cours",
+    "source": "5- Structures.pdf",
+    "chunk_id": 1,
+    "text": "en mémoire = *(pTama.sante) Risque de provoquer une erreur typedef struct { int x; int y; } Point; Si on écrit Point p = { 3 };, alors p.x == 3 et p.y n’est pas défini. Une fonction peut recevoir une structure en paramètre, mais cela crée une copie de toute la structure. Passer un pointeur vers une structure à une fonction permet de modifier la structure d’origine. On peut accéder à un champ de structure via un pointeur en utilisant *ptr.champ. On peut retourner une structure depuis une fonction, mais c’est interdit si elle contient d’autres structures imbriquées. Un tableau statique de structures peut être déclaré comme : Point tab[10]; Si une structure contient un pointeur, alors l’initialisation partielle {0} met ce pointeur à NULL. On peut retourner une structure par valeur depuis une fonction, et cela copie l’intégralité de ses données. ici y = 0 il faut faire (*ptr).champ C'est tout à fait possible"
+  },
+  {
+    "category": "programmation",
+    "ue": "C",
+    "doc_type": "cours",
+    "source": "6-Allocation Dynamique.pdf",
+    "chunk_id": 0,
+    "text": "Rappel Pour accéder et décoder l'information dans un espace mémoire nous avons besoin de : Une adresse Première case de l'espace mémoire. Un type Taille de l'espace mémoire, Comment interpréter les 0 et 1. 0 1 0 1 0 1 1 0 1 0 0 1 0 1 0 1 1 0 1 0 0 1 0 1 0 1 1 0 1 0 6E9D500AF356 La limite des pointeurs jusque-là... 1. Passer par une variable Erreur : la variable a n'existe plus Erreur : l'espace mémoire qui avait été créé avec a n'existe plus non plus donc pA est un pointeur invalide. 2. La durée de vie d'un espace mémoire est soumis à la portée des variables Une variable créée dans un bloc est détruite en sortant Un espace mémoire alloué dans un bloc est désalloué en sortant La pile : rappel main : w main : if : v a() : x b() : y c() : z Organisation LIFO (Last In, First Out) Type de mémoire rapide. À chaque nouveau bloc → une nouvelle zone (\"frame\") est empilée À la fin d'un bloc → la zone est dépilée automatiquement La mémoire : le tas (heap) • Zone mémoire dynamique globale. • Conserve des données dont la taille ou la durée de vie ne sont pas connues à l’avance. • Accès plus lent car les zones ne sont pas les unes à la suite des autres. La pile et le tas Allouer de la mémoire oui, mais combien ? Grace à la fonction : Malloc (en c) Crée un espace mémoire d'une certaine taille. Retourne l'adresse de l'espace créé. Stocker l'adresse renvoyée ! Sinon impossible de retrouver l'espace mémoire. On stocke dans un pointeur pVar Heap Stack Avantages: Un espace créé dans le tas avec malloc n'est pas détruit en sortie de bloc. Libérés de la portée des variables. Affiche 3 ! Crée un nouvel espace mémoire Erreur : l'espace mémoire qui avait été créé avec a n'existe plus non plus donc pA est un pointeur invalide. Nous pouvons désormais allouer un espace manuellement. Mais il faut désormais le désallouer nous même ! Exemple d'erreur : le pointeur lui est toujours soumis à la portée Erreur : pA n'existe plus, Mais l'espace mémoire qui était pointé lui existe encore. Danger : fuite de mémoire Accumulation des espaces mémoires qui ne sont pas désalloués manuellement. Sources du problème : o Oubli de désallouer sur le tas o Perte de l'adresse ▪Adresse pas stockée après malloc ▪Dernier pointeur détruit avant désallocation. Free (en c) Il faut libérer (désallouer) les espaces mémoires alloués dynamiquement. Désalloue (ou libère) l'espace mémoire. Il ne met pas le pointeur à NULL. pAge pAge Tableau alloué dynamiquement Définir la taille d'un tableau pendant l'exécution ! (choisir sa taille en fonction de l'utilisation ou des données) Libérer un tableau comme un pointeur Malloc et structure Tamagotchi.h Main.c Vrai / Faux malloc initialise automatiquement la mémoire allouée à 0 Allouer un tableau dynamique de 10 int : malloc(10). La"
+  },
+  {
+    "category": "programmation",
+    "ue": "C",
+    "doc_type": "cours",
+    "source": "6-Allocation Dynamique.pdf",
+    "chunk_id": 1,
+    "text": "Définir la taille d'un tableau pendant l'exécution ! (choisir sa taille en fonction de l'utilisation ou des données) Libérer un tableau comme un pointeur Malloc et structure Tamagotchi.h Main.c Vrai / Faux malloc initialise automatiquement la mémoire allouée à 0 Allouer un tableau dynamique de 10 int : malloc(10). La mémoire allouée avec malloc est stockée sur la pile. Une fois la mémoire libérée avec free, le pointeur devient automatiquement NULL. Les variables locales déclarées dans une fonction sont stockées sur la pile. Le tas se libère automatiquement quand on sort d’une fonction. Si on perd l’adresse renvoyée par malloc, la mémoire devient impossible à libérer. Pour allouer une structure en dynamique, il faut écrire : malloc(sizeof(struct)). Une structure déclarée ainsi Game g; est stockée sur la pile. Les tableaux dynamiques obtenus via malloc fonctionnent comme des tableaux classiques. Une structure déclarée ainsi Game *g = malloc(sizeof(Game)); est stockée sur le tas. La pile se libère automatiquement quand on sort d’une fonction. Le pointeur qui pointe vers une zone du tas peut, lui, être placé sur la pile. Le tas est généralement plus petit que la pile. On peut faire un malloc à l’intérieur d’une fonction et utiliser la mémoire allouée dans le main. Si on oublie de faire free, la mémoire est automatiquement libérée quand on quitte la fonction. Il est correct d’écrire : int *p; *p = 10;. On peut faire sizeof(ptr) pour connaître la taille du bloc alloué par malloc."
   },
   {
     "category": "programmation",
@@ -4090,8 +4194,48 @@
   {
     "category": "programmation",
     "ue": "Python",
+    "doc_type": "CC",
+    "source": "sujets.pdf",
+    "chunk_id": 0,
+    "text": "UAPV/CERI - BASES DE LA PROGRAMMATION L1 S1 INFORMATIQUE Feuille de TD n° 1 Dans cette UE nous programmons en python. Pour afficher « Bonjour » on écrit : print(« Bonjour\") Pour afficher le continue d’une variable A, on écrit : print(A); On peut aussi faire print(\"La valeur contenue dans la variable A est », A ) Pour lire, on utilisera l'instruction : a=input(\"Entrez une valeur: ») EXERCICE 1 Écrire un programme qui demande à l'utilisateur 2 entiers qu’il met dans deux variables a et b et qui affiche « plus grand » si a est supérieur à b, sinon il affiche « plus petit ou égal». Modifier le programme pour qu'il affiche : « plus grand », « plus petit», ou « égal». EXERCICE 2 Écrire un programme qui demande à l’utilisateur une longueur L et une largeur l (la longueur doit être supérieure ou égale à la largeur et L≥ l) et qui affiche la surface du rectangle correspondant. Si la condition sur les longueurs n’est pas respectée le programme affiche le message : « Données incohérentes » EXERCICE 3 Écrire un programme qui lit 6 entiers et qui les mets dans 6 variables : a, b, c, d, e, f. Ensuite, si au moins 3 variables sont non nulles le programme doit afficher « la saisie est correcte », sinon il affiche « la saisie est incorrecte ». EXERCICE 4 Écrire un programme qui lit 3 nombres qu’il met dans trois variables a, b et c et qui les réordonne de façon à ce que le contenu de a soit inférieur ou égal à celui de b et celui de b soit inférieur ou égal à celui de c. Le programme affiche a, b et c pour vérification. EXERCICE 5 Écrire un programme qui permet de saisir 10 valeurs et d’affiche la plus petite valeur, la plus grande valeur et la moyenne. Ce programme ne doit utiliser que 4 variables. EXERCICE 6 Écrire un programme qui saisit les coordonnées (entiers) de deux points et qui affiche la distance (double) les séparant. EXERCICE 7 Écrire un programme qui saisit les coordonnées (entiers) de 3 points et qui dit si les trois points forment un triangle rectangle. EXERCICE 8 Écrire un programme qui demande à l’utilisateur une opération (*,+,-,/), suivie de deux opérandes. Le programme doit afficher ensuite le résultat de l’opération appliquées aux deux opérandes. Les opérandes et les résultats doivent être des entiers. Attention : pensez à interdire la division par 0.0 Exécution : Entrez l’opération : * Entrez la première opérande : 3 Entrez la deuxième opérande : 4 Le résultat de 3*4 est 12 EXERCICE 9 Écrire un programme qui demande 3 valeurs a ,b et c de type double et affiche les solutions de l’équation ax2+bx+c=0. On vérifiera que a est différent de 0. EXERCICE 10 Écrire un programme qui reçoit un nombre à 4 chiffres et qui affiche les chiffres un à un avec un espace les séparant. Le programme doit vérifier d’abord"
+  },
+  {
+    "category": "programmation",
+    "ue": "Python",
+    "doc_type": "CC",
+    "source": "sujets.pdf",
+    "chunk_id": 1,
+    "text": "et c de type double et affiche les solutions de l’équation ax2+bx+c=0. On vérifiera que a est différent de 0. EXERCICE 10 Écrire un programme qui reçoit un nombre à 4 chiffres et qui affiche les chiffres un à un avec un espace les séparant. Le programme doit vérifier d’abord que le nombre contient bien 4 chiffres. Dans le cas contraire le programme affiche un message : « le nombre ne contient pas 4 chiffres » BASES DE LA PROGRAMMATION L1 S1 INFORMATIQUE Feuille de TD n° 2 Les boucles EXERCICE 1 Écrire un programme qui demande à l'utilisateur de lui fournir un nombre entier positif et inférieur à 100 et ceci jusqu'à ce que la réponse soit satisfaisante. Le dialogue avec l'utilisateur se présentera ainsi: donnez un entier positif inférieur à 100 : 453 donnez un entier positif inférieur à 100 : 25 merci pour le nombre 25 EXERCICE 2 Écrire un programme qui demande à l'utilisateur un nombre entre 2 et 9 et affiche la table de multiplication de celui-ci. La saisie du nombre est bloquante : tant que le nombre n'est pas compris entre 2 et 9 le programme redemande... EXERCICE 3 A- Écrire un programme qui saisit une suite de valeurs entières non nulles. A la fin de la saisie, le programme doit afficher la moyenne des valeurs saisies. La saisie s’arrête quand l’utilisateur donne la valeur 0. B- Écrire un programme qui saisit une suite de valeurs entières non nulles. A la fin de la saisie, le programme doit afficher la moyenne des valeurs saisies, la valeur minimale et la valeur maximale. Les trois valeurs doivent être calculées en utilisant une seule boucle. La saisie s’arrête quand l’utilisateur donne la valeur 0. EXERCICE 4 Écrire un programme qui saisit une suite de valeurs entières non nulles. A la fin de la saisie, le programme doit afficher la moyenne des valeurs paires et la moyenne des valeurs impaires. La saisie s’arrête quand l’utilisateur donne la valeur 0. Attention la division par zéro est une opération interdite. EXERCICE 5 A- Écrire un programme qui permet de déterminer le juste prix ( juste prix = 42). L'utilisateur saisit un nombre entier. Le programme répond : « inférieur » si le prix indiqué est supérieur à 42, il répond : « supérieur » si le prix indiqué est inférieur à 42 et il répond : « BRAVO! » s'il trouve le prix exact. Tant que le prix n'est pas le bon, l'utilisateur doit retenter sa chance en saisissant un nouveau nombre. B- Modifiez le programme précédent afin que le juste prix soit généré aléatoirement et pas codé en dur à 42, qui sera évidemment inconnu de l'utilisateur. En plus le programme doit, à la fin de chaque partie, afficher le le nombre de coups de la partie et proposer à l’utilisateur s’il veut continuer le jeu. Si la réponse est « o » alors le programme lance une nouvelle partie, sinon le programme affiche le nombre de coups moyen"
+  },
+  {
+    "category": "programmation",
+    "ue": "Python",
+    "doc_type": "CC",
+    "source": "sujets.pdf",
+    "chunk_id": 2,
+    "text": "le programme doit, à la fin de chaque partie, afficher le le nombre de coups de la partie et proposer à l’utilisateur s’il veut continuer le jeu. Si la réponse est « o » alors le programme lance une nouvelle partie, sinon le programme affiche le nombre de coups moyen global et affiche « A bientôt » avant d’arrêter. EXERCICE 6 Écrire un programme qui permet de dessiner un rectangle d'étoiles *. Le programme a besoin de 2 entrées : la largeur et la hauteur du rectangle (que l’utilisateur doit fournir). EXERCICE 7 Écrire un programme qui permet de dessiner X avec des *. Le programme a besoin d’une entrée : la taille de la forme. La taille doit être un nombre entier impair compris entre 15 et 20 (inclus). Tant que le nombre saisi ne vérifie pas la condition, le programme redemande la valeur de la taille. EXERCICE 8 Écrire un programme qui calcule et affiche la factorielle d'un entier n > 0 : n! = n*(n-1)*(n-2)*...*1 ; par définition 0! =1. EXERCICE 9 Un nombre est dit premier s’il n’est divisible que par 1 par et lui même. Écrire un programme qui saisit un entier est qui affiche « PREMIER » s’il est premier et « PAS PREMIER » sinon. Modifier le programme pour qu’il saisisse deux entiers positifs et qu’il affiche tous les entiers premiers entre les deux. TD3: les fonctions L1 Math-info, 2025-2026 Dans cette série nous utiliserons seulement while pour exprimer les boucles 1- Définissez une fonction surfCercle(R). Cette fonction doit renvoyer la surface (l'aire) d'un cercle dont on lui a fourni le rayon R en argument. Par exemple, l'exécution de l'instruction : print(surfCercle(2.5)) doit donner le résultat 19.635 2- Définissez une fonction maximum(n1,n2,n3,n4) qui renvoie le plus grand des 4 nombres n1, n2, n3 et n4 fournis en arguments. Par exemple, l'exécution de l'instruction : print(maximum(1,5,4,6)) doit donner La valeur maximale est : 6. 3- Nous souhaitons résoudre l’équation : ax2+bx +c=0 pour tous a, b et c. Si a == 0 si b==0 si c==0 else il n’y a pas de solution else S={-c/b} else Delta = …. si Delta == 0 S= {-b/2a} sinon si Delta > 0 sinon 3.1 Ecrire la fonction qui calcule le discriminant (Delta) 3.2 Ecrire la fonction, resoudre, qui résout l’équation. Attention la fonction ne doit faire aucun affichage. 3.3 Ecrire une fonction d’affichage qui permet après avoir utilisé la fonction résoudre, d’afficher le résultat de la résolution. Voici un exemple: Entrez a, b et c : 0 2 1 Votre équation admet une seule solution : -0.5 4.1 Une action est cotée à 57€. Sa valeur augmente de 3% tous les mois. Écrire une fonction en Python qui renvoie le nombre de mois à attendre pour que sa valeur dépasse 200€. 4.2 Proposer une généralisation de la fonction précédente : étant donnée le prix initiale d’une action, étant donné le taux d’augmentation de l’action à chaque mois (dans 4.1 le taux est 0.03), la fonction doit"
+  },
+  {
+    "category": "programmation",
+    "ue": "Python",
+    "doc_type": "CC",
+    "source": "sujets.pdf",
+    "chunk_id": 3,
+    "text": "Python qui renvoie le nombre de mois à attendre pour que sa valeur dépasse 200€. 4.2 Proposer une généralisation de la fonction précédente : étant donnée le prix initiale d’une action, étant donné le taux d’augmentation de l’action à chaque mois (dans 4.1 le taux est 0.03), la fonction doit renvoyer le nombre de mois pour atteindre une valeur donnée. 5- Ecrire une fonction « somme » qui prend en argument un entier positif et qui renvoie la somme de tous les chiffres le composant. Par exemple, « print(somme(1234)) » affichera 10 6- Ecrire une fonction Python bissextile prenant en entrée un entier représentant une année et retournant un booléen indiquant si l’année est bissextile. On rappelle qu’une année est bissextile si elle possède un 29 février. Une année est bissextile si elle est multiple de 4 mais pas multiple de 100, ou si elle est multiple de 400. Ex : bissextile(2024) doit renvoyer True, bissextile(1800) doit renvoyer False et bissextile(2000) doit renvoyer True A- Écrire une fonction qui détermine si deux nombres réels sont identiques à un epsilon près. Exemple : 2.01 et 2.005 sont identiques à 0.01 près, car |2.01-2.0.005|=0.005<0.01. On considère que deux nombres réel sont identique si ils le sont à 1e-6. B- Écrire une fonction qui prend en argument 3 nombres réels et qui retourne True/False selon qu’ils peuvent représenter les carrés des longueurs d’un triangle rectangle. C- Écrire une fonction qui prend en argument 4 nombres réels et qui retourne True/False si trois d’entre eux peuvent représenter les carrés les longueurs d’un triangle rectangle. Voici la méthode de décomposition d’un entier en facteurs premiers: A- Ecrire une fonction est_premier(n) qui retourne True si n est un nombre premier, sinon False. B- Ecrire une fonction plus_petit_diviseur(n) qui utilise est_premier et retourne le plus petit diviseur premier de n (supérieur à 1). C- Ecrire une fonction decomposition_facteurs(n) qui utilise plusieurs appels à plus_petit_diviseur pour produire la décomposition en facteurs premiers de n. Ici exceptionnellement on va utiliser une variable de type str (chîane). On début on fait : resultat=\"\". Imaginons que resultat vaut à un moment \"2x2\" et qu’on veut ajouter d (un entier) comme facteur, alors on fait simplement : resultat=resultat+str(d) TD3 Liste de listes Bases de la programmation L1 informatique, mathématique et physique 2025-2026 1- Une matrice en python peut être implantée en utilisant une liste de listes. Chaque ligne de la matrice est une sous liste. Ecrire une fonction « Zeros » qui prend en argument deux entiers n et m et qui crée une matrice initialisée avec des 0. La matrice crée est une liste de n sous-listes. Chaque sous liste est une liste d’entiers contenant m entiers (initialisés à 0). Utiliser la fonction append en partant de listes vides Exemple avec n=5 et m=4 [1, 2, 3, 4], [4, 5, 6, 7], [8, 9, 1, 4], [1, 2, 5, 4], [1, 2, 2, 4], 2- Ecrire une fonction « aleatoire » qui crée une matrice d’une taille donnée (n et m)"
+  },
+  {
+    "category": "programmation",
+    "ue": "Python",
+    "doc_type": "CC",
+    "source": "sujets.pdf",
+    "chunk_id": 4,
+    "text": "la fonction append en partant de listes vides Exemple avec n=5 et m=4 [1, 2, 3, 4], [4, 5, 6, 7], [8, 9, 1, 4], [1, 2, 5, 4], [1, 2, 2, 4], 2- Ecrire une fonction « aleatoire » qui crée une matrice d’une taille donnée (n et m) et qui l’initialise aléatoirement de valeurs entre deux entiers donnés. A partir de maintenant, toute fonction prenant en argument une matrice, prend aussi en argument ses dimensions (n et m) 3- Ecrire une fonction d’affichage. 4- Ecrire une fonction qui renvoie le nombre de fois où une valeur donnée apparaît dans une matrice (le nombre d’occurrences d’une valeur) 5- Ecrire une fonction qui dit si deux lignes données d’une matrices donnée sont identiques 6- Ecrire une fonction qui dit si dans une matrice donnée ils existent deux lignes identiques. Vous devez utiliser la fonction de la question 5- 7- Ecrire une fonction qui dit si dans une matrice donnée il existent deux colonnes identiques (utiliser la même méthode qu’en 5 et 6) 8- Ecrire une fonction qui renvoie le produit de deux matrices ( n’oubliez pas de renvoyer les nouvelles dimensions). 9- Ecrire une fonction qui dit si une matrice est symétrique 10- Une liste L est dite triée si et seulement si pour tout i < n-1 (n étant la taille de la liste), L[i]<L[i+1]. Ecrire une fonction qui prend en argument une liste et qui renvoie True si la liste est triée et False sinon. Une matrice est dite triée si et seulement si toutes les sous-listes (les lignes) sont triée Écrire une fonction qui prend en arguments une liste L et un entier n (avec n inférieur à la taille de la liste) et qui pour tout i < n - 1, si L[i] > L[i+1], on échange leurs valeurs. S’il n’existe aucun i tel que L[i] > L[i+1], la fonction renvoie True. Sinon, elle renvoie False. Utiliser cette fonction pour trier une liste. 12- Ecrire une fonction qui permet de trier une matrice."
+  },
+  {
+    "category": "programmation",
+    "ue": "Python",
     "doc_type": "TP",
-    "source": "TP2_SUJET.pdf",
+    "source": "sujet.pdf",
     "chunk_id": 0,
     "text": "TP2: les fonctions L1 Math-info, 2025-2026 Exercice 1 Nous souhaitons résoudre l’équation : ax2+bx +c=0 pour tous a, b et c. Si a == 0 si b==0 si c==0 else il n’y a pas de solution else S={-c/b} else Delta = …. si Delta == 0 S= {-b/2a} sinon si Delta > 0 sinon 3.1 Ecrire la fonction qui calcule le discriminant (Delta) 3.2 Ecrire la fonction, resoudre, qui résout l’équation. Attention la fonction ne doit faire aucun affichage. 3.3 Ecrire une fonction d’affichage qui permet après avoir utilisé la fonction résoudre, d’afficher le résultat de la résolution. Voici un exemple: Entrez a, b et c : 0 2 1 Votre équation admet une seule solution : -0.5 Exercice 2 Voici la méthode de décomposition d’un entier en facteurs premiers: A- Ecrire une fonction est_premier(n) qui retourne True si n est un nombre premier, sinon False. B- Ecrire une fonction plus_petit_diviseur(n) qui utilise est_premier et retourne le plus petit diviseur premier de n (supérieur à 1). C- Ecrire une fonction decomposition_facteurs(n) qui utilise plusieurs appels à plus_petit_diviseur pour produire la décomposition en facteurs premiers de n. Ici exceptionnellement on va utiliser une variable de type str (chîane). On début on fait : resultat=\"\". Imaginons que resultat vaut à un moment \"2x2\" et qu’on veut ajouter d (un entier) comme facteur, alors on fait simplement : resultat=resultat+str(d) Exercice 3 Créer une fonction generer_nombre(minimum, maximum), elle renvoie un nombre entier aléatoire compris entre minimum et maximum. (Utiliser random.randint(minimum, maximum)) Créer une fonction verifier_nombre(secret, proposition), elle compare proposition avec secret. Elle renvoie 1 si \"plus petit\", 2 si \"plus grand\" ou \"3\" si \"identique\". Créer une fonction jouer() qui demande à l’utilisateur combien de tentatives il veut. Ensuite, elle appelle generer_nombre pour créer le nombre mystère. Ensuite, elle utilise une boucle pour que l’utilisateur propose un nombre à chaque tentative. Elle utilise verifier_nombre pour donner un indice à l’utilisateur à chaque essai. Elle termine le jeu si l’utilisateur trouve le nombre ou si les tentatives sont épuisées. Elle affiche un message final avec le résultat. Créer la fonction main qui demande à chaque fois à l’utilisateur s’il veut continuer de jouer. Votre fonction main sera appelé dans le programme comme ceci: # Lancer le programme if __name__ == \"__main__\": main() Exercice 4 1- Ecrire une fonction factorielle qui prend en argument un entier naturel et qui renvoie Rappel: . On ajoute 2- Ecrire une fonction coeff_binomial qui prendre en argument deux entiers naturels et (avec ) et qui renvoie le coefficient binomial correspondant « parmi », donnée par la formule ci-dessous: 3- Ecrire une fonction triangle_pascal qui prend en argument un entier nb_lignes et qui affiche le triangle de Pascal avec nb_lignes lignes. Voici un exemple avec 6 lignes: 1 1 1 2 1 1 3 3 1 1 4 6 4 1 1 5 10 10 5 1 En numérotant les lignes et les colonnes à partir de 0, le nombre sur la ligne numéro et la colonne est le coefficient binomial"
   },
@@ -4099,7 +4243,7 @@
     "category": "programmation",
     "ue": "Python",
     "doc_type": "TP",
-    "source": "TP2_SUJET.pdf",
+    "source": "sujet.pdf",
     "chunk_id": 1,
     "text": "Voici un exemple avec 6 lignes: 1 1 1 2 1 1 3 3 1 1 4 6 4 1 1 5 10 10 5 1 En numérotant les lignes et les colonnes à partir de 0, le nombre sur la ligne numéro et la colonne est le coefficient binomial Une des applications du triangle de Pascal : les coefficients de la ligne N° 4 sont sont aussi les coefficients qu’on trouve dans le développement : n! = 1 × 2… × n 0! = 1 k ≤n k) = (n −k)!k! 1 4 6 4 1 (a + b)4 = a4 + 4a3b + 6a2b2 + 4ab3 + b4"
   },
@@ -4107,7 +4251,7 @@
     "category": "programmation",
     "ue": "Python",
     "doc_type": "TP",
-    "source": "TP3_SUJET.pdf",
+    "source": "sujet.pdf",
     "chunk_id": 0,
     "text": "TP3 : les listes (mastermind) Dans ce cours d’introduction à la programmation, nous utilisons les listes pour simuler le fonctionnement des tableaux de base tels qu’on les retrouve dans d’autres langages. Par conséquent, vous devez éviter d’exploiter les fonctionnalités avancées des listes. Seules les opérations suivantes sont autorisées : len, append, l’accès par indices [], et insert. Ainsi, par exemple, pour supprimer un élément, vous devrez décaler manuellement vers la gauche tous les éléments situés à sa droite. L’ordinateur fait deviner l’utilisateur Dans ce TP, on vous propose de programmer le jeu du MasterMind. Principe : L'ordinateur crée une liste de 5 chiffres différents aléatoirement, et l'utilisateur doit deviner les 5 chiffres dans l'ordre. Pour cela, à chaque fois que l’utilisateur propose une liste, le programme lui dit combien sont bien placés, et combien sont justes mais mal placés. Exemple : Admettant que l’ordinateur a généré : R=[1,2,4,8,5] Entrez une liste de chiffres : 1 2 3 4 5 3 bien placés, 1 mal placé Entrez une liste de chiffres : 1 2 3 6 4 2 bien placés, 1 mal placé Entrez une liste de chiffres : 1 2 4 8 5 5 bien placés, 0 mal placé - BRAVO!! Une autre partie? a- Ecrire la fonction Init(n,k) qui renvoie une liste générée aléatoirement à deviner. n est la taille de la liste, les nombres sont à générer dans l’intervalle [1,k]. b- Ecrire une fonction (saisir_proposition) qui saisit la liste de chiffres proposés par l’utilisateur et retourne cette proposition sous la forme d'une liste python H. c- Ecrire une fonction Score(H,R) qui retourne le nombre de chiffres bien positionnés (figurant dans le même indice dans la liste R et la liste H) et le nombre de chiffres présents mais mal positionnés. H est la proposition et R est la liste référence. d- Ecrire le programme qui réalise le jeu et qui propose à l’utilisateur s’il souhaite réaliser une nouvelle partie L’utilisateur fait deviner l’ordinateur Ici, on se propose d’implémenter une version dans laquelle l’utilisateur choisit une liste de chiffres que l’ordinateur doit deviner. Soit R la liste choisie par l’utilisateur, soient Ens_H l’ensemble des listes proposées jusqu’à l’instant n, et soit Scores_H l’ensemble des scores correspondants. Pour que la solution H proposée à l’instant n+1 soit la plus proche à R, il suffit que pour chaque élément Hi de Ens_H, Score(H,Hi) soit égale à Score(Hi,R). Voici le fonctionnement global : : • L’utilisateur fixe une liste secrète R. • L’ordinateur génère tous les candidats possibles : une liste de listes (la liste de toutes les possibilités H). • Chaque fois que l’ordinateur propose une hypothèse H, l’utilisateur détermine (à la main) le score (même fonctionnement que Score(H, Hi) ) par rapport à R et le donne à l’ordinateur. • L’ordinateur stocke cette proposition dans Ens_H et son score dans Scores_H. • Le coup suivant H_{n+1] doit être choisi dans les candidats restants, c’est-à-dire ceux qui respectent la règle : Hi Ens_H : score(H, Hi) == score(R, Hi) A chaque"
   },
@@ -4115,7 +4259,7 @@
     "category": "programmation",
     "ue": "Python",
     "doc_type": "TP",
-    "source": "TP3_SUJET.pdf",
+    "source": "sujet.pdf",
     "chunk_id": 1,
     "text": "par rapport à R et le donne à l’ordinateur. • L’ordinateur stocke cette proposition dans Ens_H et son score dans Scores_H. • Le coup suivant H_{n+1] doit être choisi dans les candidats restants, c’est-à-dire ceux qui respectent la règle : Hi Ens_H : score(H, Hi) == score(R, Hi) A chaque essai, l’ensemble des possibilités doit être réduit aux possibilités H telles que : Hi Ens_H : score(H, Hi) == score(R, Hi). Pour commencer, on vous donne la fonction qui calcule toutes les possibilités de listes de longueur longueur et dont les chiffres sont choisis entre 1 et n. Veuillez, svp, tester la fonction pour quelques valeurs de longueur et de n. def toutes_possibilites(n, longueur): possibilites = [[]] for _ in range(longueur): nouvelles = [] for c in range(len(possibilites)): comb= possibilites[c] for i in range(1, n+1): L=list(comb) L.append(i) nouvelles.append(L) possibilites = nouvelles return possibilites # Exemple d'utilisation print(toutes_possibilites(3, 3)) Ecrire la fonction devine qui prend en argument la longueur (longueur) et le nombre n (les chiffres possibles sont 1…n) et devine pas à pas le code fixé par l’utilisateur, en suivant l’algorithme ci- dessus. Elle doit retourner la liste contenant ce que l’utilisateur avait fixé et le nombre d’essais qui était nécessaire pour découvrir la liste secrète. Ecrire une fonction main qui lance le jeu : elle demande à l’utilisateur de fixer un code secret (sans dire à l’ordinateur bien sûr) en donnant la longueur et la valeur de n et qui lance la fonction devine."
   },
@@ -4123,7 +4267,7 @@
     "category": "programmation",
     "ue": "Python",
     "doc_type": "TP",
-    "source": "TP1_SUJET.pdf",
+    "source": "sujet.pdf",
     "chunk_id": 0,
     "text": "UAPV/CERI - BASES DE LA PROGRAMMATION L1 S1 INFORMATIQUE Feuille de TP1 n° 1 Dans cette UE nous programmons en python. Pour afficher « Bonjour » on écrit : print(\"Bonjour\") Pour afficher le contenu d’une variable A, on écrit : print(A); On peut aussi faire print(\"La valeur contenue dans la variable A est: », A ) Pour lire, on utilisera l'instruction : a=input(\"Entrez une valeur: « ) - 1 - Lancez un terminal pour pouvoir exécuter des commandes LINUX - 2 - A présent vous dans votre répertoire « home » - 3 - Créez un répertoire (ou dossier) appelé : BDP_Python, pour ce faire tapez : mkdir BDP_Python - 4 - Allez dans le repertoire BDP_Python, pour ce faire tapez : cd BDP_Python - 5 - Vous êtes maintenant dans le repertoire BDP_Python. Créez dans BDP_Python un répertoire que vous appelez TP1 (en utilisant la commande mkdir) - 6 - Allez dans le repertoire TP1 (en utilisant la commande cd) - 7 - Lancez un éditeur de texte : code, gedit, ou geany….en tapant code, gedit ou geany…. - 8 - Vous pouvez commencer à programmer - 9 - Enregistrez dans le fichier exo1.py - 10 - Executer en tapant : python exo1.py Programmer sans regarder la correction. Vous pouvez comparer votre programme avec la correction en cas de problème que vous n’arrivez pas à déceler EXERCICE 1 Écrire un programme qui demande à l'utilisateur 2 entiers qu’il met dans deux variables a et b et qui affiche « plus grand » si a est supérieur à b, sinon il affiche « plus petit ou égal». Modifier le programme pour qu'il affiche : « plus grand », « plus petit», ou « égal». EXERCICE 2 Écrire un programme qui demande à l’utilisateur une longueur L et une largeur l (la longueur doit être supérieure ou égale à la largeur et L≥ l) et qui affiche la surface du rectangle correspondant. Si la condition sur les longueurs n’est pas respectée le programme affiche le message : « Données incohérentes » EXERCICE 3 Écrire un programme qui lit 6 entiers et qui les mets dans 6 variables : a, b, c, d, e, f. Ensuite, si au moins 3 variables sont non nulles le programme doit afficher « la saisie est correcte », sinon il affiche « la saisie est incorrecte ». EXERCICE 4 Écrire un programme qui lit 3 nombres qu’il met dans trois variables a, b et c et qui les réordonne de façon à ce que le contenu de a soit inférieur ou égal à celui de b et celui de b soit inférieur ou égal à celui de c. Le programme affiche a, b et c pour vérification. EXERCICE 5 Écrire un programme qui permet de saisir 10 valeurs et d’affiche la plus petite valeur, la plus grande valeur et la moyenne. Ce programme ne doit utiliser que 4 variables. EXERCICE 6 Écrire un programme qui saisit les coordonnées (entiers) de deux points et qui affiche la"
   },
@@ -4131,7 +4275,7 @@
     "category": "programmation",
     "ue": "Python",
     "doc_type": "TP",
-    "source": "TP1_SUJET.pdf",
+    "source": "sujet.pdf",
     "chunk_id": 1,
     "text": "vérification. EXERCICE 5 Écrire un programme qui permet de saisir 10 valeurs et d’affiche la plus petite valeur, la plus grande valeur et la moyenne. Ce programme ne doit utiliser que 4 variables. EXERCICE 6 Écrire un programme qui saisit les coordonnées (entiers) de deux points et qui affiche la distance (double) les séparant. EXERCICE 7 Écrire un programme qui saisit les coordonnées (entiers) de 3 points et qui dit si les trois points forment un triangle rectangle. EXERCICE 8 Écrire un programme qui demande à l’utilisateur une opération (*,+,-,/), suivie de deux opérandes. Le programme doit afficher ensuite le résultat de l’opération appliquées aux deux opérandes. Les opérandes et les résultats doivent être des entiers. Attention : pensez à interdire la division par 0.0 Exécution : Entrez l’opération : * Entrez la première opérande : 3 Entrez la deuxième opérande : 4 Le résultat de 3*4 est 12 EXERCICE 9 Écrire un programme qui demande 3 valeurs a ,b et c de type double et affiche les solutions de l’équation ax2+bx+c=0. On vérifiera que a est différent de 0. EXERCICE 10 Écrire un programme qui reçoit un nombre à 4 chiffres et qui affiche les chiffres un à un avec un espace les séparant. Le programme doit vérifier d’abord que le nombre contient bien 4 chiffres. Dans le cas contraire le programme affiche un message : « le nombre ne contient pas 4 chiffres »"
   },
