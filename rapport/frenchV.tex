@@ -1,0 +1,643 @@
+\documentclass[a4paper,11pt]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage[
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=black
+]{hyperref}
+
+% Mise en page
+\geometry{margin=2.5cm}
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textit{Assistant Intelligent pour les cours de L1}}
+\fancyhead[R]{\textit{CMI Informatique --- 2025/2026}}
+\fancyfoot[C]{\thepage}
+
+% Style des sections
+\titleformat{\section}
+    {\large\bfseries}
+    {\thesection.}{0.6em}{}
+    [\vspace{2pt}\titlerule\vspace{4pt}]
+
+\titleformat{\subsection}
+    {\normalsize\bfseries}
+    {\thesubsection.}{0.6em}{}
+
+% ============================================================
+\begin{document}
+
+% ============================================================
+% PAGE DE COUVERTURE
+% ============================================================
+\thispagestyle{empty}
+
+\vspace*{3cm}
+
+\begin{center}
+    {\small\scshape Projet de Recherche --- CMI Informatique}\\[1cm]
+    {\rule{\linewidth}{0.4pt}}\\[0.6cm]
+    {\LARGE\bfseries Création d'un Assistant Intelligent\\[0.3cm]pour les Cours de Première Année}\\[0.6cm]
+    {\rule{\linewidth}{0.4pt}}\\[1.2cm]
+    {\normalsize\itshape Public cible : Tout le monde}\\[0.4cm]
+    {\normalsize Encadrant : Yannick Estève}\\[2.5cm]
+    {\normalsize
+        A. Louvet \quad L. Ouelhadj \quad T. De Faveri-Serre \quad C. Cloupet \quad H. Baudey
+    }\\[0.8cm]
+    {\small Années universitaires 2025--2027}
+\end{center}
+
+\vfill
+
+\begin{center}
+\noindent\rule{0.5\linewidth}{0.4pt}\\[0.5cm]
+{\small
+Ce projet vise d'une part à apporter des contributions de recherche sur les
+LLM, le RAG, la recherche vectorielle et à en expliquer les principes
+indépendamment du niveau de familiarité du lecteur avec ces concepts,
+et d'autre part à construire un assistant conversationnel fondé sur la
+Génération Augmentée par Récupération (RAG), capable de répondre aux
+questions des étudiants à partir de leurs propres documents de cours.
+}\\[0.4cm]
+\noindent\rule{0.5\linewidth}{0.4pt}
+\end{center}
+
+\vspace{2cm}
+
+% ============================================================
+% TABLE DES MATIÈRES
+% ============================================================
+
+\newpage
+\tableofcontents
+
+% ============================================================
+% PARTIE 1 : ÉTAT DE L'ART
+% ============================================================
+
+\newpage
+\section{État de l'art : Définitions et contexte}
+
+\subsection{Poser les bases de l'Intelligence Artificielle}
+
+\subsubsection{Bref historique}
+
+L'idée de machines capables de penser n'est pas nouvelle. Dès 1950, Alan
+Turing proposa son célèbre \emph{Test de Turing} comme critère d'intelligence
+artificielle \cite{turing1950computing} : si une machine peut soutenir une
+conversation indiscernable de celle d'un humain, on peut, dans un certain
+sens, dire qu'elle pense. Le terme \og Intelligence Artificielle \fg{} fut
+lui-même forgé en 1956 par John McCarthy lors de la conférence de Dartmouth,
+considérée comme l'acte fondateur du domaine.
+
+Les décennies suivantes alternèrent entre périodes d'optimisme et
+\og hivers de l'IA \fg{} --- des intervalles de réduction des financements
+et de l'intérêt, causés par l'écart entre les promesses ambitieuses et les
+résultats modestes. Le paysage se transforma radicalement dans les années
+1980 et 1990 avec l'essor de l'\emph{apprentissage automatique} : plutôt que
+de coder manuellement des règles dans un programme, les chercheurs commencèrent
+à concevoir des systèmes capables d'\emph{apprendre} des patterns directement
+à partir des données. Ce changement de paradigme posa les fondations de tout
+ce qui suivit.
+
+Le véritable tournant survint en 2012, lorsqu'un réseau de neurones profond
+nommé AlexNet \cite{krizhevsky2012alexnet} écrasa la concurrence lors du
+challenge de reconnaissance visuelle ImageNet, démontrant que
+l'\emph{apprentissage profond} --- des réseaux de neurones à nombreuses
+couches entraînés sur de larges jeux de données --- pouvait atteindre des
+performances bien supérieures aux méthodes classiques. À partir de ce moment,
+l'apprentissage profond devint l'approche dominante dans presque tous les
+sous-domaines de l'IA.
+
+\subsubsection{Qu'est-ce que l'Intelligence Artificielle ?}
+
+Le terme \emph{Intelligence Artificielle} est l'une des expressions les plus
+utilisées --- et les plus galvaudées --- du paysage technologique actuel.
+Avant d'aborder les systèmes au c\oe{}ur de ce projet, il convient de faire
+un pas en arrière pour comprendre ce qu'est réellement l'IA, d'où elle vient
+et pourquoi elle est devenue si centrale dans l'informatique moderne.
+
+Dans sa définition la plus large, l'Intelligence Artificielle désigne tout
+système informatique conçu pour accomplir des tâches qui nécessiteraient
+normalement l'intelligence humaine --- reconnaître des objets dans une image,
+comprendre une phrase parlée ou décider du prochain coup dans une partie
+d'échecs. Une définition plus précise, proposée par Russell et Norvig dans
+leur manuel de référence \cite{russell2010ai}, décrit un agent IA comme un
+système qui \emph{perçoit son environnement par des capteurs et agit sur lui
+par des actionneurs afin de maximiser une mesure de performance}.
+
+Une distinction utile est celle entre l'\emph{IA étroite} (ou IA faible)
+et l'\emph{IA générale} (ou IA forte). L'IA étroite --- qui couvre
+quasiment tous les systèmes existants --- est conçue pour exceller dans un
+type de tâche spécifique : un filtre anti-spam classe des e-mails, un moteur
+de recommandation suggère des films, un modèle de langage génère du texte.
+L'IA générale, en revanche, serait un système capable de raisonner sur des
+domaines arbitraires au niveau humain ; elle reste en grande partie
+hypothétique et constitue un sujet de recherche à long terme. Tous les
+systèmes IA évoqués dans ce projet relèvent sans exception de la catégorie
+de l'IA étroite.
+
+% ------------------------------------------------------------
+\subsection{Les Grands Modèles de Langage (LLM)}
+
+Les grands modèles de langage, ou LLM (de l'anglais \emph{Large Language
+Models}), sont bien plus présents dans notre quotidien qu'on ne le pense,
+ou même qu'on ne l'anticipait il y a quelques années encore. Mais que
+sont-ils vraiment ? Que recouvrent-ils, et à quoi servent-ils ?
+\cite{llm_intro_placeholder}
+
+\subsubsection{Qu'est-ce qu'un Grand Modèle de Langage ?}
+
+Un grand modèle de langage est, pour le dire simplement, un modèle
+mathématique qui génère du texte --- comme remplir le mot manquant dans
+une phrase, un peu à la manière des \og suggestions de mots \fg{} qui
+apparaissent en haut de votre clavier quand vous tapez un message sur votre
+téléphone. Mais ne vous y trompez pas : si votre téléphone peine parfois
+à prédire autre chose que votre commande de café habituelle, un LLM opère
+à une échelle franchement vertigineuse. Imaginez prendre chaque livre,
+article et fragment de code disponible sur internet, et les injecter dans
+un cerveau numérique qui cartographie les relations complexes entre chaque
+mot et chaque concept. \cite{llm_scale_placeholder}
+
+En calculant la probabilité du mot suivant à partir de milliards de
+paramètres, ces modèles dépassent le simple \og remplissage automatique \fg{}
+pour s'aventurer dans le domaine du raisonnement et de la créativité. Ils ne
+devinent pas des lettres --- ils saisissent les nuances de l'intention
+humaine. Au c\oe{}ur de ce processus se trouve une architecture appelée
+\emph{Transformer} \cite{vaswani2017attention}. Pensez-y comme un système
+qui permet au modèle d'analyser un paragraphe entier d'un seul coup, plutôt
+qu'un mot à la fois. Ce mécanisme d'\emph{attention} lui permet de se
+souvenir du début de votre histoire pendant qu'il en écrit la fin, maintenant
+un fil conducteur cohérent qui semble remarquablement humain.
+
+\subsubsection{À quoi servent les LLM ?}
+
+Parce qu'ils excellent dans la reconnaissance de patterns, leur utilité
+s'étend bien au-delà de répondre à des questions triviales ou de rédiger
+des e-mails :
+
+\begin{itemize}
+  \item \textbf{Partenaires créatifs :} ils peuvent générer des slogans
+    marketing ou rédiger de la poésie dans le style d'un romancier du
+    \textsc{xix}\ieme{} siècle.
+  \item \textbf{Assistants techniques :} ils traduisent des langages de
+    programmation complexes aussi facilement qu'ils traduisent l'anglais
+    en français.
+  \item \textbf{Assistants pédagogiques :} ils peuvent expliquer des
+    concepts complexes, répondre à des questions et adapter leur registre
+    au niveau du lecteur --- ce qui est précisément le cas d'usage exploré
+    dans ce projet.
+\end{itemize}
+
+Cette polyvalence comporte cependant des limites importantes, que nous
+explorons dans la section suivante.
+
+\subsubsection{Limites : hallucinations et frontières de la connaissance}
+
+Malgré leurs performances impressionnantes, les LLM souffrent de plusieurs
+limites bien documentées. La plus critique dans un contexte éducatif est
+leur tendance à produire des \emph{hallucinations} --- générer un texte
+fluide et plausible mais factuellement incorrect ou sans fondement
+\cite{zhang2023hallucination, huang2025hallucination, llm_hallucinations_medium}.
+
+Les hallucinations résultent de plusieurs causes. Premièrement, les LLM
+s'appuient sur des corrélations statistiques dans leurs données d'entraînement
+plutôt que sur un raisonnement factuel ancré. Deuxièmement, leur connaissance
+est statique : ils ont une date de coupure d'entraînement et ne peuvent
+accéder à des informations nouvelles ou spécifiques à un domaine que si
+celles-ci leur sont explicitement fournies. Troisièmement, lorsqu'une requête
+dépasse leur zone de connaissance certaine, ils peuvent fabriquer une réponse
+plutôt qu'admettre leur ignorance. Selon une étude de 2024 publiée dans
+l'\emph{ACM Transactions on Information Systems}, les hallucinations se
+répartissent en deux grandes catégories : les \emph{hallucinations de
+factualité} (affirmations incorrectes) et les \emph{hallucinations de
+fidélité} (contenu incohérent avec une source donnée).
+
+Ces limites sont particulièrement problématiques dans un contexte éducatif,
+où la précision est essentielle. Un assistant qui fournit avec assurance
+une information erronée sur une notion de cours peut activement induire
+les étudiants en erreur. C'est précisément ce constat qui motive le recours
+à l'ancrage dans des documents externes, via le RAG.
+
+\subsubsection{Biais et dégradation par rétroaction : les limites du RLHF}
+
+Une limite plus subtile mais significative concerne le mécanisme de retour
+utilisé pour améliorer les LLM \cite{rlhf_challenges_medium}. Des techniques
+telles que le \emph{Reinforcement Learning from Human Feedback} (RLHF) et
+l'IA Constitutionnelle sont employées pour aligner le comportement des modèles
+sur les préférences humaines et réduire les sorties nuisibles. Ce système
+repose sur la notation des réponses du modèle par les utilisateurs, le modèle
+étant mis à jour en conséquence \cite{ouyang2022rlhf}. Bien que ce processus
+vise à aligner le comportement du modèle sur les attentes des utilisateurs,
+il peut produire des effets pervers lorsque ceux-ci soumettent régulièrement
+des requêtes mal formulées.
+
+Lorsqu'un utilisateur fournit une requête ambiguë, incomplète ou incohérente,
+le modèle n'a pas de base fiable pour produire une réponse pertinente. Il
+génère alors une réponse statistiquement plausible au regard de l'entrée,
+mais qui ne peut correspondre à l'intention non exprimée de l'utilisateur.
+Celui-ci, percevant la réponse comme hors sujet ou absurde, lui attribue
+une note négative --- alors que, du point de vue du modèle, la réponse
+constituait un complément raisonnable à la requête donnée. Ce décalage entre
+le signal (une note négative) et sa cause réelle (une requête mal formulée
+plutôt qu'une erreur du modèle) introduit une \emph{supervision corrompue}
+dans la boucle d'entraînement.
+
+Répété à grande échelle, ce phénomène conduit le modèle à associer certains
+patterns de réponse légitimes à une récompense négative et à les désapprendre,
+entraînant une dégradation mesurable de la qualité générale des réponses.
+Une étude de Chen et al. \cite{chen2023chatgpt} a documenté empiriquement
+ce phénomène pour ChatGPT, observant des changements comportementaux
+significatifs entre les versions du modèle, certaines tâches étant mieux
+réussies par les versions antérieures. Les auteurs attribuent en partie cette
+régression aux effets cumulatifs du bruit dans les retours utilisateurs au
+sein du pipeline RLHF.
+
+Ce problème est particulièrement pertinent dans un cadre éducatif, où les
+étudiants --- surtout en première année --- peuvent manquer de la maîtrise
+de la formulation de requêtes nécessaire pour interagir efficacement avec
+le modèle. Un assistant qui se dégrade sous l'effet de retours bruités
+pourrait ainsi devenir progressivement moins utile pour son public cible,
+soulignant l'importance de concevoir des mécanismes robustes de collecte
+de retours et, autant que possible, de réduire la dépendance aux évaluations
+brutes des utilisateurs pour les mises à jour du modèle.
+
+% ------------------------------------------------------------
+\subsection{Récapitulatif}
+
+Un point de départ naturel pour cette vue d'ensemble est une question qui
+semble simple mais s'avère en réalité assez nuancée : qu'est-ce exactement
+qu'un LLM, et en quoi diffère-t-il de la notion plus large d'\og IA \fg{} ?
+Le terme \emph{Intelligence Artificielle} (IA) est un concept générique
+englobant toute technique ou tout système permettant aux machines d'imiter
+l'intelligence humaine, incluant l'apprentissage automatique, la vision par
+ordinateur, la robotique et le traitement du langage naturel. Un
+\emph{Grand Modèle de Langage} (LLM), en revanche, désigne une catégorie
+spécifique de modèle IA conçu pour comprendre et générer du langage humain.
+Les LLM sont un sous-ensemble de l'IA, tout comme l'\emph{Apprentissage
+Automatique} (ML) ou l'\emph{Apprentissage Profond} (DL), etc. : si tous
+les LLM sont des systèmes IA, la réciproque est fausse.
+
+Concrètement, les LLM sont des réseaux de neurones entraînés sur de vastes
+corpus textuels par apprentissage auto-supervisé, fondés sur l'architecture
+Transformer introduite par Vaswani et al. \cite{vaswani2017attention}, qui
+permet aux modèles de capturer des dépendances à longue portée dans le texte
+grâce à des mécanismes d'auto-attention. L'introduction successive de la
+série GPT d'OpenAI --- GPT-2 en 2019, GPT-3 en 2020, puis GPT-4 ---
+a démontré que l'augmentation de la taille des modèles et des données
+d'entraînement engendre des \emph{capacités émergentes} en compréhension
+et génération du langage \cite{wei2022emergent} : des aptitudes qui
+n'apparaissent qualitativement qu'au-delà d'un certain seuil d'échelle.
+Les LLM contemporains tels que GPT-4, Claude d'Anthropic, LLaMA de Meta,
+Gemini de Google et Mistral font preuve d'une remarquable compétence dans
+un large éventail de tâches --- de la réponse à des questions et du résumé
+à la génération de code et au raisonnement en plusieurs étapes --- et sont
+caractérisés par des nombres de paramètres de l'ordre de dizaines ou de
+centaines de milliards.
+
+% ------------------------------------------------------------
+\subsection{La Génération Augmentée par Récupération (RAG)}
+
+\subsubsection{Principe et motivation}
+
+Avant de plonger dans l'architecture technique, il convient de faire un
+pas en arrière pour expliquer ce qu'est le RAG et pourquoi il a été
+développé, afin de rendre cette recherche accessible et intéressante
+pour tous.
+
+Imaginez demander à un ami très cultivé de répondre à une question sur
+un sujet précis --- disons, le contenu d'un cours auquel il n'a jamais
+assisté. Aussi intelligent soit-il, il ne peut tout simplement pas savoir
+ce qui a été enseigné dans ce cours particulier. Un LLM fait face à
+exactement la même limitation : il ne connaît que ce qu'il a vu pendant
+son entraînement et n'a aucun moyen de consulter des documents qu'il n'a
+jamais rencontrés. Imaginez maintenant qu'avant de répondre, votre ami soit
+autorisé à feuilleter rapidement les notes de cours pertinentes et à
+s'appuyer sur ce qu'il y trouve pour formuler sa réponse. C'est,
+en essence, ce que fait le RAG : il donne au modèle accès à un ensemble
+spécifique de documents au moment de répondre, de sorte que sa réponse
+soit ancrée dans ces sources plutôt que dans sa mémoire générale
+(potentiellement dépassée ou incomplète).
+
+Plus formellement, la Génération Augmentée par Récupération (RAG) est un
+paradigme qui améliore les LLM en les connectant à une base de connaissances
+externe au moment de l'inférence \cite{lewis2020rag}. Plutôt que de s'appuyer
+uniquement sur la mémoire paramétrique du modèle, un système RAG récupère
+d'abord les passages de documents pertinents depuis un corpus curé en
+fonction de la requête de l'utilisateur, puis passe ces passages en contexte
+au LLM, qui génère une réponse ancrée dans ces informations.
+
+Cette approche répond directement aux limites décrites dans la section
+précédente : elle fournit au LLM des informations à jour et spécifiques
+à un domaine, et ancre la génération dans des sources explicites et
+vérifiables --- réduisant significativement le risque d'hallucination.
+Une étude spécifiquement centrée sur le RAG pour les applications éducatives
+\cite{rag_education_survey} confirme que cette approche améliore
+substantiellement la pertinence et la précision factuelle des réponses
+générées par l'IA dans des contextes académiques.
+
+\newpage
+\subsubsection{Architecture du RAG}
+
+Un pipeline RAG standard se décompose en trois étapes :
+
+\begin{enumerate}
+  \item \textbf{Indexation (phase développeur) :} les documents sources
+    (PDF, diapositives de cours, notes de cours, etc.) sont découpés en
+    morceaux (\emph{chunks}), encodés sous forme de vecteurs
+    d'\emph{embeddings} par un modèle d'embedding, et stockés dans une
+    base de données vectorielle.
+    \emph{(cf. Section 1.5 pour les détails sur la recherche vectorielle
+    et l'indexation)}.
+
+  \item \textbf{Récupération (phase utilisateur) :} lorsqu'un utilisateur
+    soumet une requête, celle-ci est encodée dans le même espace vectoriel.
+    Le système effectue alors une recherche par similarité pour récupérer
+    les $k$ morceaux les plus pertinents depuis la base de données.
+
+  \item \textbf{Génération :} les morceaux récupérés sont ajoutés à la
+    requête de l'utilisateur en tant que contexte dans le prompt du LLM.
+    Le LLM génère ensuite une réponse ancrée dans ces informations
+    récupérées.
+\end{enumerate}
+
+\subsubsection{Variantes et évolution du RAG}
+
+Le domaine a considérablement maturé depuis l'article fondateur sur le RAG.
+Des études de 2024--2025 identifient trois paradigmes principaux
+\cite{gao2024rag} :
+
+\begin{itemize}
+  \item \textbf{RAG naïf :} le pipeline basique récupérer-puis-générer
+    décrit ci-dessus.
+  \item \textbf{RAG avancé :} introduit la réécriture des requêtes, le
+    ré-ordonnancement des résultats récupérés et la récupération itérative
+    pour améliorer la précision.
+  \item \textbf{RAG modulaire :} une architecture plus flexible où chaque
+    composant (récupérateur, lecteur, mémoire, etc.) peut être remplacé
+    ou optimisé indépendamment.
+\end{itemize}
+
+Des travaux plus récents explorent également le \textbf{RAG agentique},
+où le modèle peut décider \emph{quand} récupérer et \emph{quelles} sources
+consulter en fonction de la complexité de la requête, en utilisant une
+boucle de raisonnement multi-étapes \cite{zhao2024rag}.
+
+Pour notre projet, une architecture RAG naïve ou avancée est suffisante
+compte tenu du périmètre bien défini et délimité du corpus documentaire
+(ressources de cours de première année).
+
+% ------------------------------------------------------------
+\subsection{Recherche vectorielle et indexation}
+
+\subsubsection{Qu'est-ce qu'un embedding ?}
+
+Un \emph{embedding}, dans le contexte de l'IA et des LLM, désigne la
+transformation d'un élément d'information --- un mot, une phrase, un
+document, voire parfois une image --- en une séquence de nombres réels
+appelée \emph{vecteur}. Cette représentation numérique permet à la machine
+de manipuler le langage et les concepts non plus comme du texte symbolique,
+mais comme des objets mathématiques sur lesquels elle peut effectuer des
+calculs.
+
+Plutôt que de \og comprendre \fg{} les mots comme le fait un humain, le
+modèle les place dans un \emph{espace vectoriel} de haute dimension
+(typiquement entre 384 et 4096 dimensions selon le modèle), où chaque
+élément occupe une position précise. Dans cet espace, la \emph{distance}
+entre deux vecteurs reflète leur \emph{similarité sémantique} : deux
+phrases au sens proche auront des vecteurs voisins, même si elles ne
+partagent aucun mot en commun. C'est ce principe qui permet à un système
+de récupérer, par exemple, le passage \textit{\og la photosynthèse permet
+aux plantes de produire de l'énergie \fg{}} à partir de la requête
+\textit{\og comment les plantes génèrent-elles leur énergie ? \fg{}}.
+
+\subsubsection{Comment les embeddings sont-ils appris ?}
+
+Ces vecteurs ne sont pas choisis arbitrairement : ils sont \emph{appris}
+pendant l'entraînement du modèle. Le système lit des quantités énormes de
+texte et ajuste progressivement ses paramètres de sorte que les vecteurs
+résultants capturent les régularités du langage. Par exemple, le modèle
+apprend que \og chat \fg{} et \og chien \fg{} apparaissent dans des contextes
+similaires et finit par leur attribuer des vecteurs voisins, tandis que
+\og voiture \fg{} se retrouvera plus éloigné.
+
+Des travaux pionniers comme \emph{Word2Vec} \cite{mikolov2013word2vec} et
+\emph{GloVe} \cite{pennington2014glove} ont montré que ce principe simple
+suffit à faire émerger des relations sémantiques remarquables. L'exemple
+canonique d'arithmétique vectorielle,
+$\overrightarrow{\text{roi}} - \overrightarrow{\text{homme}}
++ \overrightarrow{\text{femme}} \approx \overrightarrow{\text{reine}}$,
+illustre que l'espace appris encode des concepts (genre, royauté) plutôt
+que de simples co-occurrences.
+
+Dans les modèles modernes fondés sur les Transformers, les embeddings sont
+également \emph{contextuels} : le vecteur associé à un mot dépend de la
+phrase dans laquelle il apparaît. Le mot \og banque \fg{} dans
+\textit{\og je me suis assis au bord de la banque du fleuve \fg{}} et dans
+\textit{\og j'ai déposé de l'argent à la banque \fg{}} reçoit ainsi deux
+représentations distinctes, ce qui résout naturellement les ambiguïtés
+lexicales. Pour la recherche sémantique, on s'appuie généralement sur des
+modèles spécialisés comme ceux de la famille
+\texttt{sentence-transformers} \cite{reimers2019sbert}, qui produisent un
+\emph{vecteur unique} par phrase ou paragraphe, optimisé pour la comparaison
+par similarité plutôt que pour la génération de texte.
+
+\subsubsection{Mesurer la similarité entre vecteurs}
+
+Une fois le contenu représenté sous forme de vecteurs, comparer deux
+morceaux de texte revient à comparer deux points dans un espace. Trois
+métriques sont couramment utilisées :
+
+\begin{itemize}
+  \item \textbf{La similarité cosinus}, qui mesure l'angle entre deux
+    vecteurs et est insensible à leur magnitude : de loin la métrique
+    la plus utilisée en recherche sémantique.
+  \item \textbf{Le produit scalaire}, plus rapide à calculer mais
+    sensible aux normes des vecteurs ; préféré lorsque les vecteurs
+    ont été normalisés au préalable.
+  \item \textbf{La distance euclidienne}, intuitive mais souvent moins
+    discriminante en très haute dimension en raison du phénomène dit
+    du \emph{fléau de la dimensionnalité}.
+\end{itemize}
+
+\subsubsection{Indexation et recherche approchée des plus proches voisins}
+
+Lorsqu'un corpus contient des milliers voire des millions de passages
+indexés, comparer la requête contre chaque vecteur stocké --- la recherche
+dite \emph{exacte} ou \og force brute \fg{} --- devient prohibitivement
+coûteuse. La solution standard consiste à s'appuyer sur des structures
+d'\emph{indexation} permettant la \emph{recherche approchée des plus
+proches voisins} (ANN, \emph{Approximate Nearest Neighbor}) : on accepte
+une légère perte de précision en échange d'un gain de vitesse de plusieurs
+ordres de grandeur.
+
+Plusieurs algorithmes d'indexation sont devenus des références :
+
+\begin{itemize}
+  \item \textbf{IVF (Index à Fichier Inversé) :} partitionne l'espace en
+    cellules via une étape préalable de clustering (typiquement $k$-means),
+    puis restreint la recherche aux cellules les plus proches de la requête.
+  \item \textbf{HNSW (\emph{Hierarchical Navigable Small World})}
+    \cite{malkov2018hnsw} : construit un graphe multi-couches dans lequel
+    la navigation locale converge rapidement vers le voisinage du vecteur
+    requêté. C'est actuellement l'algorithme de référence dans la plupart
+    des bases de données vectorielles, grâce à son excellent compromis
+    entre rappel et latence.
+  \item \textbf{Quantification par produit (PQ) :} compresse les vecteurs
+    en sous-quantifiant chaque sous-espace, réduisant drastiquement l'usage
+    mémoire au prix d'une légère perte de précision.
+\end{itemize}
+
+Ces algorithmes sont implémentés dans des bibliothèques et bases de données
+dédiées --- les \emph{bases de données vectorielles} --- dont les plus
+utilisées dans l'écosystème open-source sont \texttt{FAISS} (Facebook AI
+Similarity Search), \texttt{Chroma}, \texttt{Qdrant} et \texttt{Weaviate}.
+Le choix dépend principalement du volume de données, des contraintes de
+latence et du besoin de filtrage par métadonnées (par exemple, restreindre
+la recherche à un cours ou un chapitre spécifique).
+
+\subsubsection{Synthèse}
+
+En pratique, les embeddings sont le bloc de construction fondamental de tout
+système RAG : ils servent à interpréter les requêtes, à comparer les passages
+de cours, à effectuer la recherche sémantique et, plus généralement, à
+alimenter les mécanismes internes des LLM. On peut les voir comme une
+\og traduction \fg{} du langage humain en une géométrie de concepts, où
+les idées sont organisées dans un espace multidimensionnel que la machine
+peut explorer et exploiter efficacement. C'est précisément cette géométrie,
+combinée à un index adapté, qui permettra à notre assistant pédagogique de
+récupérer en quelques millisecondes les passages de cours pertinents pour
+répondre à la question d'un étudiant.
+
+% ============================================================
+% PARTIE 2 : PRÉSENTATION DU PROJET
+% ============================================================
+\newpage
+\section{Présentation du projet}
+
+\subsection{Objectifs pédagogiques}
+
+L'objectif est de découvrir les principes fondamentaux de l'intelligence
+artificielle moderne à travers les grands modèles de langage (LLM) et le
+système RAG (Génération Augmentée par Récupération). Les étudiants
+apprendront à interfacer un LLM avec une base documentaire personnalisée
+afin de créer un assistant conversationnel capable de répondre à des
+questions portant sur leurs cours.
+
+\subsection{Les assistants IA dans les environnements éducatifs}
+
+\subsubsection{Panorama des travaux existants}
+
+L'application d'assistants alimentés par l'IA à l'enseignement suscite un
+intérêt de recherche croissant. Une étude publiée dans \emph{Applied Sciences}
+\cite{mdpi2025rag} a recensé 47 travaux portant sur des chatbots éducatifs
+fondés sur le RAG, dont la majorité publiés en 2024, témoignant de la
+croissance rapide de ce domaine.
+
+Plusieurs déploiements réels sont directement pertinents pour notre projet :
+
+\begin{itemize}
+  \item \textbf{Assistant UniMiB} (Université de Bicocca, Milan, 2024)
+    \cite{unimib2024} : un assistant étudiant fondé sur le RAG, capable
+    de répondre à des questions sur les procédures universitaires, les
+    emplois du temps et les informations administratives. Il indexe les
+    documents officiels de l'université et utilise un LLM pour générer
+    des réponses ancrées dans ces sources.
+
+  \item \textbf{OwlMentor} (\emph{Frontiers in Psychology}, 2024)
+    \cite{owlmentor2024} : un environnement d'apprentissage assisté par
+    l'IA conçu pour aider les étudiants universitaires à comprendre des
+    textes scientifiques. Intégré dans un cours, il proposait un chat
+    fondé sur des documents, une génération automatique de questions et
+    la création de quiz.
+
+  \item \textbf{Assistant IA CS50} (Université Harvard) : intégré dans
+    un cours d'introduction à l'informatique, un assistant fondé sur le
+    RAG s'est révélé capable de fournir des réponses détaillées et
+    contextuellement appropriées, facilitant un tutorat personnalisé à
+    grande échelle.
+
+  \item \textbf{Assistant RAG pour l'enseignement médical} (\emph{npj
+    Digital Medicine}, Nature, 2025) \cite{npj2025} : un assistant
+    pédagogique déployé dans un cours de médecine, dont les patterns
+    d'usage et les retours étudiants ont été analysés sur deux cohortes
+    consécutives, démontrant la faisabilité et l'efficacité des assistants
+    fondés sur le RAG dans des contextes éducatifs à enjeux élevés.
+\end{itemize}
+
+\subsubsection{Efficacité et défis}
+
+Le constat général qui se dégage de ces études est que les assistants
+fondés sur le RAG sont efficaces pour fournir des réponses précises et
+ancrées dans des sources à des questions spécifiques à un domaine, et que
+les étudiants les perçoivent positivement comme un complément à
+l'enseignement humain. Plusieurs défis sont cependant régulièrement
+signalés :
+
+\begin{itemize}
+  \item \textbf{Qualité et couverture des documents :} la qualité des
+    réponses de l'assistant est directement bornée par la qualité et
+    la couverture du corpus documentaire indexé. Des documents de cours
+    mal formatés ou incomplets dégradent les performances.
+  \item \textbf{Requêtes hors périmètre :} les étudiants posent souvent
+    des questions en dehors du domaine des documents indexés. Les systèmes
+    robustes doivent détecter ces requêtes et refuser poliment de spéculer.
+  \item \textbf{Difficulté d'évaluation :} évaluer la correction des
+    réponses générées dans des contextes éducatifs ouverts est non trivial
+    et nécessite souvent une évaluation par des experts humains.
+  \item \textbf{Calibration de la confiance des étudiants :} les étudiants
+    peuvent sur-se-fier aux réponses de l'IA ou, au contraire, s'en méfier
+    même lorsqu'elles sont correctes. Communiquer l'incertitude et citer
+    les sources est important pour une calibration appropriée de la
+    confiance.
+\end{itemize}
+
+% ------------------------------------------------------------
+\newpage
+\subsection{Synthèse et positionnement de notre projet}
+
+Cet état de l'art révèle que la combinaison LLM + RAG représente l'état
+de l'art actuel pour construire des assistants conversationnels spécifiques
+à un domaine. La pile technologique que nous prévoyons d'utiliser ---
+Python, un modèle d'embedding (\texttt{sentence-transformers} ou OpenAI),
+une base de données vectorielle (FAISS ou Chroma) et un framework
+d'orchestration (LangChain ou LlamaIndex) --- est bien validée tant dans
+la littérature académique que dans des déploiements éducatifs réels.
+
+La principale originalité de notre projet réside dans son périmètre
+spécifique : construire un assistant adapté aux \emph{ressources de cours
+de première année du CMI Informatique}, qui présentent des caractéristiques
+particulières (informatique et mathématiques de niveau introductif, contenu
+de projet en français et en anglais). Les défis que nous anticipons
+s'alignent sur ceux rapportés dans la littérature : assurer une couverture
+documentaire suffisante, gérer les questions hors périmètre et calibrer
+la confiance des étudiants envers les sorties du système.
+
+\newpage
+
+% À compléter :
+% Parler de FAISS, Chroma, etc.
+% Parler de LangChain, LlamaIndex, etc.
+% répartition :
+% -> Helia va présenter le projet dans sa globalité / introduire la vidéo et la terminer
+% -> Lisa va présenter l'IA + parler des LLMs
+% -> Camille va définir et parler des RAGs
+% -> Thomas va parler de l'indexation / embeddings / vectorisation
+% -> Arthur va parler des appels d'API / création du RAG avec rassemblement des ressources disponibles
+\bibliographystyle{plain}
+\IfFileExists{rapport/references.bib}{\bibliography{rapport/references}}{\bibliography{references}}
+\end{document}

@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.24)  4 MAY 2026 12:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.24)  9 MAY 2026 17:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**search_subject.tex
+**nom_du_fichier.tex
 (./search_subject.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -489,8 +489,8 @@ Package rerunfilecheck Info: File `search_subject.out' has not changed.
 (rerunfilecheck)             Checksum: 9AE4AC46D1201411E3121249F4C8A39A;5808.
  ) 
 Here is how much of TeX's memory you used:
- 12067 strings out of 467525
- 182502 string characters out of 5418982
+ 12068 strings out of 467525
+ 182516 string characters out of 5418982
  617403 words of memory out of 5000000
  40755 multiletter control sequences out of 15000+600000
  641316 words of font info for 71 fonts, out of 8000000 for 9000

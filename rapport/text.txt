@@ -1,0 +1,29 @@
+Salut, moi c'est Arthur Louvet, et maintenant que le contexte global du projet vous a été présenté et que tous les termes ont été 
+définis, je vais vous parler de ma partie : le développement du RAG. Comme vous pouvez le voir sur cette trame que j'ai réalisée 
+tout au long du projet pour rester structuré, j'ai commencé par l'étape la plus importante : télécharger, extraire et vérifier 
+toutes les ressources mises à disposition par l'Université d'Avignon, ainsi que les cours que j'ai rédigés moi-même, afin d'avoir 
+la base de données la plus étendue possible. Concrètement, cela représente des dizaines de fichiers PDF et LaTeX couvrant trois 
+grandes matières : les mathématiques, les fondements de l’informatique et la programmation. Une fois les fichiers récupérés, il a 
+fallu les trier selon leur UE et leur catégorie — cours, TDs, TPs, CCs, corrections — puis les convertir si besoin en LaTeX pour 
+qu'ils soient lisibles par le programme. Ce qui peut sembler anodin est en réalité un travail colossal : les PDF doivent contenir du 
+texte copiable, pas de simples images scannées, sinon le programme ne peut tout simplement pas les lire. J'aurais pu gagner beaucoup 
+de temps avec une API de l'université pour récupérer les cours automatiquement, mais cette option n'étant pas disponible, tout a été 
+fait manuellement. Après ce tri, j'ai cherché comment utiliser une API d'IA en Python. Mon choix s'est porté sur Groq, pour une raison 
+simple : ses limites de requêtes gratuites sont bien plus généreuses que celles de ses concurrents, et elle dispose nativement d'une 
+fonctionnalité de mémoire — c'est-à-dire qu'elle garde un historique de la conversation avec l'utilisateur. J'ai ensuite développé le 
+cœur du RAG : un programme capable de découper l'ensemble des ressources en chunks, des morceaux de texte de 500 mots avec un chevauchement 
+de 50 mots entre eux pour éviter de couper une notion importante en plein milieu. Chaque chunk est enrichi de métadonnées précises : la 
+catégorie, l'UE, le type de document et le fichier source. Ces métadonnées serviront plus tard à cibler la recherche et à indiquer à 
+l'étudiant d'où vient la réponse. Le programme effectue également un nettoyage automatique : il supprime les commandes LaTeX résiduelles, 
+les en-têtes, les pieds de page et tout ce qui polluerait inutilement les données. Une fois le RAG lié au chatbot, j'ai voulu automatiser 
+les tâches les plus répétitives — notamment la mise à jour des chunks à chaque ajout de ressources. Pour cela, j'ai créé deux dépôts GitHub : 
+un public pour la base de cours UAPV, un privé pour le pipeline RAG. J'ai ensuite mis en place deux workflows GitHub Actions. Le premier tourne 
+chaque nuit à 3h du matin : il clone le dépôt des cours, régénère les chunks si des changements sont détectés, et commite automatiquement le 
+résultat. Le second se déclenche à chaque push sur le dépôt des cours, ce qui garantit qu'un nouveau document est reflété quasi instantanément 
+dans l'assistant — synchroniser tout ça entre les deux dépôts a été un vrai défi technique. Enfin, j'ai intégré l'algorithme de recherche BM25 
+: à chaque question d'un étudiant, le système récupère les 5 chunks les plus pertinents, les injecte dans le prompt envoyé à Groq, et l'IA répond 
+en s'appuyant exclusivement sur ces extraits. Pas d'invention, pas d'improvisation — uniquement ce qui figure dans les vrais cours de la licence. 
+Ce pipeline est aujourd'hui entièrement fonctionnel et automatisé. La prochaine grande étape sera de remplacer la recherche BM25 par des embeddings 
+sémantiques, pour des résultats encore plus précis — mais ça, c'est pour la suite. Pour finir, je précise que si l’avancée vous intéresse, j’ai gardé 
+une trace de chaque programmes fonctionnels que j’ai réalisé, disponibles sur mon Github.
+
