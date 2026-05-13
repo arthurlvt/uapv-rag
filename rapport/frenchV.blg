@@ -1,5 +1,0 @@
-[0] Config.pm:328> INFO - This is Biber 2.21
-[0] Config.pm:331> INFO - Logfile is 'frenchV.blg'
-[23] biber-darwin:342> INFO - === Tue May 12, 2026, 16:34:01
-[97] Utils.pm:479> ERROR - Cannot find 'frenchV.bcf'!
-[97] Biber.pm:137> INFO - ERRORS: 1
