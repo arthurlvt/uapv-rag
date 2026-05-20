@@ -9,7 +9,7 @@ def cmd_extract(args):
     import json
 
     print(f"\nDossier source : {args.input}")
-    print(f"Chunk size     : {args.chunk_size} mots | Overlap : {args.overlap} mots\n")
+    print(f"Chunk size : {args.chunk_size} mots | Overlap : {args.overlap} mots\n")
 
     chunks = process_directory(args.input, args.chunk_size, args.overlap)
 
@@ -31,10 +31,10 @@ def cmd_extract_ue(args):
     ue_name = args.ue_name or os.path.basename(os.path.normpath(args.input))
     output  = args.output  or f"./chunks_{ue_name}.json"
 
-    print(f"\nDossier UE  : {args.input}")
+    print(f"\nDossier UE : {args.input}")
     print(f"Nom de l'UE : {ue_name}")
-    print(f"Sortie      : {output}")
-    print(f"Chunk size  : {args.chunk_size} mots | Overlap : {args.overlap} mots\n")
+    print(f"Sortie : {output}")
+    print(f"Chunk size : {args.chunk_size} mots | Overlap : {args.overlap} mots\n")
 
     chunks = process_ue_directory(
         args.input,
