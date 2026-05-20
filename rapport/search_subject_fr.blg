@@ -1,0 +1,5 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'search_subject_fr.blg'
+[23] biber-darwin:342> INFO - === Tue May 19, 2026, 08:58:59
+[97] Utils.pm:479> ERROR - Cannot find 'search_subject_fr.bcf'!
+[98] Biber.pm:137> INFO - ERRORS: 1
